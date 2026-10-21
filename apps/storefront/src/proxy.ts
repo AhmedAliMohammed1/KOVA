@@ -6,7 +6,7 @@ export async function proxy(request: NextRequest) {
   const pathLocale = request.nextUrl.pathname.split("/")[1];
   request.headers.set(
     "x-scrub-vibe-locale",
-    isLocale(pathLocale) ? pathLocale : "en",
+    isLocale(pathLocale) ? pathLocale : "ar",
   );
   return updateSession(request);
 }

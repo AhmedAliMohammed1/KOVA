@@ -4,8 +4,8 @@
     "lint": "PASS, zero warnings",
     "typecheck": "PASS, both apps (also enforced by production builds)",
     "unitAndIntegrationTests": {
-      "files": 41,
-      "passed": 353,
+      "files": 42,
+      "passed": 355,
       "failed": 0
     },
     "productionBuilds": {
@@ -149,5 +149,12 @@
     "cacheInvalidationVerified": true,
     "liveSamples": "live-loading.json",
     "accountVerifiedAndAdmin": true
+  },
+  "languageAndColourSelection": {
+    "rootRedirect": "/ar",
+    "explicitEnglishPreserved": true,
+    "interactiveCardSwatches": true,
+    "selectedColourPhotoAndLinks": true,
+    "browserEvidence": "language-colour-results.json"
   }
 }

@@ -22,7 +22,7 @@ export default async function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   const requestedLocale = (await headers()).get("x-scrub-vibe-locale");
   const locale =
-    requestedLocale && isLocale(requestedLocale) ? requestedLocale : "en";
+    requestedLocale && isLocale(requestedLocale) ? requestedLocale : "ar";
 
   return (
     <html lang={locale} dir={copy[locale].dir} data-scroll-behavior="smooth">

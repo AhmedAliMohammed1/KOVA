@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { useState } from "react";
 import { Heart, ArrowUpRight, Star } from "lucide-react";
 import type { Product } from "@/features/catalog/types";
 import { discountPercent, formatMoney } from "@/lib/money";
@@ -21,6 +22,10 @@ export function ProductCard({
   const wished = wishlist.includes(product.id);
   const discount = discountPercent(product.price, product.compareAt);
   const ar = locale === "ar";
+  const [selectedColourCode, setSelectedColourCode] = useState(product.colorCode ?? product.colors[0]?.code ?? "");
+  const selectedColour = product.colors.find(colour => colour.code === selectedColourCode) ?? product.colors[0];
+  const selectedImage = product.images?.find(image => image.colourCode?.toLowerCase() === selectedColour?.code.toLowerCase()) ?? product.image;
+  const productHref = `/${locale}/products/${product.slug}${selectedColour ? `?colour=${encodeURIComponent(selectedColour.code)}` : ""}`;
 
   return (
     <article className="group flex flex-col justify-between overflow-hidden">
@@ -28,13 +33,13 @@ export function ProductCard({
         {/* Media Frame */}
         <div className="relative aspect-[4/5] w-full overflow-hidden rounded-xs border border-[var(--border-subtle)] bg-[#ebe9e4]">
           <Link
-            href={`/${locale}/products/${product.slug}`}
+            href={productHref}
             tabIndex={-1}
             className="relative block size-full"
           >
             <Image
-              src={product.image.src}
-              alt={product.image.alt[locale]}
+              src={selectedImage.src}
+              alt={selectedImage.alt[locale]}
               fill
               preload={priority}
               sizes="(min-width: 1280px) 25vw, (min-width: 768px) 33vw, 50vw"
@@ -86,7 +91,7 @@ export function ProductCard({
             />
           </button>
 
-          <Link href={`/${locale}/products/${product.slug}`} className="absolute inset-x-2 bottom-2 flex min-h-11 items-center justify-between border border-[var(--border-subtle)] bg-white/95 px-3 text-[10px] font-bold text-[var(--brand-950)] hover:bg-[var(--brand-100)]" aria-label={`${product.availabilityPending ? ar ? 'استعرض الألوان' : 'Explore colours' : ar ? 'اختر مقاسك' : 'Choose your size'}: ${product.title[locale]}`}>
+          <Link href={productHref} className="absolute inset-x-2 bottom-2 flex min-h-11 items-center justify-between border border-[var(--border-subtle)] bg-white/95 px-3 text-[10px] font-bold text-[var(--brand-950)] hover:bg-[var(--brand-100)]" aria-label={`${product.availabilityPending ? ar ? 'استعرض الألوان' : 'Explore colours' : ar ? 'اختر مقاسك' : 'Choose your size'}: ${product.title[locale]}`}>
             {product.availabilityPending ? ar ? 'استعرض الألوان' : 'Explore colours' : ar ? 'اختر مقاسك' : 'Choose your size'}<ArrowUpRight size={15} aria-hidden="true"/>
           </Link>
         </div>
@@ -94,7 +99,7 @@ export function ProductCard({
         {/* Product Meta */}
         <div className="pt-3.5 sm:pt-4">
           <Link
-            href={`/${locale}/products/${product.slug}`}
+            href={productHref}
             className="line-clamp-2 text-sm font-semibold leading-snug text-[var(--text-strong)] transition-colors hover:text-[var(--brand-700)]"
           >
             {product.title[locale]}
@@ -102,7 +107,7 @@ export function ProductCard({
 
           {product.rating && product.rating.count > 0 && (
             <Link
-              href={`/${locale}/products/${product.slug}#reviews`}
+              href={`${productHref}#reviews`}
               aria-label={
                 ar
                   ? `${product.rating.average} من 5، ${product.rating.count} تقييم`
@@ -118,18 +123,22 @@ export function ProductCard({
 
           {/* Color swatches */}
           <div
-            className="mt-2.5 flex min-h-5 items-center gap-1.5"
+            className="mt-2 flex flex-wrap items-center gap-1"
+            role="group"
             aria-label={`${product.colors.length} ${ar ? "ألوان" : "colours"}`}
           >
             {product.colors.slice(0, 5).map((colour) => (
-              <span
+              <button
                 key={colour.code}
-                className={`size-3.5 rounded-full border border-black/20 shadow-2xs ${
-                  colour.inStock || product.availabilityPending ? "" : "opacity-30"
-                }`}
-                style={{ backgroundColor: colour.swatch }}
+                type="button"
+                aria-label={colour.name[locale]}
+                aria-pressed={selectedColour?.code === colour.code}
+                onClick={() => setSelectedColourCode(colour.code)}
+                className="grid size-11 shrink-0 place-items-center rounded-full focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--brand-700)]"
                 title={colour.name[locale]}
-              />
+              >
+                <span aria-hidden="true" className={`size-5 rounded-full border border-black/20 shadow-2xs ${selectedColour?.code === colour.code ? "ring-2 ring-[var(--brand-700)] ring-offset-2" : ""}`} style={{backgroundColor:colour.swatch}} />
+              </button>
             ))}
             {product.colors.length > 5 && (
               <span className="text-[10px] font-semibold text-[var(--text-muted)]">
