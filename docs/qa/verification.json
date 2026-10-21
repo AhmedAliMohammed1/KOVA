@@ -4,8 +4,8 @@
     "lint": "PASS, zero warnings",
     "typecheck": "PASS, both apps (also enforced by production builds)",
     "unitAndIntegrationTests": {
-      "files": 40,
-      "passed": 350,
+      "files": 41,
+      "passed": 353,
       "failed": 0
     },
     "productionBuilds": {
@@ -136,5 +136,18 @@
     "draftCatalog": "explicit localhost-only preview flag; ignored on Vercel",
     "productionConfigChanged": false
   },
-  "currentDatabaseCheckpoint": "new-database-verification.json"
+  "currentDatabaseCheckpoint": "new-database-verification.json",
+  "currentLoadingCheckpoint": {
+    "commit": "a8e856c",
+    "storefrontDeployment": "dpl_6BM9hSmNCmSj8gqPLZNpZC3C2KhG",
+    "adminDeployment": "dpl_66mFMFcuBjeiyYPxE3jE97K34SF8",
+    "status": "READY",
+    "region": "dub1",
+    "publicCatalogVisible": true,
+    "privateDataCacheChanged": false,
+    "photographyQualityChanged": false,
+    "cacheInvalidationVerified": true,
+    "liveSamples": "live-loading.json",
+    "accountVerifiedAndAdmin": true
+  }
 }

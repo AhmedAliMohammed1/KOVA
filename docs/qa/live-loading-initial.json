@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-21T21:42:49.289Z",
+  "origin": "https://kova-green-delta.vercel.app",
+  "environment": "First live validation after deployment; unthrottled Edge mobile viewport",
+  "limits": "Two individual navigations, not field percentiles",
+  "samples": [
+    {
+      "route": "/en",
+      "status": 200,
+      "contentReadyMs": 1785,
+      "lcpMs": 1772,
+      "cls": 0.052132701421800945,
+      "ttfbMs": 40,
+      "domMs": 1681
+    },
+    {
+      "route": "/en/products/kova-mens-scrub-set",
+      "status": 200,
+      "contentReadyMs": 1226,
+      "lcpMs": 1336,
+      "cls": 0.052132701421800945,
+      "ttfbMs": 279,
+      "domMs": 1090
+    }
+  ],
+  "runtimeErrors": []
+}

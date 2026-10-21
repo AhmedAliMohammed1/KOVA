@@ -1,0 +1,28 @@
+{
+  "date": "2026-10-21T21:43:50.682Z",
+  "origin": "https://kova-green-delta.vercel.app",
+  "environment": "Live production site; desktop Edge headless with mobile viewport; unthrottled workstation connection",
+  "limits": "One navigation per route; no field p75, INP or universal speed guarantee. Network and cold-cache effects remain.",
+  "samples": [
+    {
+      "route": "/en",
+      "status": 200,
+      "contentReadyMs": 426,
+      "lcpMs": 436,
+      "cls": 0.052132701421800945,
+      "ttfbMs": 24,
+      "domMs": 323
+    },
+    {
+      "route": "/en/products/kova-mens-scrub-set",
+      "status": 200,
+      "contentReadyMs": 327,
+      "lcpMs": 396,
+      "cls": 0.052132701421800945,
+      "ttfbMs": 25,
+      "domMs": 277
+    }
+  ],
+  "runtimeErrors": [],
+  "cacheState": "Repeat navigation after first live run (warm server data cache)"
+}

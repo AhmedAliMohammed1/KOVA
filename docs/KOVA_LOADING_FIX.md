@@ -19,3 +19,9 @@ The previous live diagnostic received the first byte in about 0.68 seconds but d
 ## Administrator access
 
 The owner-supplied email's account is now confirmed and has the `admin` role in the new project. Sign in at `https://admin-two-tau-18.vercel.app/en/admin` using the password chosen during registration. No password is generated or retrieved by this work. Use the recovery link if needed; successful email delivery depends on the configured Supabase Auth callback and email settings.
+
+## Live acceptance
+
+Both production deployments for commit `a8e856c` are READY and report region `dub1`. Public home and men's product pages returned 200, showed the expected catalog/product content, had no horizontal overflow and emitted no browser page errors. One unthrottled mobile-viewport navigation measured content ready at 1.785 seconds for home and 1.226 seconds for the men's page; corresponding LCP samples were 1.772 and 1.336 seconds. Sampled CLS was 0.052. This is a small live lab sample, not field p75 or a guarantee across networks. The authenticated production revalidation request returned 200 with `revalidated: true`. No image quality setting changed.
+
+Initial live samples are retained in `qa/live-loading-initial.json`. The subsequent warm-data-cache run in `qa/live-loading.json` measured content ready at 0.426 seconds for home and 0.327 seconds for the men’s page. All homepage images were scrolled into view and decoded before the final screenshot, including lazy editorial images.
