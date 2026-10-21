@@ -1,4 +1,8 @@
 .next/
+**/.next/
+.kova-assets/
+/ELESAWY STUDIOS-20261021T195231Z-1-001/
+.kova-downloads.json
 node_modules/
 .pnpm-store/
 coverage/
@@ -13,6 +17,7 @@ backups/
 
 .vercel
 .env*
+!.env.example
 
 # Agent harness & local tooling
 .agents/

@@ -1,0 +1,10 @@
+{
+  "name": "@kova/shared",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Shared KOVA design tokens, commerce types, validation, components and database utilities",
+  "exports": {
+    "./tokens.css": "./tokens.css",
+    "./*": "./src/*"
+  }
+}

@@ -3,8 +3,8 @@ import {
   mapSyncCartLine,
   mergeCartLines,
   mergeWishlistIds,
-} from "../../src/features/cart/repository";
-import type { CartLine } from "../../src/features/cart/types";
+} from "../../packages/shared/src/features/cart/repository";
+import type { CartLine } from "../../packages/shared/src/features/cart/types";
 
 describe("cart-sync unit tests", () => {
   const sampleLine1: CartLine = {

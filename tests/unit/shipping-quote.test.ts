@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { calculateShippingQuote } from "../../src/features/shipping/types";
+import { calculateShippingQuote } from "../../packages/shared/src/features/shipping/types";
 
 const zone = {
   id: 1,

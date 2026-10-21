@@ -6,6 +6,7 @@ import type { ViewerAccess } from "@/server/auth/roles";
 
 vi.mock("next/navigation", () => ({
   usePathname: () => "/en",
+  useRouter: () => ({ push: vi.fn() }),
 }));
 
 vi.mock("@/components/store/cart-provider", () => ({
@@ -58,18 +59,15 @@ describe("store authentication navigation", () => {
       canAccessAdmin: true,
     });
 
-    expect(container.querySelectorAll('a[href="/en/admin"]')).toHaveLength(4);
+    expect(container.querySelectorAll('a[href="/en/admin"]')).toHaveLength(3);
     expect(screen.getByTitle("Admin Dashboard")).toBeInTheDocument();
   });
 
   it("keeps the closed mobile drawer out of keyboard navigation", () => {
     renderNavigation({ isAuthenticated: true, canAccessAdmin: false });
 
-    const drawer = screen.getByLabelText("Mobile navigation", {
-      selector: "aside",
-    });
-    expect(drawer).toHaveAttribute("inert");
-    expect(drawer).toHaveAttribute("aria-hidden", "true");
+    const drawer = screen.getByLabelText("Store navigation", { selector: "dialog" });
+    expect(drawer).not.toHaveAttribute("open");
   });
 
   it("keeps the phone header compact while retaining touch-sized primary actions", () => {
@@ -81,20 +79,20 @@ describe("store authentication navigation", () => {
     expect(screen.getByLabelText("Search catalog")).toHaveClass(
       "hidden",
       "size-11",
-      "lg:grid",
+      "sm:grid",
     );
     expect(screen.getByTitle("Sign In")).toHaveClass(
       "hidden",
-      "min-h-11",
-      "lg:flex",
+      "size-11",
+      "lg:grid",
     );
     expect(screen.getByLabelText("Wishlist (0)")).toHaveClass("size-11");
     expect(screen.getByLabelText("Bag (0)")).toHaveClass("size-11");
     expect(
-      container.querySelector('header a[aria-label="Scrub Vibe home"]'),
-    ).toHaveClass("min-h-11");
-    expect(container.querySelector('aside a[href="/ar"]')).toHaveClass(
-      "min-h-12",
+      container.querySelector('header a[aria-label="KOVA Scrubs home"]'),
+    ).toHaveClass("absolute");
+    expect(container.querySelector('dialog a[href="/ar"]')).toHaveClass(
+      "min-h-11",
     );
 
     for (const link of screen

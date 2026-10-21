@@ -1,0 +1,139 @@
+{
+  "date": "2026-10-21T20:30:02.175092+00:00",
+  "checks": {
+    "lint": "PASS, zero warnings",
+    "typecheck": "PASS, both apps (also enforced by production builds)",
+    "unitAndIntegrationTests": {
+      "files": 39,
+      "passed": 348,
+      "failed": 0
+    },
+    "productionBuilds": {
+      "storefront": "PASS, Next.js 16.3.3",
+      "admin": "PASS, Next.js 16.3.3"
+    },
+    "workspaceBoundaries": "PASS: no admin routes/mutation exports in storefront; cron/webhook ownership storefront only",
+    "originalRouteRetention": {
+      "original": 44,
+      "currentPageAndApiRouteFiles": 53,
+      "missing": []
+    },
+    "opaqueTokenContrastPairs": 6,
+    "browserChecksPassed": 19,
+    "browserRuntimeErrors": 0
+  },
+  "labPerformance": [
+    {
+      "route": "/en",
+      "medianLcpMs": 1160,
+      "medianCls": 0,
+      "medianTtfbMs": 9,
+      "medianTransferBytes": 296268
+    },
+    {
+      "route": "/ar",
+      "medianLcpMs": 1224,
+      "medianCls": 0,
+      "medianTtfbMs": 8,
+      "medianTransferBytes": 296388
+    },
+    {
+      "route": "/en/shop",
+      "medianLcpMs": 1068,
+      "medianCls": 0,
+      "medianTtfbMs": 8,
+      "medianTransferBytes": 294501
+    },
+    {
+      "route": "/en/products/kova-womens-scrub-set",
+      "medianLcpMs": 1144,
+      "medianCls": 0,
+      "medianTtfbMs": 8,
+      "medianTransferBytes": 316610
+    }
+  ],
+  "notMeasured": [
+    "Field p75 LCP/INP/CLS",
+    "INP",
+    "Production database query timings and connection changes",
+    "Authenticated sandbox commerce and staff operations",
+    "Live cross-project auth and cache synchronization"
+  ],
+  "externalBlockers": [
+    "Vercel kovaadmin inspection returned 404; connected team project list empty",
+    "No local non-production Supabase credentials or staff/customer test accounts",
+    "Confirmed product sizes and inventory required before publication",
+    "Standalone logo and complete business policy/provider acceptance still required"
+  ],
+  "productionMutationsPerformed": true,
+  "deploymentChangesPerformed": false,
+  "catalogCutover": {
+    "authorization": "Owner explicitly requested retirement of old Scrub Vibe products and approved new grouping, EGP 850 price and EGP 200 COD deposit.",
+    "project": "iqufqtjotgpmhhtvlxwf",
+    "legacyProductsArchived": 9,
+    "legacyProductsActive": 0,
+    "newProducts": [
+      {
+        "id": 20,
+        "slug": "kova-womens-scrub-set",
+        "status": "draft",
+        "priceMinor": 85000,
+        "codDepositMinor": 20000,
+        "colors": [
+          "grey",
+          "blue",
+          "burgundy"
+        ],
+        "images": 50,
+        "variants": 0
+      },
+      {
+        "id": 21,
+        "slug": "kova-mens-scrub-set",
+        "status": "draft",
+        "priceMinor": 85000,
+        "codDepositMinor": 20000,
+        "colors": [
+          "black"
+        ],
+        "images": 13,
+        "variants": 0
+      }
+    ],
+    "historyPreserved": {
+      "orders": 19,
+      "orderItems": 22,
+      "linkedOrderItems": 22,
+      "reviews": 1
+    },
+    "transactionGuard": "Order-item reference hash, order count and review count unchanged within transaction; post-commit counts verified.",
+    "remaining": "Sizes and inventory unconfirmed; new products intentionally unpublished pending these details and asset deployment."
+  },
+  "connectedInteractiveVerification": {
+    "date": "2026-10-21T20:28:50.194Z",
+    "environment": "Local production builds connected to existing Supabase; draft catalog preview; no new users/orders or email sent",
+    "checks": [
+      "en: sign-in, registration and recovery forms enabled",
+      "ar: sign-in, registration and recovery forms enabled",
+      "Sign-in server action reaches Auth and rejects invalid credentials",
+      "Legacy admin URL redirects to configured admin sign-in",
+      "Wishlist save, navigation and reload persistence",
+      "en: size guide opens, KOVA colours, mobile reflow, units, calculator, Escape",
+      "ar: size guide opens, KOVA colours, mobile reflow, units, calculator, Escape",
+      "Checkout route uses connected application, without submitting live orders"
+    ],
+    "runtimeErrors": [],
+    "limits": [
+      "No staff credentials supplied; successful staff/customer authentication and protected operations unverified",
+      "Server secret is unavailable locally; privileged checkout/payment operations remain unverified",
+      "No fabricated stock; buying remains disabled for draft products"
+    ]
+  },
+  "localConfiguration": {
+    "supabasePublicConnection": "restored in ignored per-app environment files",
+    "adminRouting": "restored localhost:3200 to localhost:3201",
+    "serverSecret": "unavailable; Vercel sensitive variables return no readable value",
+    "draftCatalog": "explicit localhost-only preview flag; ignored on Vercel",
+    "productionConfigChanged": false
+  }
+}

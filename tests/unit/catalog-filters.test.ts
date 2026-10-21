@@ -1,10 +1,10 @@
 import { describe, expect, it } from "vitest";
-import { demoProducts } from "../../src/features/catalog/demo-catalog";
+import { demoProducts } from "../fixtures/legacy-catalog";
 import {
   filterCatalog,
   hasCatalogFilters,
   parseCatalogFilters,
-} from "../../src/features/catalog/filters";
+} from "../../packages/shared/src/features/catalog/filters";
 
 describe("catalogue URL filters", () => {
   it("normalizes supported values and rejects unknown input", () => {

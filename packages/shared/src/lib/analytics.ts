@@ -1,0 +1,192 @@
+"use client";
+
+import { createClient } from "@/lib/supabase/client";
+import { hasSupabaseEnvironment } from "@/lib/supabase/config";
+import type { Json } from "@/types/database";
+
+export type StoreEventName =
+  | "page_view"
+  | "product_view"
+  | "add_to_cart"
+  | "wishlist_add"
+  | "begin_checkout"
+  | "purchase"
+  | "newsletter_signup"
+  | "instagram_click";
+
+type AnalyticsWindow = Window & {
+  gtag?: (...args: unknown[]) => void;
+  fbq?: (...args: unknown[]) => void;
+};
+export function trackProductInteraction(event: "select_item" | "view_size_guide", productId: string, colour?: string, size?: string) {
+  if (typeof window === "undefined") return;
+  (window as AnalyticsWindow).gtag?.("event", event, { item_id: productId, colour, size });
+}
+
+function trackMarketing(
+  eventName: StoreEventName,
+  productId: string | number | undefined,
+  metadata: Record<string, Json | undefined>,
+) {
+  const analyticsWindow = window as AnalyticsWindow;
+  const value =
+    typeof metadata.value === "number" ? metadata.value / 100 : undefined;
+  const item =
+    productId === undefined
+      ? undefined
+      : {
+          item_id: String(productId),
+          item_name:
+            typeof metadata.name === "string" ? metadata.name : undefined,
+          item_variant:
+            typeof metadata.colour === "string" ? metadata.colour : undefined,
+          price: value,
+          quantity: 1,
+        };
+  const gaName = eventName === "product_view" ? "view_item" : eventName;
+  if (
+    [
+      "page_view",
+      "view_item",
+      "add_to_cart",
+      "begin_checkout",
+      "purchase",
+    ].includes(gaName)
+  )
+    analyticsWindow.gtag?.("event", gaName, {
+      currency: "EGP",
+      value,
+      transaction_id: metadata.orderNumber,
+      items: item ? [item] : undefined,
+    });
+  const metaName =
+    eventName === "page_view"
+      ? "PageView"
+      : eventName === "product_view"
+        ? "ViewContent"
+        : eventName === "add_to_cart"
+          ? "AddToCart"
+          : eventName === "begin_checkout"
+            ? "InitiateCheckout"
+            : eventName === "purchase"
+              ? "Purchase"
+              : null;
+  if (metaName)
+    analyticsWindow.fbq?.(
+      "track",
+      metaName,
+      {
+        content_ids:
+          productId === undefined ? metadata.productIds : [String(productId)],
+        content_type: "product",
+        currency: "EGP",
+        value,
+      },
+      metadata.orderNumber ? { eventID: metadata.orderNumber } : undefined,
+    );
+}
+
+const ANONYMOUS_KEY = "scrub-vibe-anonymous-id";
+const SESSION_KEY = "scrub-vibe-analytics-session";
+const SESSION_TIMEOUT = 30 * 60 * 1000;
+
+type SessionRecord = { id: string; lastSeen: number };
+
+function readJson<T>(key: string): T | null {
+  try {
+    const value = window.localStorage.getItem(key);
+    return value ? (JSON.parse(value) as T) : null;
+  } catch {
+    return null;
+  }
+}
+
+function anonymousId() {
+  const existing = window.localStorage.getItem(ANONYMOUS_KEY);
+  if (existing) return existing;
+  const id = crypto.randomUUID();
+  window.localStorage.setItem(ANONYMOUS_KEY, id);
+  return id;
+}
+
+function sessionId() {
+  const now = Date.now();
+  const existing = readJson<SessionRecord>(SESSION_KEY);
+  const id =
+    existing && now - existing.lastSeen < SESSION_TIMEOUT
+      ? existing.id
+      : crypto.randomUUID();
+  window.localStorage.setItem(
+    SESSION_KEY,
+    JSON.stringify({ id, lastSeen: now } satisfies SessionRecord),
+  );
+  return id;
+}
+
+function deviceType() {
+  if (window.innerWidth < 768) return "mobile";
+  if (window.innerWidth < 1100) return "tablet";
+  return "desktop";
+}
+
+function referrerHost() {
+  if (!document.referrer) return undefined;
+  try {
+    const host = new URL(document.referrer).hostname;
+    return host === window.location.hostname ? undefined : host;
+  } catch {
+    return undefined;
+  }
+}
+
+export function trackStoreEvent(
+  eventName: StoreEventName,
+  options: {
+    productId?: string | number;
+    path?: string;
+    metadata?: Record<string, Json | undefined>;
+  } = {},
+) {
+  if (typeof window === "undefined") return;
+  if (eventName === "purchase") {
+    const order = options.metadata?.orderNumber;
+    if (typeof order !== "string" || !order) return;
+    try {
+      const key = "kova-reported-purchases";
+      const stored: unknown = JSON.parse(window.localStorage.getItem(key) ?? "[]");
+      const reported = Array.isArray(stored) ? stored.filter((value): value is string => typeof value === "string") : [];
+      if (reported.includes(order)) return;
+      window.localStorage.setItem(key, JSON.stringify([...reported.slice(-49), order]));
+    } catch { /* Tracking must never interrupt checkout when storage is unavailable. */ }
+  }
+
+  trackMarketing(eventName, options.productId, options.metadata ?? {});
+  if (!hasSupabaseEnvironment()) return;
+
+  // Query strings can contain private tracking tokens, phone numbers or auth codes.
+  const path = (options.path ?? window.location.pathname).split(/[?#]/)[0];
+  const locale = window.location.pathname.split("/")[1];
+  const params = new URLSearchParams(window.location.search);
+
+  void createClient()
+    .rpc("track_store_event", {
+      p_event_name: eventName,
+      p_session_id: sessionId(),
+      p_anonymous_id: anonymousId(),
+      p_path: path,
+      p_locale: locale === "ar" || locale === "en" ? locale : undefined,
+      p_product_id:
+        options.productId === undefined ? undefined : Number(options.productId),
+      p_referrer_host: referrerHost(),
+      p_utm_source: params.get("utm_source") ?? undefined,
+      p_utm_medium: params.get("utm_medium") ?? undefined,
+      p_utm_campaign: params.get("utm_campaign") ?? undefined,
+      p_device_type: deviceType(),
+      p_metadata: options.metadata ?? {},
+    })
+    .then(({ error }) => {
+      if (error && process.env.NODE_ENV === "development") {
+        console.warn("Analytics event was not recorded", error.message);
+      }
+    });
+}

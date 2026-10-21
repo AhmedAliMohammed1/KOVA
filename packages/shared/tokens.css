@@ -1,0 +1,19 @@
+:root {
+  --brand-950: #06152d;
+  --brand-800: #102947;
+  --brand-700: #087e83;
+  --brand-100: #dcefee;
+  --brand-surface: #eef5f5;
+  --surface-canvas: #f7f8fa;
+  --surface-raised: #ffffff;
+  --text-strong: #102239;
+  --text-muted: #526276;
+  --border-subtle: #d5dde5;
+  --border-control: #7c899b;
+  --border-strong: #102239;
+  --accent-warm: #a5472f;
+  --status-success: #18794e;
+  --status-warning: #935400;
+  --status-danger: #b42318;
+  --brand-highlight: #55d5cd;
+}

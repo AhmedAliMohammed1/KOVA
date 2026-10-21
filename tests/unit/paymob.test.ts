@@ -1,7 +1,7 @@
 import { createHmac } from "node:crypto";
 import { describe, expect, it } from "vitest";
-import { getPaymobConfigurationStatus } from "../../src/features/checkout/paymob-config";
-import { verifyPaymobHmac } from "../../src/features/checkout/paymob-webhook";
+import { getPaymobConfigurationStatus } from "../../packages/shared/src/features/checkout/paymob-config";
+import { verifyPaymobHmac } from "../../packages/shared/src/features/checkout/paymob-webhook";
 
 describe("Paymob readiness", () => {
   it("stays disabled until the callback secret and public app URL are present", () => {

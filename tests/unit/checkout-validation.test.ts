@@ -5,8 +5,8 @@ import {
   normalizeCustomerName,
   normalizeEgyptianPhone,
   otpRequestSchema,
-} from "../../src/features/checkout/validation";
-import { isCheckoutPhoneOtpEnabled } from "../../src/features/checkout/config";
+} from "../../packages/shared/src/features/checkout/validation";
+import { isCheckoutPhoneOtpEnabled } from "../../packages/shared/src/features/checkout/config";
 
 describe("Egypt checkout validation", () => {
   it.each([

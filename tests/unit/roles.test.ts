@@ -2,7 +2,7 @@ import { describe, expect, it } from "vitest";
 import {
   canAccessAdminDashboard,
   hasRequiredRole,
-} from "../../src/server/auth/policy";
+} from "../../packages/shared/src/server/auth/policy";
 
 describe("role authorization", () => {
   it("requires at least one explicitly allowed role", () => {

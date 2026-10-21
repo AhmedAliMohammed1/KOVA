@@ -5,8 +5,8 @@ import {
   calculateRecommendedSize,
   DEFAULT_SIZE_CHART_ENTRIES,
   mapRowToSizeChartEntry,
-} from "../../src/features/catalog/size-guide";
-import type { SizeChartRow } from "../../src/features/catalog/size-guide-types";
+} from "../../packages/shared/src/features/catalog/size-guide";
+import type { SizeChartRow } from "../../packages/shared/src/features/catalog/size-guide-types";
 
 describe("Size Guide Unit Conversions", () => {
   it("converts cm to inches accurately rounded to 1 decimal", () => {

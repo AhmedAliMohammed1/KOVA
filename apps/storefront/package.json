@@ -1,0 +1,7 @@
+{
+  "name": "@kova/storefront",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": { "dev": "next dev --port 3000", "build": "next build", "start": "next start --port 3000", "typecheck": "tsc --noEmit" },
+  "dependencies": { "@kova/shared": "workspace:*", "next": "16.3.3", "react": "19.2.0", "react-dom": "19.2.0" }
+}

@@ -3,8 +3,8 @@ import { join, resolve } from "node:path";
 import { describe, expect, it } from "vitest";
 
 const projectRoot = resolve(__dirname, "../..");
-const sourceRoot = join(projectRoot, "src");
-const globalsPath = join(sourceRoot, "app", "globals.css");
+const sourceRoot = join(projectRoot, "packages", "shared", "src");
+const globalsPath = join(sourceRoot, "styles", "globals.css");
 const sourceExtensions = new Set([".css", ".ts", ".tsx"]);
 
 function collectSourceFiles(directory: string): string[] {
@@ -32,11 +32,11 @@ function customPropertiesReferencedIn(source: string) {
 
 describe("global design tokens", () => {
   it("defines every custom property referenced by the application UI", () => {
-    const globals = readFileSync(globalsPath, "utf8");
+    const globals = readFileSync(globalsPath, "utf8") + readFileSync(join(projectRoot, "packages/shared/tokens.css"), "utf8");
     const defined = customPropertiesDefinedIn(globals);
     const referenced = new Set<string>();
 
-    for (const file of collectSourceFiles(sourceRoot)) {
+    for (const file of [...collectSourceFiles(sourceRoot), ...collectSourceFiles(join(projectRoot, "apps/storefront/src")), ...collectSourceFiles(join(projectRoot, "apps/admin/src"))]) {
       for (const property of customPropertiesReferencedIn(
         readFileSync(file, "utf8"),
       )) {
@@ -52,7 +52,7 @@ describe("global design tokens", () => {
   });
 
   it("keeps action colors mapped to concrete brand colors", () => {
-    const globals = readFileSync(globalsPath, "utf8");
+    const globals = readFileSync(globalsPath, "utf8") + readFileSync(join(projectRoot, "packages/shared/tokens.css"), "utf8");
 
     expect(globals).toMatch(/--color-primary:\s*var\(--brand-950\)/);
     expect(globals).toMatch(/--color-primary-hover:\s*var\(--brand-700\)/);

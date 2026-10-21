@@ -2,9 +2,9 @@ import { describe, expect, it } from "vitest";
 import { timingSafeEqual } from "node:crypto";
 import {
   paymentProofExtensionFromBytes,
-} from "../../src/features/checkout/payment-proof";
-import { hashToken, issuePrivateToken } from "../../src/features/checkout/security";
-import { matchEgyptianPhone } from "../../src/features/checkout/validation";
+} from "../../packages/shared/src/features/checkout/payment-proof";
+import { hashToken, issuePrivateToken } from "../../packages/shared/src/features/checkout/security";
+import { matchEgyptianPhone } from "../../packages/shared/src/features/checkout/validation";
 
 describe("Payment Proof Re-upload Workflow", () => {
   describe("File Magic Bytes & Extension Validation", () => {

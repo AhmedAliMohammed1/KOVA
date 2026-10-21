@@ -1,0 +1,47 @@
+{
+  "method": "WCAG relative sRGB luminance contrast, opaque token pairs",
+  "pairs": [
+    {
+      "role": "White on navy",
+      "fg": "#ffffff",
+      "bg": "#06152d",
+      "ratio": 18.21,
+      "minimum": 4.5
+    },
+    {
+      "role": "White on interactive teal",
+      "fg": "#ffffff",
+      "bg": "#087e83",
+      "ratio": 4.86,
+      "minimum": 4.5
+    },
+    {
+      "role": "Highlight teal on navy",
+      "fg": "#55d5cd",
+      "bg": "#06152d",
+      "ratio": 10.22,
+      "minimum": 4.5
+    },
+    {
+      "role": "Muted copy on white",
+      "fg": "#526276",
+      "bg": "#ffffff",
+      "ratio": 6.24,
+      "minimum": 4.5
+    },
+    {
+      "role": "Muted copy on canvas",
+      "fg": "#526276",
+      "bg": "#f7f8fa",
+      "ratio": 5.87,
+      "minimum": 4.5
+    },
+    {
+      "role": "Control border on white",
+      "fg": "#7c899b",
+      "bg": "#ffffff",
+      "ratio": 3.55,
+      "minimum": 3
+    }
+  ]
+}

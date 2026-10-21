@@ -1,6 +1,6 @@
 import { cleanup, render, screen } from "@testing-library/react";
 import { afterEach, describe, expect, it } from "vitest";
-import { PaginationNav } from "../../src/components/ui/pagination-nav";
+import { PaginationNav } from "../../packages/shared/src/components/ui/pagination-nav";
 
 afterEach(cleanup);
 

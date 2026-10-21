@@ -1,0 +1,2509 @@
+{
+  "folderId": "1kIySxOJEz2FL5by7g4LbGJb73wX_QPlu",
+  "localSourceDirectory": "ELESAWY STUDIOS-20261021T195231Z-1-001/ELESAWY STUDIOS",
+  "reviewedOn": "2026-10-21",
+  "sourceCount": 70,
+  "sourceBytes": 549004428,
+  "optimizedBytes": 16967498,
+  "exactDuplicateGroups": [],
+  "mappingNotes": [
+    "Owner confirmed: grey, blue and burgundy belong to one new KOVA women's product; black belongs to a separate new KOVA men's product.",
+    "Both products are EGP 850 with an EGP 200 COD deposit. Sizes and stock remain unspecified; no variants or stock quantities are invented.",
+    "No complete rear view was identified. Seven still-life/water images remain outside the product galleries.",
+    "Previously retrieved Drive IDs are retained for 13 files; the other files have local provenance and hashes without invented Drive IDs."
+  ],
+  "assets": [
+    {
+      "number": 1,
+      "sourceId": null,
+      "sourceName": "ELESAWY STUDIOS.jpg",
+      "sourceUrl": null,
+      "localSourcePath": "ELESAWY STUDIOS-20261021T195231Z-1-001/ELESAWY STUDIOS/ELESAWY STUDIOS.jpg",
+      "sha256": "bb6ccbc2e17b96df93c3f0dc370ab92d7ae90acc1c2043414bad7e6ba6ea326b",
+      "sourceBytes": 5190402,
+      "sourceDimensions": {
+        "width": 2713,
+        "height": 4069,
+        "orientation": 1
+      },
+      "group": "grey-womens-set",
+      "observedColour": "grey",
+      "view": "full-front",
+      "localPath": "apps/storefront/public/images/kova/studio-1.webp",
+      "publicPath": "/images/kova/studio-1.webp",
+      "dimensions": {
+        "width": 1333,
+        "height": 2000
+      },
+      "bytes": 137370,
+      "groupOrder": 2,
+      "alt": {
+        "en": "Grey V-neck scrub set with wide-leg trousers, full-length front view",
+        "ar": "طقم سكراب رمادي برقبة V وبنطلون واسع، صورة أمامية كاملة"
+      },
+      "productAssociation": {
+        "productId": 20,
+        "productSlug": "kova-womens-scrub-set",
+        "colourCode": "grey"
+      },
+      "mappingStatus": "Owner-confirmed product/color mapping; database draft awaiting sizes, stock and deployment",
+      "usage": "Color-specific product gallery; database product remains a draft"
+    },
+    {
+      "number": 2,
+      "sourceId": "1Fj7wizmjpuhF9TVw6Lru79M_zyzGK3MS",
+      "sourceName": "ELESAWY STUDIOS-2.jpg",
+      "sourceUrl": "https://drive.google.com/file/d/1Fj7wizmjpuhF9TVw6Lru79M_zyzGK3MS/view",
+      "localSourcePath": "ELESAWY STUDIOS-20261021T195231Z-1-001/ELESAWY STUDIOS/ELESAWY STUDIOS-2.jpg",
+      "sha256": "6ebd5889170ded9c0fadb5ce95cac7d87ba52601df10705becbb5dad54aa122a",
+      "sourceBytes": 6379081,
+      "sourceDimensions": {
+        "width": 2784,
+        "height": 4176,
+        "orientation": 1
+      },
+      "group": "grey-womens-set",
+      "observedColour": "grey",
+      "view": "full-front",
+      "localPath": "apps/storefront/public/images/kova/studio-2.webp",
+      "publicPath": "/images/kova/studio-2.webp",
+      "dimensions": {
+        "width": 1333,
+        "height": 2000
+      },
+      "bytes": 151160,
+      "groupOrder": 3,
+      "alt": {
+        "en": "Grey V-neck scrub set with wide-leg trousers, full-length front view",
+        "ar": "طقم سكراب رمادي برقبة V وبنطلون واسع، صورة أمامية كاملة"
+      },
+      "productAssociation": {
+        "productId": 20,
+        "productSlug": "kova-womens-scrub-set",
+        "colourCode": "grey"
+      },
+      "mappingStatus": "Owner-confirmed product/color mapping; database draft awaiting sizes, stock and deployment",
+      "usage": "Color-specific product gallery; database product remains a draft"
+    },
+    {
+      "number": 3,
+      "sourceId": "1YnAvQphG2ZzpmZOKT4rKNEG8AGr1kUdQ",
+      "sourceName": "ELESAWY STUDIOS-3.jpg",
+      "sourceUrl": "https://drive.google.com/file/d/1YnAvQphG2ZzpmZOKT4rKNEG8AGr1kUdQ/view",
+      "localSourcePath": "ELESAWY STUDIOS-20261021T195231Z-1-001/ELESAWY STUDIOS/ELESAWY STUDIOS-3.jpg",
+      "sha256": "b244a01eef655fb6662b4a6a3993e2cdad8ce281ab6701298a108de1f9ec3f16",
+      "sourceBytes": 6438391,
+      "sourceDimensions": {
+        "width": 2784,
+        "height": 4176,
+        "orientation": 1
+      },
+      "group": "grey-womens-set",
+      "observedColour": "grey",
+      "view": "full-front",
+      "localPath": "apps/storefront/public/images/kova/studio-3.webp",
+      "publicPath": "/images/kova/studio-3.webp",
+      "dimensions": {
+        "width": 1333,
+        "height": 2000
+      },
+      "bytes": 158420,
+      "groupOrder": 4,
+      "alt": {
+        "en": "Grey V-neck scrub set with wide-leg trousers, full-length front view",
+        "ar": "طقم سكراب رمادي برقبة V وبنطلون واسع، صورة أمامية كاملة"
+      },
+      "productAssociation": {
+        "productId": 20,
+        "productSlug": "kova-womens-scrub-set",
+        "colourCode": "grey"
+      },
+      "mappingStatus": "Owner-confirmed product/color mapping; database draft awaiting sizes, stock and deployment",
+      "usage": "Color-specific product gallery; database product remains a draft"
+    },
+    {
+      "number": 4,
+      "sourceId": "13FblKwFjvPCxOHYy6xiEXxLxfKu-F9xf",
+      "sourceName": "ELESAWY STUDIOS-4.jpg",
+      "sourceUrl": "https://drive.google.com/file/d/13FblKwFjvPCxOHYy6xiEXxLxfKu-F9xf/view",
+      "localSourcePath": "ELESAWY STUDIOS-20261021T195231Z-1-001/ELESAWY STUDIOS/ELESAWY STUDIOS-4.jpg",
+      "sha256": "31c3ce31dce2e23e52cd0b52f41e4ab1db6562f705e2af447d5ee280655d5056",
+      "sourceBytes": 15389366,
+      "sourceDimensions": {
+        "width": 2784,
+        "height": 4176,
+        "orientation": 1
+      },
+      "group": "blue-womens-set",
+      "observedColour": "blue",
+      "view": "pocket-detail",
+      "localPath": "apps/storefront/public/images/kova/studio-4.webp",
+      "publicPath": "/images/kova/studio-4.webp",
+      "dimensions": {
+        "width": 1333,
+        "height": 2000
+      },
+      "bytes": 456714,
+      "groupOrder": 7,
+      "alt": {
+        "en": "Blue V-neck scrub set, pocket and garment detail",
+        "ar": "طقم سكراب أزرق برقبة V، تفاصيل الجيوب والملابس"
+      },
+      "productAssociation": {
+        "productId": 20,
+        "productSlug": "kova-womens-scrub-set",
+        "colourCode": "blue"
+      },
+      "mappingStatus": "Owner-confirmed product/color mapping; database draft awaiting sizes, stock and deployment",
+      "usage": "Color-specific product gallery; database product remains a draft"
+    },
+    {
+      "number": 5,
+      "sourceId": "1f2Yfh1VklPjfnWLlXR49je31UFFTCCwK",
+      "sourceName": "ELESAWY STUDIOS-5.jpg",
+      "sourceUrl": "https://drive.google.com/file/d/1f2Yfh1VklPjfnWLlXR49je31UFFTCCwK/view",
+      "localSourcePath": "ELESAWY STUDIOS-20261021T195231Z-1-001/ELESAWY STUDIOS/ELESAWY STUDIOS-5.jpg",
+      "sha256": "1b2157e180d5182c2fb55281554946e6bf2f9de6620b1c68d1faee1d092f746c",
+      "sourceBytes": 15732641,
+      "sourceDimensions": {
+        "width": 2784,
+        "height": 4176,
+        "orientation": 1
+      },
+      "group": "blue-womens-set",
+      "observedColour": "blue",
+      "view": "side-detail",
+      "localPath": "apps/storefront/public/images/kova/studio-5.webp",
+      "publicPath": "/images/kova/studio-5.webp",
+      "dimensions": {
+        "width": 1333,
+        "height": 2000
+      },
+      "bytes": 521592,
+      "groupOrder": 9,
+      "alt": {
+        "en": "Blue V-neck scrub set, side garment detail",
+        "ar": "طقم سكراب أزرق برقبة V، تفاصيل جانبية للملابس"
+      },
+      "productAssociation": {
+        "productId": 20,
+        "productSlug": "kova-womens-scrub-set",
+        "colourCode": "blue"
+      },
+      "mappingStatus": "Owner-confirmed product/color mapping; database draft awaiting sizes, stock and deployment",
+      "usage": "Color-specific product gallery; database product remains a draft"
+    },
+    {
+      "number": 6,
+      "sourceId": "18U1VbHkKI960xiRlK7uWovR-oiLX9fRx",
+      "sourceName": "ELESAWY STUDIOS-6.jpg",
+      "sourceUrl": "https://drive.google.com/file/d/18U1VbHkKI960xiRlK7uWovR-oiLX9fRx/view",
+      "localSourcePath": "ELESAWY STUDIOS-20261021T195231Z-1-001/ELESAWY STUDIOS/ELESAWY STUDIOS-6.jpg",
+      "sha256": "f1e3f5c2e4ab4b519c88152c5039ef6431a35a42be2f188565e4d37d57351fa5",
+      "sourceBytes": 10681524,
+      "sourceDimensions": {
+        "width": 2784,
+        "height": 4176,
+        "orientation": 1
+      },
+      "group": "burgundy-demonstration",
+      "observedColour": "burgundy",
+      "view": "still-life",
+      "localPath": "apps/storefront/public/images/kova/studio-6.webp",
+      "publicPath": "/images/kova/studio-6.webp",
+      "dimensions": {
+        "width": 1333,
+        "height": 2000
+      },
+      "bytes": 326120,
+      "groupOrder": 1,
+      "alt": {
+        "en": "Burgundy scrub top on folded garments, still-life with a water bottle nearby",
+        "ar": "بلوزة سكراب نبيتي على ملابس مطوية، صورة ثابتة وبجوار الملابس زجاجة ماء"
+      },
+      "productAssociation": null,
+      "mappingStatus": "Not assigned: demonstration image excluded from product galleries",
+      "usage": "Not published: imagery is not evidence of fabric performance"
+    },
+    {
+      "number": 7,
+      "sourceId": "1ZFqxjxswCwENDl46VBTeWY0S5fYc-oty",
+      "sourceName": "ELESAWY STUDIOS-7.jpg",
+      "sourceUrl": "https://drive.google.com/file/d/1ZFqxjxswCwENDl46VBTeWY0S5fYc-oty/view",
+      "localSourcePath": "ELESAWY STUDIOS-20261021T195231Z-1-001/ELESAWY STUDIOS/ELESAWY STUDIOS-7.jpg",
+      "sha256": "ec92a2cab7da461873f3983ec714c32687f722ffdffbeb155c0b030b552bf1f0",
+      "sourceBytes": 13086099,
+      "sourceDimensions": {
+        "width": 2784,
+        "height": 4176,
+        "orientation": 1
+      },
+      "group": "burgundy-demonstration",
+      "observedColour": "burgundy",
+      "view": "water-demonstration",
+      "localPath": "apps/storefront/public/images/kova/studio-7.webp",
+      "publicPath": "/images/kova/studio-7.webp",
+      "dimensions": {
+        "width": 1333,
+        "height": 2000
+      },
+      "bytes": 477948,
+      "groupOrder": 4,
+      "alt": {
+        "en": "Burgundy scrub top on folded garments, water-pour demonstration frame",
+        "ar": "بلوزة سكراب نبيتي على ملابس مطوية، لقطة لسكب الماء على الملابس"
+      },
+      "productAssociation": null,
+      "mappingStatus": "Not assigned: demonstration image excluded from product galleries",
+      "usage": "Not published: imagery is not evidence of fabric performance"
+    },
+    {
+      "number": 8,
+      "sourceId": "1NtTwuVjYQo4BgsyXhZqyAyObkB3Jb7zh",
+      "sourceName": "ELESAWY STUDIOS-8.jpg",
+      "sourceUrl": "https://drive.google.com/file/d/1NtTwuVjYQo4BgsyXhZqyAyObkB3Jb7zh/view",
+      "localSourcePath": "ELESAWY STUDIOS-20261021T195231Z-1-001/ELESAWY STUDIOS/ELESAWY STUDIOS-8.jpg",
+      "sha256": "02aa3bab54e69abc20c89ce2b3092e1026e233cb83011fd1085a17d5d9df35b1",
+      "sourceBytes": 13058606,
+      "sourceDimensions": {
+        "width": 2784,
+        "height": 4176,
+        "orientation": 1
+      },
+      "group": "burgundy-demonstration",
+      "observedColour": "burgundy",
+      "view": "water-demonstration",
+      "localPath": "apps/storefront/public/images/kova/studio-8.webp",
+      "publicPath": "/images/kova/studio-8.webp",
+      "dimensions": {
+        "width": 1333,
+        "height": 2000
+      },
+      "bytes": 477476,
+      "groupOrder": 5,
+      "alt": {
+        "en": "Burgundy scrub top on folded garments, water-pour demonstration frame",
+        "ar": "بلوزة سكراب نبيتي على ملابس مطوية، لقطة لسكب الماء على الملابس"
+      },
+      "productAssociation": null,
+      "mappingStatus": "Not assigned: demonstration image excluded from product galleries",
+      "usage": "Not published: imagery is not evidence of fabric performance"
+    },
+    {
+      "number": 9,
+      "sourceId": "1g8l1GHUl0sAEaGYi-wnjSGgGxlHZLBoi",
+      "sourceName": "ELESAWY STUDIOS-9.jpg",
+      "sourceUrl": "https://drive.google.com/file/d/1g8l1GHUl0sAEaGYi-wnjSGgGxlHZLBoi/view",
+      "localSourcePath": "ELESAWY STUDIOS-20261021T195231Z-1-001/ELESAWY STUDIOS/ELESAWY STUDIOS-9.jpg",
+      "sha256": "aa858476563e86d0c99d5eddc6d59aa0b797d7061ce30c33525c3952f15bf7f7",
+      "sourceBytes": 12699344,
+      "sourceDimensions": {
+        "width": 2784,
+        "height": 4176,
+        "orientation": 1
+      },
+      "group": "burgundy-demonstration",
+      "observedColour": "burgundy",
+      "view": "water-demonstration",
+      "localPath": "apps/storefront/public/images/kova/studio-9.webp",
+      "publicPath": "/images/kova/studio-9.webp",
+      "dimensions": {
+        "width": 1333,
+        "height": 2000
+      },
+      "bytes": 433996,
+      "groupOrder": 6,
+      "alt": {
+        "en": "Burgundy scrub top on folded garments, water-pour demonstration frame",
+        "ar": "بلوزة سكراب نبيتي على ملابس مطوية، لقطة لسكب الماء على الملابس"
+      },
+      "productAssociation": null,
+      "mappingStatus": "Not assigned: demonstration image excluded from product galleries",
+      "usage": "Not published: imagery is not evidence of fabric performance"
+    },
+    {
+      "number": 10,
+      "sourceId": "16K8u6P209lrvgeLDNCLxEyKfETx2DE9v",
+      "sourceName": "ELESAWY STUDIOS-10.jpg",
+      "sourceUrl": "https://drive.google.com/file/d/16K8u6P209lrvgeLDNCLxEyKfETx2DE9v/view",
+      "localSourcePath": "ELESAWY STUDIOS-20261021T195231Z-1-001/ELESAWY STUDIOS/ELESAWY STUDIOS-10.jpg",
+      "sha256": "62a4da8655758d8fc4c21e72a4e139f486cc1080e79bfd01c8eb8a6beaaf017b",
+      "sourceBytes": 3943295,
+      "sourceDimensions": {
+        "width": 2784,
+        "height": 4176,
+        "orientation": 1
+      },
+      "group": "grey-womens-set",
+      "observedColour": "grey",
+      "view": "full-front",
+      "localPath": "apps/storefront/public/images/kova/studio-10.webp",
+      "publicPath": "/images/kova/studio-10.webp",
+      "dimensions": {
+        "width": 1333,
+        "height": 2000
+      },
+      "bytes": 146680,
+      "groupOrder": 5,
+      "alt": {
+        "en": "Grey V-neck scrub set with wide-leg trousers, full-length front view",
+        "ar": "طقم سكراب رمادي برقبة V وبنطلون واسع، صورة أمامية كاملة"
+      },
+      "productAssociation": {
+        "productId": 20,
+        "productSlug": "kova-womens-scrub-set",
+        "colourCode": "grey"
+      },
+      "mappingStatus": "Owner-confirmed product/color mapping; database draft awaiting sizes, stock and deployment",
+      "usage": "Homepage women editorial and grey product gallery"
+    },
+    {
+      "number": 11,
+      "sourceId": "1YbRKrwzqHnjj3EVbulT7YzUspPs-UD3F",
+      "sourceName": "ELESAWY STUDIOS-11.jpg",
+      "sourceUrl": "https://drive.google.com/file/d/1YbRKrwzqHnjj3EVbulT7YzUspPs-UD3F/view",
+      "localSourcePath": "ELESAWY STUDIOS-20261021T195231Z-1-001/ELESAWY STUDIOS/ELESAWY STUDIOS-11.jpg",
+      "sha256": "dcf9785baa6d276bfe84d7fa0bbd133a490ed838fd21e8628266a18a1bccc80d",
+      "sourceBytes": 12016458,
+      "sourceDimensions": {
+        "width": 2784,
+        "height": 4176,
+        "orientation": 1
+      },
+      "group": "grey-womens-set",
+      "observedColour": "grey",
+      "view": "pocket-detail",
+      "localPath": "apps/storefront/public/images/kova/studio-11.webp",
+      "publicPath": "/images/kova/studio-11.webp",
+      "dimensions": {
+        "width": 1333,
+        "height": 2000
+      },
+      "bytes": 537160,
+      "groupOrder": 16,
+      "alt": {
+        "en": "Grey V-neck scrub set with wide-leg trousers, pocket and garment detail",
+        "ar": "طقم سكراب رمادي برقبة V وبنطلون واسع، تفاصيل الجيوب والملابس"
+      },
+      "productAssociation": {
+        "productId": 20,
+        "productSlug": "kova-womens-scrub-set",
+        "colourCode": "grey"
+      },
+      "mappingStatus": "Owner-confirmed product/color mapping; database draft awaiting sizes, stock and deployment",
+      "usage": "Color-specific product gallery; database product remains a draft"
+    },
+    {
+      "number": 12,
+      "sourceId": "1-DuPglTDl5EWIPTYGu4BWWh3iT-F1J2K",
+      "sourceName": "ELESAWY STUDIOS-12.jpg",
+      "sourceUrl": "https://drive.google.com/file/d/1-DuPglTDl5EWIPTYGu4BWWh3iT-F1J2K/view",
+      "localSourcePath": "ELESAWY STUDIOS-20261021T195231Z-1-001/ELESAWY STUDIOS/ELESAWY STUDIOS-12.jpg",
+      "sha256": "b6fa18e646d67dc2ef44e0adfc5367ef1e185e5426c92afb15b83e0d04630b6f",
+      "sourceBytes": 5723662,
+      "sourceDimensions": {
+        "width": 2204,
+        "height": 3306,
+        "orientation": 1
+      },
+      "group": "grey-womens-set",
+      "observedColour": "grey",
+      "view": "trouser-detail",
+      "localPath": "apps/storefront/public/images/kova/studio-12.webp",
+      "publicPath": "/images/kova/studio-12.webp",
+      "dimensions": {
+        "width": 1333,
+        "height": 2000
+      },
+      "bytes": 505100,
+      "groupOrder": 17,
+      "alt": {
+        "en": "Grey V-neck scrub set with wide-leg trousers, trouser detail",
+        "ar": "طقم سكراب رمادي برقبة V وبنطلون واسع، تفاصيل البنطلون"
+      },
+      "productAssociation": {
+        "productId": 20,
+        "productSlug": "kova-womens-scrub-set",
+        "colourCode": "grey"
+      },
+      "mappingStatus": "Owner-confirmed product/color mapping; database draft awaiting sizes, stock and deployment",
+      "usage": "Color-specific product gallery; database product remains a draft"
+    },
+    {
+      "number": 13,
+      "sourceId": "1wtnMrdA_mpqhex0EsVNdt8X5QlcPN5Gh",
+      "sourceName": "ELESAWY STUDIOS-13.jpg",
+      "sourceUrl": "https://drive.google.com/file/d/1wtnMrdA_mpqhex0EsVNdt8X5QlcPN5Gh/view",
+      "localSourcePath": "ELESAWY STUDIOS-20261021T195231Z-1-001/ELESAWY STUDIOS/ELESAWY STUDIOS-13.jpg",
+      "sha256": "c3d82389902d94ed09b39c4b7fe69186d557c405765f9072f3272798bab2199a",
+      "sourceBytes": 4913499,
+      "sourceDimensions": {
+        "width": 2755,
+        "height": 4133,
+        "orientation": 1
+      },
+      "group": "grey-womens-set",
+      "observedColour": "grey",
+      "view": "full-front",
+      "localPath": "apps/storefront/public/images/kova/studio-13.webp",
+      "publicPath": "/images/kova/studio-13.webp",
+      "dimensions": {
+        "width": 1333,
+        "height": 2000
+      },
+      "bytes": 124334,
+      "groupOrder": 8,
+      "alt": {
+        "en": "Grey V-neck scrub set with wide-leg trousers, full-length front view",
+        "ar": "طقم سكراب رمادي برقبة V وبنطلون واسع، صورة أمامية كاملة"
+      },
+      "productAssociation": {
+        "productId": 20,
+        "productSlug": "kova-womens-scrub-set",
+        "colourCode": "grey"
+      },
+      "mappingStatus": "Owner-confirmed product/color mapping; database draft awaiting sizes, stock and deployment",
+      "usage": "Color-specific product gallery; database product remains a draft"
+    },
+    {
+      "number": 14,
+      "sourceId": "1Drx_2PR-YbODnJrZKnni8pRNLgPt1TK9",
+      "sourceName": "ELESAWY STUDIOS-14.jpg",
+      "sourceUrl": "https://drive.google.com/file/d/1Drx_2PR-YbODnJrZKnni8pRNLgPt1TK9/view",
+      "localSourcePath": "ELESAWY STUDIOS-20261021T195231Z-1-001/ELESAWY STUDIOS/ELESAWY STUDIOS-14.jpg",
+      "sha256": "7c5e6bbdccc82ecd9c7eb0b63f23928b5fddebc14421cdb45e4df7d2d0298c70",
+      "sourceBytes": 5573606,
+      "sourceDimensions": {
+        "width": 2784,
+        "height": 4176,
+        "orientation": 1
+      },
+      "group": "grey-womens-set",
+      "observedColour": "grey",
+      "view": "full-front",
+      "localPath": "apps/storefront/public/images/kova/studio-14.webp",
+      "publicPath": "/images/kova/studio-14.webp",
+      "dimensions": {
+        "width": 1333,
+        "height": 2000
+      },
+      "bytes": 125588,
+      "groupOrder": 1,
+      "alt": {
+        "en": "Grey V-neck scrub set with wide-leg trousers, full-length front view",
+        "ar": "طقم سكراب رمادي برقبة V وبنطلون واسع، صورة أمامية كاملة"
+      },
+      "productAssociation": {
+        "productId": 20,
+        "productSlug": "kova-womens-scrub-set",
+        "colourCode": "grey"
+      },
+      "mappingStatus": "Owner-confirmed product/color mapping; database draft awaiting sizes, stock and deployment",
+      "usage": "Homepage hero and grey product gallery"
+    },
+    {
+      "number": 15,
+      "sourceId": null,
+      "sourceName": "ELESAWY STUDIOS-15.jpg",
+      "sourceUrl": null,
+      "localSourcePath": "ELESAWY STUDIOS-20261021T195231Z-1-001/ELESAWY STUDIOS/ELESAWY STUDIOS-15.jpg",
+      "sha256": "cb7e6182835183c3891908efc38a12c1d0640015fd5779335b831ccca49a90b0",
+      "sourceBytes": 6599263,
+      "sourceDimensions": {
+        "width": 2784,
+        "height": 4176,
+        "orientation": 1
+      },
+      "group": "grey-womens-set",
+      "observedColour": "grey",
+      "view": "front-three-quarter",
+      "localPath": "apps/storefront/public/images/kova/studio-15.webp",
+      "publicPath": "/images/kova/studio-15.webp",
+      "dimensions": {
+        "width": 1333,
+        "height": 2000
+      },
+      "bytes": 180374,
+      "groupOrder": 9,
+      "alt": {
+        "en": "Grey V-neck scrub set with wide-leg trousers, front or three-quarter pose",
+        "ar": "طقم سكراب رمادي برقبة V وبنطلون واسع، صورة أمامية أو بزاوية"
+      },
+      "productAssociation": {
+        "productId": 20,
+        "productSlug": "kova-womens-scrub-set",
+        "colourCode": "grey"
+      },
+      "mappingStatus": "Owner-confirmed product/color mapping; database draft awaiting sizes, stock and deployment",
+      "usage": "Color-specific product gallery; database product remains a draft"
+    },
+    {
+      "number": 16,
+      "sourceId": null,
+      "sourceName": "ELESAWY STUDIOS-16.jpg",
+      "sourceUrl": null,
+      "localSourcePath": "ELESAWY STUDIOS-20261021T195231Z-1-001/ELESAWY STUDIOS/ELESAWY STUDIOS-16.jpg",
+      "sha256": "15a046fcf24725983da2288627381ddbd0fbdaf161d31cf2a97629bd32413158",
+      "sourceBytes": 6478253,
+      "sourceDimensions": {
+        "width": 2784,
+        "height": 4176,
+        "orientation": 1
+      },
+      "group": "grey-womens-set",
+      "observedColour": "grey",
+      "view": "front-three-quarter",
+      "localPath": "apps/storefront/public/images/kova/studio-16.webp",
+      "publicPath": "/images/kova/studio-16.webp",
+      "dimensions": {
+        "width": 1333,
+        "height": 2000
+      },
+      "bytes": 173158,
+      "groupOrder": 10,
+      "alt": {
+        "en": "Grey V-neck scrub set with wide-leg trousers, front or three-quarter pose",
+        "ar": "طقم سكراب رمادي برقبة V وبنطلون واسع، صورة أمامية أو بزاوية"
+      },
+      "productAssociation": {
+        "productId": 20,
+        "productSlug": "kova-womens-scrub-set",
+        "colourCode": "grey"
+      },
+      "mappingStatus": "Owner-confirmed product/color mapping; database draft awaiting sizes, stock and deployment",
+      "usage": "Color-specific product gallery; database product remains a draft"
+    },
+    {
+      "number": 17,
+      "sourceId": null,
+      "sourceName": "ELESAWY STUDIOS-17.jpg",
+      "sourceUrl": null,
+      "localSourcePath": "ELESAWY STUDIOS-20261021T195231Z-1-001/ELESAWY STUDIOS/ELESAWY STUDIOS-17.jpg",
+      "sha256": "d1182b69e3e2f65128df2d33e624a0007c59ab7f14777bcb3ccdc6e235cc04f9",
+      "sourceBytes": 5132101,
+      "sourceDimensions": {
+        "width": 2585,
+        "height": 3878,
+        "orientation": 1
+      },
+      "group": "grey-womens-set",
+      "observedColour": "grey",
+      "view": "side",
+      "localPath": "apps/storefront/public/images/kova/studio-17.webp",
+      "publicPath": "/images/kova/studio-17.webp",
+      "dimensions": {
+        "width": 1333,
+        "height": 2000
+      },
+      "bytes": 146576,
+      "groupOrder": 13,
+      "alt": {
+        "en": "Grey V-neck scrub set with wide-leg trousers, side view",
+        "ar": "طقم سكراب رمادي برقبة V وبنطلون واسع، صورة جانبية"
+      },
+      "productAssociation": {
+        "productId": 20,
+        "productSlug": "kova-womens-scrub-set",
+        "colourCode": "grey"
+      },
+      "mappingStatus": "Owner-confirmed product/color mapping; database draft awaiting sizes, stock and deployment",
+      "usage": "Color-specific product gallery; database product remains a draft"
+    },
+    {
+      "number": 18,
+      "sourceId": null,
+      "sourceName": "ELESAWY STUDIOS-18.jpg",
+      "sourceUrl": null,
+      "localSourcePath": "ELESAWY STUDIOS-20261021T195231Z-1-001/ELESAWY STUDIOS/ELESAWY STUDIOS-18.jpg",
+      "sha256": "89fa5b4663bf7c780f21ddbc37d716b63134f1f4b272c9754bdd14f64dbe0c90",
+      "sourceBytes": 4349286,
+      "sourceDimensions": {
+        "width": 2529,
+        "height": 3794,
+        "orientation": 1
+      },
+      "group": "grey-womens-set",
+      "observedColour": "grey",
+      "view": "full-front",
+      "localPath": "apps/storefront/public/images/kova/studio-18.webp",
+      "publicPath": "/images/kova/studio-18.webp",
+      "dimensions": {
+        "width": 1333,
+        "height": 2000
+      },
+      "bytes": 157396,
+      "groupOrder": 6,
+      "alt": {
+        "en": "Grey V-neck scrub set with wide-leg trousers, full-length front view",
+        "ar": "طقم سكراب رمادي برقبة V وبنطلون واسع، صورة أمامية كاملة"
+      },
+      "productAssociation": {
+        "productId": 20,
+        "productSlug": "kova-womens-scrub-set",
+        "colourCode": "grey"
+      },
+      "mappingStatus": "Owner-confirmed product/color mapping; database draft awaiting sizes, stock and deployment",
+      "usage": "Color-specific product gallery; database product remains a draft"
+    },
+    {
+      "number": 19,
+      "sourceId": null,
+      "sourceName": "ELESAWY STUDIOS-19.jpg",
+      "sourceUrl": null,
+      "localSourcePath": "ELESAWY STUDIOS-20261021T195231Z-1-001/ELESAWY STUDIOS/ELESAWY STUDIOS-19.jpg",
+      "sha256": "2c1ef5f3429b19172496ea697aad99defac287f048edde6803062c69004a4ae0",
+      "sourceBytes": 4499405,
+      "sourceDimensions": {
+        "width": 2681,
+        "height": 4022,
+        "orientation": 1
+      },
+      "group": "grey-womens-set",
+      "observedColour": "grey",
+      "view": "full-front",
+      "localPath": "apps/storefront/public/images/kova/studio-19.webp",
+      "publicPath": "/images/kova/studio-19.webp",
+      "dimensions": {
+        "width": 1333,
+        "height": 2000
+      },
+      "bytes": 112422,
+      "groupOrder": 7,
+      "alt": {
+        "en": "Grey V-neck scrub set with wide-leg trousers, full-length front view",
+        "ar": "طقم سكراب رمادي برقبة V وبنطلون واسع، صورة أمامية كاملة"
+      },
+      "productAssociation": {
+        "productId": 20,
+        "productSlug": "kova-womens-scrub-set",
+        "colourCode": "grey"
+      },
+      "mappingStatus": "Owner-confirmed product/color mapping; database draft awaiting sizes, stock and deployment",
+      "usage": "Color-specific product gallery; database product remains a draft"
+    },
+    {
+      "number": 20,
+      "sourceId": null,
+      "sourceName": "ELESAWY STUDIOS-20.jpg",
+      "sourceUrl": null,
+      "localSourcePath": "ELESAWY STUDIOS-20261021T195231Z-1-001/ELESAWY STUDIOS/ELESAWY STUDIOS-20.jpg",
+      "sha256": "e4e4552b447470711dcc83c6238f1cef328af329fe19968d55f892f9e12aee09",
+      "sourceBytes": 8137928,
+      "sourceDimensions": {
+        "width": 2784,
+        "height": 4176,
+        "orientation": 1
+      },
+      "group": "grey-womens-set",
+      "observedColour": "grey",
+      "view": "trouser-detail",
+      "localPath": "apps/storefront/public/images/kova/studio-20.webp",
+      "publicPath": "/images/kova/studio-20.webp",
+      "dimensions": {
+        "width": 1333,
+        "height": 2000
+      },
+      "bytes": 299388,
+      "groupOrder": 18,
+      "alt": {
+        "en": "Grey V-neck scrub set with wide-leg trousers, trouser detail",
+        "ar": "طقم سكراب رمادي برقبة V وبنطلون واسع، تفاصيل البنطلون"
+      },
+      "productAssociation": {
+        "productId": 20,
+        "productSlug": "kova-womens-scrub-set",
+        "colourCode": "grey"
+      },
+      "mappingStatus": "Owner-confirmed product/color mapping; database draft awaiting sizes, stock and deployment",
+      "usage": "Color-specific product gallery; database product remains a draft"
+    },
+    {
+      "number": 21,
+      "sourceId": null,
+      "sourceName": "ELESAWY STUDIOS-21.jpg",
+      "sourceUrl": null,
+      "localSourcePath": "ELESAWY STUDIOS-20261021T195231Z-1-001/ELESAWY STUDIOS/ELESAWY STUDIOS-21.jpg",
+      "sha256": "d2334877ccf8ecdb433a674d209ed9995e2c6094c87670427c4c14920fff61c8",
+      "sourceBytes": 8310095,
+      "sourceDimensions": {
+        "width": 2784,
+        "height": 4176,
+        "orientation": 1
+      },
+      "group": "grey-womens-set",
+      "observedColour": "grey",
+      "view": "pocket-detail",
+      "localPath": "apps/storefront/public/images/kova/studio-21.webp",
+      "publicPath": "/images/kova/studio-21.webp",
+      "dimensions": {
+        "width": 1333,
+        "height": 2000
+      },
+      "bytes": 303546,
+      "groupOrder": 15,
+      "alt": {
+        "en": "Grey V-neck scrub set with wide-leg trousers, pocket and garment detail",
+        "ar": "طقم سكراب رمادي برقبة V وبنطلون واسع، تفاصيل الجيوب والملابس"
+      },
+      "productAssociation": {
+        "productId": 20,
+        "productSlug": "kova-womens-scrub-set",
+        "colourCode": "grey"
+      },
+      "mappingStatus": "Owner-confirmed product/color mapping; database draft awaiting sizes, stock and deployment",
+      "usage": "Color-specific product gallery; database product remains a draft"
+    },
+    {
+      "number": 22,
+      "sourceId": null,
+      "sourceName": "ELESAWY STUDIOS-22.jpg",
+      "sourceUrl": null,
+      "localSourcePath": "ELESAWY STUDIOS-20261021T195231Z-1-001/ELESAWY STUDIOS/ELESAWY STUDIOS-22.jpg",
+      "sha256": "de92550d4130789eb4ecc3aaeed2b4d81508c4b08b852e2ec15f3ea4831a829f",
+      "sourceBytes": 6408059,
+      "sourceDimensions": {
+        "width": 2784,
+        "height": 4176,
+        "orientation": 1
+      },
+      "group": "grey-womens-set",
+      "observedColour": "grey",
+      "view": "front-three-quarter",
+      "localPath": "apps/storefront/public/images/kova/studio-22.webp",
+      "publicPath": "/images/kova/studio-22.webp",
+      "dimensions": {
+        "width": 1333,
+        "height": 2000
+      },
+      "bytes": 170400,
+      "groupOrder": 11,
+      "alt": {
+        "en": "Grey V-neck scrub set with wide-leg trousers, front or three-quarter pose",
+        "ar": "طقم سكراب رمادي برقبة V وبنطلون واسع، صورة أمامية أو بزاوية"
+      },
+      "productAssociation": {
+        "productId": 20,
+        "productSlug": "kova-womens-scrub-set",
+        "colourCode": "grey"
+      },
+      "mappingStatus": "Owner-confirmed product/color mapping; database draft awaiting sizes, stock and deployment",
+      "usage": "Color-specific product gallery; database product remains a draft"
+    },
+    {
+      "number": 23,
+      "sourceId": null,
+      "sourceName": "ELESAWY STUDIOS-23.jpg",
+      "sourceUrl": null,
+      "localSourcePath": "ELESAWY STUDIOS-20261021T195231Z-1-001/ELESAWY STUDIOS/ELESAWY STUDIOS-23.jpg",
+      "sha256": "1758c69a008d2c4bfda29147db09797d5a1e2fe5970b1941f1f5725655ffda87",
+      "sourceBytes": 6197714,
+      "sourceDimensions": {
+        "width": 2784,
+        "height": 4176,
+        "orientation": 1
+      },
+      "group": "grey-womens-set",
+      "observedColour": "grey",
+      "view": "side",
+      "localPath": "apps/storefront/public/images/kova/studio-23.webp",
+      "publicPath": "/images/kova/studio-23.webp",
+      "dimensions": {
+        "width": 1333,
+        "height": 2000
+      },
+      "bytes": 161132,
+      "groupOrder": 14,
+      "alt": {
+        "en": "Grey V-neck scrub set with wide-leg trousers, side view",
+        "ar": "طقم سكراب رمادي برقبة V وبنطلون واسع، صورة جانبية"
+      },
+      "productAssociation": {
+        "productId": 20,
+        "productSlug": "kova-womens-scrub-set",
+        "colourCode": "grey"
+      },
+      "mappingStatus": "Owner-confirmed product/color mapping; database draft awaiting sizes, stock and deployment",
+      "usage": "Color-specific product gallery; database product remains a draft"
+    },
+    {
+      "number": 24,
+      "sourceId": null,
+      "sourceName": "ELESAWY STUDIOS-24.jpg",
+      "sourceUrl": null,
+      "localSourcePath": "ELESAWY STUDIOS-20261021T195231Z-1-001/ELESAWY STUDIOS/ELESAWY STUDIOS-24.jpg",
+      "sha256": "deba94e3704c9ee3f1e84308d80645a1a4764bbcafc28d88e34e3f5f3dc439a0",
+      "sourceBytes": 5636016,
+      "sourceDimensions": {
+        "width": 2784,
+        "height": 4176,
+        "orientation": 1
+      },
+      "group": "grey-womens-set",
+      "observedColour": "grey",
+      "view": "full-front",
+      "localPath": "apps/storefront/public/images/kova/studio-24.webp",
+      "publicPath": "/images/kova/studio-24.webp",
+      "dimensions": {
+        "width": 1333,
+        "height": 2000
+      },
+      "bytes": 120918,
+      "groupOrder": 12,
+      "alt": {
+        "en": "Grey V-neck scrub set with wide-leg trousers, full-length front view",
+        "ar": "طقم سكراب رمادي برقبة V وبنطلون واسع، صورة أمامية كاملة"
+      },
+      "productAssociation": {
+        "productId": 20,
+        "productSlug": "kova-womens-scrub-set",
+        "colourCode": "grey"
+      },
+      "mappingStatus": "Owner-confirmed product/color mapping; database draft awaiting sizes, stock and deployment",
+      "usage": "Color-specific product gallery; database product remains a draft"
+    },
+    {
+      "number": 25,
+      "sourceId": null,
+      "sourceName": "ELESAWY STUDIOS-25.jpg",
+      "sourceUrl": null,
+      "localSourcePath": "ELESAWY STUDIOS-20261021T195231Z-1-001/ELESAWY STUDIOS/ELESAWY STUDIOS-25.jpg",
+      "sha256": "abed83c91fec1a5da6afaec884740ff3432bd3b560ab2b254c7bd98b987b300d",
+      "sourceBytes": 8692628,
+      "sourceDimensions": {
+        "width": 2784,
+        "height": 4176,
+        "orientation": 1
+      },
+      "group": "blue-womens-set",
+      "observedColour": "blue",
+      "view": "front-three-quarter",
+      "localPath": "apps/storefront/public/images/kova/studio-25.webp",
+      "publicPath": "/images/kova/studio-25.webp",
+      "dimensions": {
+        "width": 1333,
+        "height": 2000
+      },
+      "bytes": 144362,
+      "groupOrder": 4,
+      "alt": {
+        "en": "Blue V-neck scrub set, front or three-quarter pose",
+        "ar": "طقم سكراب أزرق برقبة V، صورة أمامية أو بزاوية"
+      },
+      "productAssociation": {
+        "productId": 20,
+        "productSlug": "kova-womens-scrub-set",
+        "colourCode": "blue"
+      },
+      "mappingStatus": "Owner-confirmed product/color mapping; database draft awaiting sizes, stock and deployment",
+      "usage": "Color-specific product gallery; database product remains a draft"
+    },
+    {
+      "number": 26,
+      "sourceId": null,
+      "sourceName": "ELESAWY STUDIOS-26.jpg",
+      "sourceUrl": null,
+      "localSourcePath": "ELESAWY STUDIOS-20261021T195231Z-1-001/ELESAWY STUDIOS/ELESAWY STUDIOS-26.jpg",
+      "sha256": "97f9e5d171ed7aa4f80e3e1af2469bf3d8ba8adc5d0f47bb9e58e12418d963b1",
+      "sourceBytes": 9566396,
+      "sourceDimensions": {
+        "width": 2784,
+        "height": 4176,
+        "orientation": 1
+      },
+      "group": "blue-womens-set",
+      "observedColour": "blue",
+      "view": "front-three-quarter",
+      "localPath": "apps/storefront/public/images/kova/studio-26.webp",
+      "publicPath": "/images/kova/studio-26.webp",
+      "dimensions": {
+        "width": 1333,
+        "height": 2000
+      },
+      "bytes": 171068,
+      "groupOrder": 5,
+      "alt": {
+        "en": "Blue V-neck scrub set, front or three-quarter pose",
+        "ar": "طقم سكراب أزرق برقبة V، صورة أمامية أو بزاوية"
+      },
+      "productAssociation": {
+        "productId": 20,
+        "productSlug": "kova-womens-scrub-set",
+        "colourCode": "blue"
+      },
+      "mappingStatus": "Owner-confirmed product/color mapping; database draft awaiting sizes, stock and deployment",
+      "usage": "Color-specific product gallery; database product remains a draft"
+    },
+    {
+      "number": 27,
+      "sourceId": null,
+      "sourceName": "ELESAWY STUDIOS-27.jpg",
+      "sourceUrl": null,
+      "localSourcePath": "ELESAWY STUDIOS-20261021T195231Z-1-001/ELESAWY STUDIOS/ELESAWY STUDIOS-27.jpg",
+      "sha256": "bb623d938e7a75aa6405a6b74139e124f98790b8e13dca5efa9c73495ffc7ce7",
+      "sourceBytes": 10188146,
+      "sourceDimensions": {
+        "width": 2784,
+        "height": 4176,
+        "orientation": 1
+      },
+      "group": "blue-womens-set",
+      "observedColour": "blue",
+      "view": "front-three-quarter",
+      "localPath": "apps/storefront/public/images/kova/studio-27.webp",
+      "publicPath": "/images/kova/studio-27.webp",
+      "dimensions": {
+        "width": 1333,
+        "height": 2000
+      },
+      "bytes": 204986,
+      "groupOrder": 6,
+      "alt": {
+        "en": "Blue V-neck scrub set, front or three-quarter pose",
+        "ar": "طقم سكراب أزرق برقبة V، صورة أمامية أو بزاوية"
+      },
+      "productAssociation": {
+        "productId": 20,
+        "productSlug": "kova-womens-scrub-set",
+        "colourCode": "blue"
+      },
+      "mappingStatus": "Owner-confirmed product/color mapping; database draft awaiting sizes, stock and deployment",
+      "usage": "Color-specific product gallery; database product remains a draft"
+    },
+    {
+      "number": 28,
+      "sourceId": null,
+      "sourceName": "ELESAWY STUDIOS-28.jpg",
+      "sourceUrl": null,
+      "localSourcePath": "ELESAWY STUDIOS-20261021T195231Z-1-001/ELESAWY STUDIOS/ELESAWY STUDIOS-28.jpg",
+      "sha256": "1c08f4eadcca7ee6f1710562d823b79d1bb83a77e222bc72f609b8950a30f3ba",
+      "sourceBytes": 6147287,
+      "sourceDimensions": {
+        "width": 2594,
+        "height": 3891,
+        "orientation": 1
+      },
+      "group": "burgundy-womens-set",
+      "observedColour": "burgundy",
+      "view": "front-three-quarter",
+      "localPath": "apps/storefront/public/images/kova/studio-28.webp",
+      "publicPath": "/images/kova/studio-28.webp",
+      "dimensions": {
+        "width": 1333,
+        "height": 2000
+      },
+      "bytes": 154288,
+      "groupOrder": 4,
+      "alt": {
+        "en": "Burgundy V-neck scrub set, front or three-quarter pose",
+        "ar": "طقم سكراب نبيتي برقبة V، صورة أمامية أو بزاوية"
+      },
+      "productAssociation": {
+        "productId": 20,
+        "productSlug": "kova-womens-scrub-set",
+        "colourCode": "burgundy"
+      },
+      "mappingStatus": "Owner-confirmed product/color mapping; database draft awaiting sizes, stock and deployment",
+      "usage": "Color-specific product gallery; database product remains a draft"
+    },
+    {
+      "number": 29,
+      "sourceId": null,
+      "sourceName": "ELESAWY STUDIOS-29.jpg",
+      "sourceUrl": null,
+      "localSourcePath": "ELESAWY STUDIOS-20261021T195231Z-1-001/ELESAWY STUDIOS/ELESAWY STUDIOS-29.jpg",
+      "sha256": "2a4f0d3fc81ec0c5050d18723ee16e07209145f61a624a7be80c2a03a3270b2c",
+      "sourceBytes": 7074775,
+      "sourceDimensions": {
+        "width": 2784,
+        "height": 4176,
+        "orientation": 1
+      },
+      "group": "blue-womens-set",
+      "observedColour": "blue",
+      "view": "full-front",
+      "localPath": "apps/storefront/public/images/kova/studio-29.webp",
+      "publicPath": "/images/kova/studio-29.webp",
+      "dimensions": {
+        "width": 1333,
+        "height": 2000
+      },
+      "bytes": 112490,
+      "groupOrder": 1,
+      "alt": {
+        "en": "Blue V-neck scrub set, full-length front view",
+        "ar": "طقم سكراب أزرق برقبة V، صورة أمامية كاملة"
+      },
+      "productAssociation": {
+        "productId": 20,
+        "productSlug": "kova-womens-scrub-set",
+        "colourCode": "blue"
+      },
+      "mappingStatus": "Owner-confirmed product/color mapping; database draft awaiting sizes, stock and deployment",
+      "usage": "Color-specific product gallery; database product remains a draft"
+    },
+    {
+      "number": 30,
+      "sourceId": null,
+      "sourceName": "ELESAWY STUDIOS-30.jpg",
+      "sourceUrl": null,
+      "localSourcePath": "ELESAWY STUDIOS-20261021T195231Z-1-001/ELESAWY STUDIOS/ELESAWY STUDIOS-30.jpg",
+      "sha256": "0ec1d72c622d074b392e5cea31ea4c9714f7a8f62aac961b1eff76fde92f9d08",
+      "sourceBytes": 7068507,
+      "sourceDimensions": {
+        "width": 2784,
+        "height": 4176,
+        "orientation": 1
+      },
+      "group": "blue-womens-set",
+      "observedColour": "blue",
+      "view": "full-front",
+      "localPath": "apps/storefront/public/images/kova/studio-30.webp",
+      "publicPath": "/images/kova/studio-30.webp",
+      "dimensions": {
+        "width": 1333,
+        "height": 2000
+      },
+      "bytes": 111820,
+      "groupOrder": 2,
+      "alt": {
+        "en": "Blue V-neck scrub set, full-length front view",
+        "ar": "طقم سكراب أزرق برقبة V، صورة أمامية كاملة"
+      },
+      "productAssociation": {
+        "productId": 20,
+        "productSlug": "kova-womens-scrub-set",
+        "colourCode": "blue"
+      },
+      "mappingStatus": "Owner-confirmed product/color mapping; database draft awaiting sizes, stock and deployment",
+      "usage": "Color-specific product gallery; database product remains a draft"
+    },
+    {
+      "number": 31,
+      "sourceId": null,
+      "sourceName": "ELESAWY STUDIOS-31.jpg",
+      "sourceUrl": null,
+      "localSourcePath": "ELESAWY STUDIOS-20261021T195231Z-1-001/ELESAWY STUDIOS/ELESAWY STUDIOS-31.jpg",
+      "sha256": "6efed62fced1816dc34e3d7c942ca24c541b171a3553bd95c53bc405744d8d8e",
+      "sourceBytes": 15387131,
+      "sourceDimensions": {
+        "width": 2784,
+        "height": 4176,
+        "orientation": 1
+      },
+      "group": "blue-womens-set",
+      "observedColour": "blue",
+      "view": "pocket-detail",
+      "localPath": "apps/storefront/public/images/kova/studio-31.webp",
+      "publicPath": "/images/kova/studio-31.webp",
+      "dimensions": {
+        "width": 1333,
+        "height": 2000
+      },
+      "bytes": 471050,
+      "groupOrder": 8,
+      "alt": {
+        "en": "Blue V-neck scrub set, pocket and garment detail",
+        "ar": "طقم سكراب أزرق برقبة V، تفاصيل الجيوب والملابس"
+      },
+      "productAssociation": {
+        "productId": 20,
+        "productSlug": "kova-womens-scrub-set",
+        "colourCode": "blue"
+      },
+      "mappingStatus": "Owner-confirmed product/color mapping; database draft awaiting sizes, stock and deployment",
+      "usage": "Color-specific product gallery; database product remains a draft"
+    },
+    {
+      "number": 32,
+      "sourceId": null,
+      "sourceName": "ELESAWY STUDIOS-32.jpg",
+      "sourceUrl": null,
+      "localSourcePath": "ELESAWY STUDIOS-20261021T195231Z-1-001/ELESAWY STUDIOS/ELESAWY STUDIOS-32.jpg",
+      "sha256": "56c15dc5d89efbef0cc9e5b414bdb61615df08e305f559c4c5c40173c439793f",
+      "sourceBytes": 11452167,
+      "sourceDimensions": {
+        "width": 2784,
+        "height": 4176,
+        "orientation": 1
+      },
+      "group": "blue-womens-set",
+      "observedColour": "blue",
+      "view": "trouser-detail",
+      "localPath": "apps/storefront/public/images/kova/studio-32.webp",
+      "publicPath": "/images/kova/studio-32.webp",
+      "dimensions": {
+        "width": 1333,
+        "height": 2000
+      },
+      "bytes": 261500,
+      "groupOrder": 10,
+      "alt": {
+        "en": "Blue V-neck scrub set, trouser detail",
+        "ar": "طقم سكراب أزرق برقبة V، تفاصيل البنطلون"
+      },
+      "productAssociation": {
+        "productId": 20,
+        "productSlug": "kova-womens-scrub-set",
+        "colourCode": "blue"
+      },
+      "mappingStatus": "Owner-confirmed product/color mapping; database draft awaiting sizes, stock and deployment",
+      "usage": "Color-specific product gallery; database product remains a draft"
+    },
+    {
+      "number": 33,
+      "sourceId": null,
+      "sourceName": "ELESAWY STUDIOS-33.jpg",
+      "sourceUrl": null,
+      "localSourcePath": "ELESAWY STUDIOS-20261021T195231Z-1-001/ELESAWY STUDIOS/ELESAWY STUDIOS-33.jpg",
+      "sha256": "9dd29edb4dc7fdffd851751902a031314bbc4228b5d967795d614ac554cf4797",
+      "sourceBytes": 9403493,
+      "sourceDimensions": {
+        "width": 2784,
+        "height": 4176,
+        "orientation": 1
+      },
+      "group": "blue-womens-set",
+      "observedColour": "blue",
+      "view": "full-front",
+      "localPath": "apps/storefront/public/images/kova/studio-33.webp",
+      "publicPath": "/images/kova/studio-33.webp",
+      "dimensions": {
+        "width": 1333,
+        "height": 2000
+      },
+      "bytes": 189602,
+      "groupOrder": 3,
+      "alt": {
+        "en": "Blue V-neck scrub set, full-length front view",
+        "ar": "طقم سكراب أزرق برقبة V، صورة أمامية كاملة"
+      },
+      "productAssociation": {
+        "productId": 20,
+        "productSlug": "kova-womens-scrub-set",
+        "colourCode": "blue"
+      },
+      "mappingStatus": "Owner-confirmed product/color mapping; database draft awaiting sizes, stock and deployment",
+      "usage": "Color-specific product gallery; database product remains a draft"
+    },
+    {
+      "number": 34,
+      "sourceId": null,
+      "sourceName": "ELESAWY STUDIOS-34.jpg",
+      "sourceUrl": null,
+      "localSourcePath": "ELESAWY STUDIOS-20261021T195231Z-1-001/ELESAWY STUDIOS/ELESAWY STUDIOS-34.jpg",
+      "sha256": "7b784998f4ff946b9f80ef4ec82ef645ef6f1ba4e58e48d6e89c78c2c0dbd32c",
+      "sourceBytes": 6993845,
+      "sourceDimensions": {
+        "width": 2784,
+        "height": 4176,
+        "orientation": 1
+      },
+      "group": "burgundy-womens-set",
+      "observedColour": "burgundy",
+      "view": "full-front",
+      "localPath": "apps/storefront/public/images/kova/studio-34.webp",
+      "publicPath": "/images/kova/studio-34.webp",
+      "dimensions": {
+        "width": 1333,
+        "height": 2000
+      },
+      "bytes": 144874,
+      "groupOrder": 5,
+      "alt": {
+        "en": "Burgundy V-neck scrub set, full-length front view",
+        "ar": "طقم سكراب نبيتي برقبة V، صورة أمامية كاملة"
+      },
+      "productAssociation": {
+        "productId": 20,
+        "productSlug": "kova-womens-scrub-set",
+        "colourCode": "burgundy"
+      },
+      "mappingStatus": "Owner-confirmed product/color mapping; database draft awaiting sizes, stock and deployment",
+      "usage": "Color-specific product gallery; database product remains a draft"
+    },
+    {
+      "number": 35,
+      "sourceId": null,
+      "sourceName": "ELESAWY STUDIOS-35.jpg",
+      "sourceUrl": null,
+      "localSourcePath": "ELESAWY STUDIOS-20261021T195231Z-1-001/ELESAWY STUDIOS/ELESAWY STUDIOS-35.jpg",
+      "sha256": "acf796af3ee95482b74d5cc36c340c91046e7d07ef9f936935e38258fe524fba",
+      "sourceBytes": 7052894,
+      "sourceDimensions": {
+        "width": 2784,
+        "height": 4176,
+        "orientation": 1
+      },
+      "group": "burgundy-womens-set",
+      "observedColour": "burgundy",
+      "view": "front-three-quarter",
+      "localPath": "apps/storefront/public/images/kova/studio-35.webp",
+      "publicPath": "/images/kova/studio-35.webp",
+      "dimensions": {
+        "width": 1333,
+        "height": 2000
+      },
+      "bytes": 156816,
+      "groupOrder": 6,
+      "alt": {
+        "en": "Burgundy V-neck scrub set, front or three-quarter pose",
+        "ar": "طقم سكراب نبيتي برقبة V، صورة أمامية أو بزاوية"
+      },
+      "productAssociation": {
+        "productId": 20,
+        "productSlug": "kova-womens-scrub-set",
+        "colourCode": "burgundy"
+      },
+      "mappingStatus": "Owner-confirmed product/color mapping; database draft awaiting sizes, stock and deployment",
+      "usage": "Color-specific product gallery; database product remains a draft"
+    },
+    {
+      "number": 36,
+      "sourceId": null,
+      "sourceName": "ELESAWY STUDIOS-36.jpg",
+      "sourceUrl": null,
+      "localSourcePath": "ELESAWY STUDIOS-20261021T195231Z-1-001/ELESAWY STUDIOS/ELESAWY STUDIOS-36.jpg",
+      "sha256": "44e2e4af6f9e5de2ec311e6e3aee7a9263866dfd1f894716b3a36379460ae426",
+      "sourceBytes": 7552285,
+      "sourceDimensions": {
+        "width": 2784,
+        "height": 4176,
+        "orientation": 1
+      },
+      "group": "burgundy-womens-set",
+      "observedColour": "burgundy",
+      "view": "front-three-quarter",
+      "localPath": "apps/storefront/public/images/kova/studio-36.webp",
+      "publicPath": "/images/kova/studio-36.webp",
+      "dimensions": {
+        "width": 1333,
+        "height": 2000
+      },
+      "bytes": 202604,
+      "groupOrder": 7,
+      "alt": {
+        "en": "Burgundy V-neck scrub set, front or three-quarter pose",
+        "ar": "طقم سكراب نبيتي برقبة V، صورة أمامية أو بزاوية"
+      },
+      "productAssociation": {
+        "productId": 20,
+        "productSlug": "kova-womens-scrub-set",
+        "colourCode": "burgundy"
+      },
+      "mappingStatus": "Owner-confirmed product/color mapping; database draft awaiting sizes, stock and deployment",
+      "usage": "Color-specific product gallery; database product remains a draft"
+    },
+    {
+      "number": 37,
+      "sourceId": null,
+      "sourceName": "ELESAWY STUDIOS-37.jpg",
+      "sourceUrl": null,
+      "localSourcePath": "ELESAWY STUDIOS-20261021T195231Z-1-001/ELESAWY STUDIOS/ELESAWY STUDIOS-37.jpg",
+      "sha256": "e18431bbbe12a2f15b79eae83c0edac012bb7cf205c7b2dcc8dee3b210efbe1c",
+      "sourceBytes": 6133788,
+      "sourceDimensions": {
+        "width": 2784,
+        "height": 4176,
+        "orientation": 1
+      },
+      "group": "burgundy-womens-set",
+      "observedColour": "burgundy",
+      "view": "side",
+      "localPath": "apps/storefront/public/images/kova/studio-37.webp",
+      "publicPath": "/images/kova/studio-37.webp",
+      "dimensions": {
+        "width": 1333,
+        "height": 2000
+      },
+      "bytes": 122142,
+      "groupOrder": 8,
+      "alt": {
+        "en": "Burgundy V-neck scrub set, side view",
+        "ar": "طقم سكراب نبيتي برقبة V، صورة جانبية"
+      },
+      "productAssociation": {
+        "productId": 20,
+        "productSlug": "kova-womens-scrub-set",
+        "colourCode": "burgundy"
+      },
+      "mappingStatus": "Owner-confirmed product/color mapping; database draft awaiting sizes, stock and deployment",
+      "usage": "Color-specific product gallery; database product remains a draft"
+    },
+    {
+      "number": 38,
+      "sourceId": null,
+      "sourceName": "ELESAWY STUDIOS-38.jpg",
+      "sourceUrl": null,
+      "localSourcePath": "ELESAWY STUDIOS-20261021T195231Z-1-001/ELESAWY STUDIOS/ELESAWY STUDIOS-38.jpg",
+      "sha256": "58b64d9c11659233513f5c14c96d340d395a22c7499f074a21e5ca1debf60797",
+      "sourceBytes": 6760768,
+      "sourceDimensions": {
+        "width": 2784,
+        "height": 4176,
+        "orientation": 1
+      },
+      "group": "burgundy-womens-set",
+      "observedColour": "burgundy",
+      "view": "front-three-quarter",
+      "localPath": "apps/storefront/public/images/kova/studio-38.webp",
+      "publicPath": "/images/kova/studio-38.webp",
+      "dimensions": {
+        "width": 1333,
+        "height": 2000
+      },
+      "bytes": 112228,
+      "groupOrder": 9,
+      "alt": {
+        "en": "Burgundy V-neck scrub set, front or three-quarter pose",
+        "ar": "طقم سكراب نبيتي برقبة V، صورة أمامية أو بزاوية"
+      },
+      "productAssociation": {
+        "productId": 20,
+        "productSlug": "kova-womens-scrub-set",
+        "colourCode": "burgundy"
+      },
+      "mappingStatus": "Owner-confirmed product/color mapping; database draft awaiting sizes, stock and deployment",
+      "usage": "Color-specific product gallery; database product remains a draft"
+    },
+    {
+      "number": 39,
+      "sourceId": null,
+      "sourceName": "ELESAWY STUDIOS-39.jpg",
+      "sourceUrl": null,
+      "localSourcePath": "ELESAWY STUDIOS-20261021T195231Z-1-001/ELESAWY STUDIOS/ELESAWY STUDIOS-39.jpg",
+      "sha256": "e7919c0de967440845abef5f35e5b0de29b0199b9cd75604346c0ee458747945",
+      "sourceBytes": 6569457,
+      "sourceDimensions": {
+        "width": 2784,
+        "height": 4176,
+        "orientation": 1
+      },
+      "group": "burgundy-womens-set",
+      "observedColour": "burgundy",
+      "view": "front-three-quarter",
+      "localPath": "apps/storefront/public/images/kova/studio-39.webp",
+      "publicPath": "/images/kova/studio-39.webp",
+      "dimensions": {
+        "width": 1333,
+        "height": 2000
+      },
+      "bytes": 104710,
+      "groupOrder": 10,
+      "alt": {
+        "en": "Burgundy V-neck scrub set, front or three-quarter pose",
+        "ar": "طقم سكراب نبيتي برقبة V، صورة أمامية أو بزاوية"
+      },
+      "productAssociation": {
+        "productId": 20,
+        "productSlug": "kova-womens-scrub-set",
+        "colourCode": "burgundy"
+      },
+      "mappingStatus": "Owner-confirmed product/color mapping; database draft awaiting sizes, stock and deployment",
+      "usage": "Color-specific product gallery; database product remains a draft"
+    },
+    {
+      "number": 40,
+      "sourceId": null,
+      "sourceName": "ELESAWY STUDIOS-40.jpg",
+      "sourceUrl": null,
+      "localSourcePath": "ELESAWY STUDIOS-20261021T195231Z-1-001/ELESAWY STUDIOS/ELESAWY STUDIOS-40.jpg",
+      "sha256": "571dfa975842f831e0e46b5dbaaed2dc21712cb6250e69fe40a81581f22b280a",
+      "sourceBytes": 7455496,
+      "sourceDimensions": {
+        "width": 2784,
+        "height": 4176,
+        "orientation": 1
+      },
+      "group": "burgundy-womens-set",
+      "observedColour": "burgundy",
+      "view": "front-three-quarter",
+      "localPath": "apps/storefront/public/images/kova/studio-40.webp",
+      "publicPath": "/images/kova/studio-40.webp",
+      "dimensions": {
+        "width": 1333,
+        "height": 2000
+      },
+      "bytes": 130786,
+      "groupOrder": 11,
+      "alt": {
+        "en": "Burgundy V-neck scrub set, front or three-quarter pose",
+        "ar": "طقم سكراب نبيتي برقبة V، صورة أمامية أو بزاوية"
+      },
+      "productAssociation": {
+        "productId": 20,
+        "productSlug": "kova-womens-scrub-set",
+        "colourCode": "burgundy"
+      },
+      "mappingStatus": "Owner-confirmed product/color mapping; database draft awaiting sizes, stock and deployment",
+      "usage": "Color-specific product gallery; database product remains a draft"
+    },
+    {
+      "number": 41,
+      "sourceId": null,
+      "sourceName": "ELESAWY STUDIOS-41.jpg",
+      "sourceUrl": null,
+      "localSourcePath": "ELESAWY STUDIOS-20261021T195231Z-1-001/ELESAWY STUDIOS/ELESAWY STUDIOS-41.jpg",
+      "sha256": "94606c11aac351de68019c67b1418378987669c08de1c1e3f5a875099e457a87",
+      "sourceBytes": 7427151,
+      "sourceDimensions": {
+        "width": 2784,
+        "height": 4176,
+        "orientation": 1
+      },
+      "group": "burgundy-womens-set",
+      "observedColour": "burgundy",
+      "view": "front-three-quarter",
+      "localPath": "apps/storefront/public/images/kova/studio-41.webp",
+      "publicPath": "/images/kova/studio-41.webp",
+      "dimensions": {
+        "width": 1333,
+        "height": 2000
+      },
+      "bytes": 132252,
+      "groupOrder": 12,
+      "alt": {
+        "en": "Burgundy V-neck scrub set, front or three-quarter pose",
+        "ar": "طقم سكراب نبيتي برقبة V، صورة أمامية أو بزاوية"
+      },
+      "productAssociation": {
+        "productId": 20,
+        "productSlug": "kova-womens-scrub-set",
+        "colourCode": "burgundy"
+      },
+      "mappingStatus": "Owner-confirmed product/color mapping; database draft awaiting sizes, stock and deployment",
+      "usage": "Color-specific product gallery; database product remains a draft"
+    },
+    {
+      "number": 42,
+      "sourceId": null,
+      "sourceName": "ELESAWY STUDIOS-42.jpg",
+      "sourceUrl": null,
+      "localSourcePath": "ELESAWY STUDIOS-20261021T195231Z-1-001/ELESAWY STUDIOS/ELESAWY STUDIOS-42.jpg",
+      "sha256": "1019b7f16a54645aee2c01d57d4316498e8c16f5b444d349caebb34c5c4981c6",
+      "sourceBytes": 6031871,
+      "sourceDimensions": {
+        "width": 2563,
+        "height": 3845,
+        "orientation": 1
+      },
+      "group": "burgundy-womens-set",
+      "observedColour": "burgundy",
+      "view": "front-three-quarter",
+      "localPath": "apps/storefront/public/images/kova/studio-42.webp",
+      "publicPath": "/images/kova/studio-42.webp",
+      "dimensions": {
+        "width": 1333,
+        "height": 2000
+      },
+      "bytes": 228586,
+      "groupOrder": 13,
+      "alt": {
+        "en": "Burgundy V-neck scrub set, front or three-quarter pose",
+        "ar": "طقم سكراب نبيتي برقبة V، صورة أمامية أو بزاوية"
+      },
+      "productAssociation": {
+        "productId": 20,
+        "productSlug": "kova-womens-scrub-set",
+        "colourCode": "burgundy"
+      },
+      "mappingStatus": "Owner-confirmed product/color mapping; database draft awaiting sizes, stock and deployment",
+      "usage": "Color-specific product gallery; database product remains a draft"
+    },
+    {
+      "number": 43,
+      "sourceId": null,
+      "sourceName": "ELESAWY STUDIOS-43.jpg",
+      "sourceUrl": null,
+      "localSourcePath": "ELESAWY STUDIOS-20261021T195231Z-1-001/ELESAWY STUDIOS/ELESAWY STUDIOS-43.jpg",
+      "sha256": "c4f12efe48e2cb74a20eb776c8549ca0ac8c6a1ab0ae27b50abed6f7492574d6",
+      "sourceBytes": 7586404,
+      "sourceDimensions": {
+        "width": 2784,
+        "height": 4176,
+        "orientation": 1
+      },
+      "group": "burgundy-womens-set",
+      "observedColour": "burgundy",
+      "view": "front-three-quarter",
+      "localPath": "apps/storefront/public/images/kova/studio-43.webp",
+      "publicPath": "/images/kova/studio-43.webp",
+      "dimensions": {
+        "width": 1333,
+        "height": 2000
+      },
+      "bytes": 298664,
+      "groupOrder": 14,
+      "alt": {
+        "en": "Burgundy V-neck scrub set, front or three-quarter pose",
+        "ar": "طقم سكراب نبيتي برقبة V، صورة أمامية أو بزاوية"
+      },
+      "productAssociation": {
+        "productId": 20,
+        "productSlug": "kova-womens-scrub-set",
+        "colourCode": "burgundy"
+      },
+      "mappingStatus": "Owner-confirmed product/color mapping; database draft awaiting sizes, stock and deployment",
+      "usage": "Color-specific product gallery; database product remains a draft"
+    },
+    {
+      "number": 44,
+      "sourceId": null,
+      "sourceName": "ELESAWY STUDIOS-44.jpg",
+      "sourceUrl": null,
+      "localSourcePath": "ELESAWY STUDIOS-20261021T195231Z-1-001/ELESAWY STUDIOS/ELESAWY STUDIOS-44.jpg",
+      "sha256": "6d4c77ee55eacb1697c553b478f357199766d05e6d8e03a7c2d7a3c7999294ca",
+      "sourceBytes": 7565256,
+      "sourceDimensions": {
+        "width": 2784,
+        "height": 4176,
+        "orientation": 1
+      },
+      "group": "burgundy-womens-set",
+      "observedColour": "burgundy",
+      "view": "front-three-quarter",
+      "localPath": "apps/storefront/public/images/kova/studio-44.webp",
+      "publicPath": "/images/kova/studio-44.webp",
+      "dimensions": {
+        "width": 1333,
+        "height": 2000
+      },
+      "bytes": 237908,
+      "groupOrder": 15,
+      "alt": {
+        "en": "Burgundy V-neck scrub set, front or three-quarter pose",
+        "ar": "طقم سكراب نبيتي برقبة V، صورة أمامية أو بزاوية"
+      },
+      "productAssociation": {
+        "productId": 20,
+        "productSlug": "kova-womens-scrub-set",
+        "colourCode": "burgundy"
+      },
+      "mappingStatus": "Owner-confirmed product/color mapping; database draft awaiting sizes, stock and deployment",
+      "usage": "Color-specific product gallery; database product remains a draft"
+    },
+    {
+      "number": 45,
+      "sourceId": null,
+      "sourceName": "ELESAWY STUDIOS-45.jpg",
+      "sourceUrl": null,
+      "localSourcePath": "ELESAWY STUDIOS-20261021T195231Z-1-001/ELESAWY STUDIOS/ELESAWY STUDIOS-45.jpg",
+      "sha256": "63380888623cc17a78a0adcffa6c917d55b0943e0a36eba2b0f06f456166c68e",
+      "sourceBytes": 6904092,
+      "sourceDimensions": {
+        "width": 2721,
+        "height": 4081,
+        "orientation": 1
+      },
+      "group": "burgundy-womens-set",
+      "observedColour": "burgundy",
+      "view": "full-front",
+      "localPath": "apps/storefront/public/images/kova/studio-45.webp",
+      "publicPath": "/images/kova/studio-45.webp",
+      "dimensions": {
+        "width": 1333,
+        "height": 2000
+      },
+      "bytes": 257370,
+      "groupOrder": 2,
+      "alt": {
+        "en": "Burgundy V-neck scrub set, full-length front view",
+        "ar": "طقم سكراب نبيتي برقبة V، صورة أمامية كاملة"
+      },
+      "productAssociation": {
+        "productId": 20,
+        "productSlug": "kova-womens-scrub-set",
+        "colourCode": "burgundy"
+      },
+      "mappingStatus": "Owner-confirmed product/color mapping; database draft awaiting sizes, stock and deployment",
+      "usage": "Color-specific product gallery; database product remains a draft"
+    },
+    {
+      "number": 46,
+      "sourceId": null,
+      "sourceName": "ELESAWY STUDIOS-46.jpg",
+      "sourceUrl": null,
+      "localSourcePath": "ELESAWY STUDIOS-20261021T195231Z-1-001/ELESAWY STUDIOS/ELESAWY STUDIOS-46.jpg",
+      "sha256": "7b7aadaaab21a321040c0391e86d79e423a5685c6f65894c9825757c411f82e9",
+      "sourceBytes": 7928655,
+      "sourceDimensions": {
+        "width": 2784,
+        "height": 4176,
+        "orientation": 1
+      },
+      "group": "burgundy-womens-set",
+      "observedColour": "burgundy",
+      "view": "front-three-quarter",
+      "localPath": "apps/storefront/public/images/kova/studio-46.webp",
+      "publicPath": "/images/kova/studio-46.webp",
+      "dimensions": {
+        "width": 1333,
+        "height": 2000
+      },
+      "bytes": 304254,
+      "groupOrder": 16,
+      "alt": {
+        "en": "Burgundy V-neck scrub set, front or three-quarter pose",
+        "ar": "طقم سكراب نبيتي برقبة V، صورة أمامية أو بزاوية"
+      },
+      "productAssociation": {
+        "productId": 20,
+        "productSlug": "kova-womens-scrub-set",
+        "colourCode": "burgundy"
+      },
+      "mappingStatus": "Owner-confirmed product/color mapping; database draft awaiting sizes, stock and deployment",
+      "usage": "Color-specific product gallery; database product remains a draft"
+    },
+    {
+      "number": 47,
+      "sourceId": null,
+      "sourceName": "ELESAWY STUDIOS-47.jpg",
+      "sourceUrl": null,
+      "localSourcePath": "ELESAWY STUDIOS-20261021T195231Z-1-001/ELESAWY STUDIOS/ELESAWY STUDIOS-47.jpg",
+      "sha256": "4c65f7e4a45763b4f0cd9ce9dcf4ceee3904f75f235a894a1b57788df930729c",
+      "sourceBytes": 7522821,
+      "sourceDimensions": {
+        "width": 2784,
+        "height": 4176,
+        "orientation": 1
+      },
+      "group": "burgundy-womens-set",
+      "observedColour": "burgundy",
+      "view": "full-front",
+      "localPath": "apps/storefront/public/images/kova/studio-47.webp",
+      "publicPath": "/images/kova/studio-47.webp",
+      "dimensions": {
+        "width": 1333,
+        "height": 2000
+      },
+      "bytes": 178530,
+      "groupOrder": 3,
+      "alt": {
+        "en": "Burgundy V-neck scrub set, full-length front view",
+        "ar": "طقم سكراب نبيتي برقبة V، صورة أمامية كاملة"
+      },
+      "productAssociation": {
+        "productId": 20,
+        "productSlug": "kova-womens-scrub-set",
+        "colourCode": "burgundy"
+      },
+      "mappingStatus": "Owner-confirmed product/color mapping; database draft awaiting sizes, stock and deployment",
+      "usage": "Color-specific product gallery; database product remains a draft"
+    },
+    {
+      "number": 48,
+      "sourceId": null,
+      "sourceName": "ELESAWY STUDIOS-48.jpg",
+      "sourceUrl": null,
+      "localSourcePath": "ELESAWY STUDIOS-20261021T195231Z-1-001/ELESAWY STUDIOS/ELESAWY STUDIOS-48.jpg",
+      "sha256": "2f8ccf52947752682d7af950a76536fc0579e63977edc7e9fe6717ac5d5cd282",
+      "sourceBytes": 7301013,
+      "sourceDimensions": {
+        "width": 2784,
+        "height": 4176,
+        "orientation": 1
+      },
+      "group": "burgundy-womens-set",
+      "observedColour": "burgundy",
+      "view": "full-front",
+      "localPath": "apps/storefront/public/images/kova/studio-48.webp",
+      "publicPath": "/images/kova/studio-48.webp",
+      "dimensions": {
+        "width": 1333,
+        "height": 2000
+      },
+      "bytes": 170242,
+      "groupOrder": 17,
+      "alt": {
+        "en": "Burgundy V-neck scrub set, full-length front view",
+        "ar": "طقم سكراب نبيتي برقبة V، صورة أمامية كاملة"
+      },
+      "productAssociation": {
+        "productId": 20,
+        "productSlug": "kova-womens-scrub-set",
+        "colourCode": "burgundy"
+      },
+      "mappingStatus": "Owner-confirmed product/color mapping; database draft awaiting sizes, stock and deployment",
+      "usage": "Color-specific product gallery; database product remains a draft"
+    },
+    {
+      "number": 49,
+      "sourceId": null,
+      "sourceName": "ELESAWY STUDIOS-49.jpg",
+      "sourceUrl": null,
+      "localSourcePath": "ELESAWY STUDIOS-20261021T195231Z-1-001/ELESAWY STUDIOS/ELESAWY STUDIOS-49.jpg",
+      "sha256": "2d77830c228d25bc152e411988835a33092eb0b8a7c5e425f969503362c48665",
+      "sourceBytes": 6516568,
+      "sourceDimensions": {
+        "width": 2721,
+        "height": 4081,
+        "orientation": 1
+      },
+      "group": "burgundy-womens-set",
+      "observedColour": "burgundy",
+      "view": "front-three-quarter",
+      "localPath": "apps/storefront/public/images/kova/studio-49.webp",
+      "publicPath": "/images/kova/studio-49.webp",
+      "dimensions": {
+        "width": 1333,
+        "height": 2000
+      },
+      "bytes": 320282,
+      "groupOrder": 18,
+      "alt": {
+        "en": "Burgundy V-neck scrub set, front or three-quarter pose",
+        "ar": "طقم سكراب نبيتي برقبة V، صورة أمامية أو بزاوية"
+      },
+      "productAssociation": {
+        "productId": 20,
+        "productSlug": "kova-womens-scrub-set",
+        "colourCode": "burgundy"
+      },
+      "mappingStatus": "Owner-confirmed product/color mapping; database draft awaiting sizes, stock and deployment",
+      "usage": "Color-specific product gallery; database product remains a draft"
+    },
+    {
+      "number": 50,
+      "sourceId": null,
+      "sourceName": "ELESAWY STUDIOS-50.jpg",
+      "sourceUrl": null,
+      "localSourcePath": "ELESAWY STUDIOS-20261021T195231Z-1-001/ELESAWY STUDIOS/ELESAWY STUDIOS-50.jpg",
+      "sha256": "ce58a4e0fd8acc1895f5bce6b69c152ce69fe3c21d5183d34ef63e648deb468e",
+      "sourceBytes": 6245287,
+      "sourceDimensions": {
+        "width": 2721,
+        "height": 4081,
+        "orientation": 1
+      },
+      "group": "burgundy-womens-set",
+      "observedColour": "burgundy",
+      "view": "front-three-quarter",
+      "localPath": "apps/storefront/public/images/kova/studio-50.webp",
+      "publicPath": "/images/kova/studio-50.webp",
+      "dimensions": {
+        "width": 1333,
+        "height": 2000
+      },
+      "bytes": 197384,
+      "groupOrder": 19,
+      "alt": {
+        "en": "Burgundy V-neck scrub set, front or three-quarter pose",
+        "ar": "طقم سكراب نبيتي برقبة V، صورة أمامية أو بزاوية"
+      },
+      "productAssociation": {
+        "productId": 20,
+        "productSlug": "kova-womens-scrub-set",
+        "colourCode": "burgundy"
+      },
+      "mappingStatus": "Owner-confirmed product/color mapping; database draft awaiting sizes, stock and deployment",
+      "usage": "Color-specific product gallery; database product remains a draft"
+    },
+    {
+      "number": 51,
+      "sourceId": null,
+      "sourceName": "ELESAWY STUDIOS-51.jpg",
+      "sourceUrl": null,
+      "localSourcePath": "ELESAWY STUDIOS-20261021T195231Z-1-001/ELESAWY STUDIOS/ELESAWY STUDIOS-51.jpg",
+      "sha256": "31c5f867b512b7f7d556b057e5b2f830da5f63c3c1c43ba7156510f6a7f064ff",
+      "sourceBytes": 7149109,
+      "sourceDimensions": {
+        "width": 2721,
+        "height": 4081,
+        "orientation": 1
+      },
+      "group": "burgundy-womens-set",
+      "observedColour": "burgundy",
+      "view": "trouser-detail",
+      "localPath": "apps/storefront/public/images/kova/studio-51.webp",
+      "publicPath": "/images/kova/studio-51.webp",
+      "dimensions": {
+        "width": 1333,
+        "height": 2000
+      },
+      "bytes": 253730,
+      "groupOrder": 22,
+      "alt": {
+        "en": "Burgundy V-neck scrub set, trouser detail",
+        "ar": "طقم سكراب نبيتي برقبة V، تفاصيل البنطلون"
+      },
+      "productAssociation": {
+        "productId": 20,
+        "productSlug": "kova-womens-scrub-set",
+        "colourCode": "burgundy"
+      },
+      "mappingStatus": "Owner-confirmed product/color mapping; database draft awaiting sizes, stock and deployment",
+      "usage": "Color-specific product gallery; database product remains a draft"
+    },
+    {
+      "number": 52,
+      "sourceId": null,
+      "sourceName": "ELESAWY STUDIOS-52.jpg",
+      "sourceUrl": null,
+      "localSourcePath": "ELESAWY STUDIOS-20261021T195231Z-1-001/ELESAWY STUDIOS/ELESAWY STUDIOS-52.jpg",
+      "sha256": "46ba33802489bfbfdd0ad529a35613314e7afa1c9aa2e906bb9cbd5d8e749a10",
+      "sourceBytes": 6866244,
+      "sourceDimensions": {
+        "width": 2721,
+        "height": 4081,
+        "orientation": 1
+      },
+      "group": "burgundy-womens-set",
+      "observedColour": "burgundy",
+      "view": "front-three-quarter",
+      "localPath": "apps/storefront/public/images/kova/studio-52.webp",
+      "publicPath": "/images/kova/studio-52.webp",
+      "dimensions": {
+        "width": 1333,
+        "height": 2000
+      },
+      "bytes": 230268,
+      "groupOrder": 20,
+      "alt": {
+        "en": "Burgundy V-neck scrub set, front or three-quarter pose",
+        "ar": "طقم سكراب نبيتي برقبة V، صورة أمامية أو بزاوية"
+      },
+      "productAssociation": {
+        "productId": 20,
+        "productSlug": "kova-womens-scrub-set",
+        "colourCode": "burgundy"
+      },
+      "mappingStatus": "Owner-confirmed product/color mapping; database draft awaiting sizes, stock and deployment",
+      "usage": "Color-specific product gallery; database product remains a draft"
+    },
+    {
+      "number": 53,
+      "sourceId": null,
+      "sourceName": "ELESAWY STUDIOS-53.jpg",
+      "sourceUrl": null,
+      "localSourcePath": "ELESAWY STUDIOS-20261021T195231Z-1-001/ELESAWY STUDIOS/ELESAWY STUDIOS-53.jpg",
+      "sha256": "b74d204813c2c274a738e6ee3d3eebe4f7838a318cbaecd1270af928add4b2b8",
+      "sourceBytes": 8742026,
+      "sourceDimensions": {
+        "width": 2784,
+        "height": 4176,
+        "orientation": 1
+      },
+      "group": "black-mens-set",
+      "observedColour": "black",
+      "view": "pocket-detail",
+      "localPath": "apps/storefront/public/images/kova/studio-53.webp",
+      "publicPath": "/images/kova/studio-53.webp",
+      "dimensions": {
+        "width": 1333,
+        "height": 2000
+      },
+      "bytes": 595814,
+      "groupOrder": 11,
+      "alt": {
+        "en": "Black V-neck scrub set worn by a male model, pocket and garment detail",
+        "ar": "طقم سكراب أسود برقبة V على عارض، تفاصيل الجيوب والملابس"
+      },
+      "productAssociation": {
+        "productId": 21,
+        "productSlug": "kova-mens-scrub-set",
+        "colourCode": "black"
+      },
+      "mappingStatus": "Owner-confirmed product/color mapping; database draft awaiting sizes, stock and deployment",
+      "usage": "Color-specific product gallery; database product remains a draft"
+    },
+    {
+      "number": 54,
+      "sourceId": null,
+      "sourceName": "ELESAWY STUDIOS-54.jpg",
+      "sourceUrl": null,
+      "localSourcePath": "ELESAWY STUDIOS-20261021T195231Z-1-001/ELESAWY STUDIOS/ELESAWY STUDIOS-54.jpg",
+      "sha256": "d08120af2fff107020446b8eb8d231b2dd706a0ffcb5202f26a95133acdfc4be",
+      "sourceBytes": 5327884,
+      "sourceDimensions": {
+        "width": 2784,
+        "height": 4176,
+        "orientation": 1
+      },
+      "group": "black-mens-set",
+      "observedColour": "black",
+      "view": "front-three-quarter",
+      "localPath": "apps/storefront/public/images/kova/studio-54.webp",
+      "publicPath": "/images/kova/studio-54.webp",
+      "dimensions": {
+        "width": 1333,
+        "height": 2000
+      },
+      "bytes": 165944,
+      "groupOrder": 2,
+      "alt": {
+        "en": "Black V-neck scrub set worn by a male model, front or three-quarter pose",
+        "ar": "طقم سكراب أسود برقبة V على عارض، صورة أمامية أو بزاوية"
+      },
+      "productAssociation": {
+        "productId": 21,
+        "productSlug": "kova-mens-scrub-set",
+        "colourCode": "black"
+      },
+      "mappingStatus": "Owner-confirmed product/color mapping; database draft awaiting sizes, stock and deployment",
+      "usage": "Color-specific product gallery; database product remains a draft"
+    },
+    {
+      "number": 55,
+      "sourceId": null,
+      "sourceName": "ELESAWY STUDIOS-55.jpg",
+      "sourceUrl": null,
+      "localSourcePath": "ELESAWY STUDIOS-20261021T195231Z-1-001/ELESAWY STUDIOS/ELESAWY STUDIOS-55.jpg",
+      "sha256": "80a4ce442940f059bfc01427c75460548d431a797b93bac9a450625736ece95a",
+      "sourceBytes": 5528545,
+      "sourceDimensions": {
+        "width": 2784,
+        "height": 4176,
+        "orientation": 1
+      },
+      "group": "black-mens-set",
+      "observedColour": "black",
+      "view": "full-front",
+      "localPath": "apps/storefront/public/images/kova/studio-55.webp",
+      "publicPath": "/images/kova/studio-55.webp",
+      "dimensions": {
+        "width": 1333,
+        "height": 2000
+      },
+      "bytes": 95748,
+      "groupOrder": 1,
+      "alt": {
+        "en": "Black V-neck scrub set worn by a male model, full-length front view",
+        "ar": "طقم سكراب أسود برقبة V على عارض، صورة أمامية كاملة"
+      },
+      "productAssociation": {
+        "productId": 21,
+        "productSlug": "kova-mens-scrub-set",
+        "colourCode": "black"
+      },
+      "mappingStatus": "Owner-confirmed product/color mapping; database draft awaiting sizes, stock and deployment",
+      "usage": "Homepage men editorial and black product gallery"
+    },
+    {
+      "number": 56,
+      "sourceId": null,
+      "sourceName": "ELESAWY STUDIOS-56.jpg",
+      "sourceUrl": null,
+      "localSourcePath": "ELESAWY STUDIOS-20261021T195231Z-1-001/ELESAWY STUDIOS/ELESAWY STUDIOS-56.jpg",
+      "sha256": "e5f3660e6eaf8111df079ddec24bb8021e9d0f391398be0b567ef1b51be0e058",
+      "sourceBytes": 4847683,
+      "sourceDimensions": {
+        "width": 2784,
+        "height": 4176,
+        "orientation": 1
+      },
+      "group": "black-mens-set",
+      "observedColour": "black",
+      "view": "full-front",
+      "localPath": "apps/storefront/public/images/kova/studio-56.webp",
+      "publicPath": "/images/kova/studio-56.webp",
+      "dimensions": {
+        "width": 1333,
+        "height": 2000
+      },
+      "bytes": 129084,
+      "groupOrder": 6,
+      "alt": {
+        "en": "Black V-neck scrub set worn by a male model, full-length front view",
+        "ar": "طقم سكراب أسود برقبة V على عارض، صورة أمامية كاملة"
+      },
+      "productAssociation": {
+        "productId": 21,
+        "productSlug": "kova-mens-scrub-set",
+        "colourCode": "black"
+      },
+      "mappingStatus": "Owner-confirmed product/color mapping; database draft awaiting sizes, stock and deployment",
+      "usage": "Color-specific product gallery; database product remains a draft"
+    },
+    {
+      "number": 57,
+      "sourceId": null,
+      "sourceName": "ELESAWY STUDIOS-57.jpg",
+      "sourceUrl": null,
+      "localSourcePath": "ELESAWY STUDIOS-20261021T195231Z-1-001/ELESAWY STUDIOS/ELESAWY STUDIOS-57.jpg",
+      "sha256": "c76af216ebc671de33c432e084c0ee8f0a0a5724bf510f41d12e484c34071b18",
+      "sourceBytes": 8149749,
+      "sourceDimensions": {
+        "width": 2784,
+        "height": 4176,
+        "orientation": 1
+      },
+      "group": "black-mens-set",
+      "observedColour": "black",
+      "view": "pocket-detail",
+      "localPath": "apps/storefront/public/images/kova/studio-57.webp",
+      "publicPath": "/images/kova/studio-57.webp",
+      "dimensions": {
+        "width": 1333,
+        "height": 2000
+      },
+      "bytes": 342144,
+      "groupOrder": 7,
+      "alt": {
+        "en": "Black V-neck scrub set worn by a male model, pocket and garment detail",
+        "ar": "طقم سكراب أسود برقبة V على عارض، تفاصيل الجيوب والملابس"
+      },
+      "productAssociation": {
+        "productId": 21,
+        "productSlug": "kova-mens-scrub-set",
+        "colourCode": "black"
+      },
+      "mappingStatus": "Owner-confirmed product/color mapping; database draft awaiting sizes, stock and deployment",
+      "usage": "Color-specific product gallery; database product remains a draft"
+    },
+    {
+      "number": 58,
+      "sourceId": null,
+      "sourceName": "ELESAWY STUDIOS-58.jpg",
+      "sourceUrl": null,
+      "localSourcePath": "ELESAWY STUDIOS-20261021T195231Z-1-001/ELESAWY STUDIOS/ELESAWY STUDIOS-58.jpg",
+      "sha256": "b418744950c7a7884861cf8a65921080d7217032856b143dd93d6407ffa3956e",
+      "sourceBytes": 5305087,
+      "sourceDimensions": {
+        "width": 2784,
+        "height": 4176,
+        "orientation": 1
+      },
+      "group": "black-mens-set",
+      "observedColour": "black",
+      "view": "full-front",
+      "localPath": "apps/storefront/public/images/kova/studio-58.webp",
+      "publicPath": "/images/kova/studio-58.webp",
+      "dimensions": {
+        "width": 1333,
+        "height": 2000
+      },
+      "bytes": 179374,
+      "groupOrder": 3,
+      "alt": {
+        "en": "Black V-neck scrub set worn by a male model, full-length front view",
+        "ar": "طقم سكراب أسود برقبة V على عارض، صورة أمامية كاملة"
+      },
+      "productAssociation": {
+        "productId": 21,
+        "productSlug": "kova-mens-scrub-set",
+        "colourCode": "black"
+      },
+      "mappingStatus": "Owner-confirmed product/color mapping; database draft awaiting sizes, stock and deployment",
+      "usage": "Color-specific product gallery; database product remains a draft"
+    },
+    {
+      "number": 59,
+      "sourceId": null,
+      "sourceName": "ELESAWY STUDIOS-59.jpg",
+      "sourceUrl": null,
+      "localSourcePath": "ELESAWY STUDIOS-20261021T195231Z-1-001/ELESAWY STUDIOS/ELESAWY STUDIOS-59.jpg",
+      "sha256": "78aa294d87827d8a9f2bb581b590f2a6bec3b033c7b90bdecbde324a898bd1ef",
+      "sourceBytes": 8817943,
+      "sourceDimensions": {
+        "width": 2784,
+        "height": 4176,
+        "orientation": 1
+      },
+      "group": "black-mens-set",
+      "observedColour": "black",
+      "view": "front-three-quarter",
+      "localPath": "apps/storefront/public/images/kova/studio-59.webp",
+      "publicPath": "/images/kova/studio-59.webp",
+      "dimensions": {
+        "width": 1333,
+        "height": 2000
+      },
+      "bytes": 351452,
+      "groupOrder": 8,
+      "alt": {
+        "en": "Black V-neck scrub set worn by a male model, front or three-quarter pose",
+        "ar": "طقم سكراب أسود برقبة V على عارض، صورة أمامية أو بزاوية"
+      },
+      "productAssociation": {
+        "productId": 21,
+        "productSlug": "kova-mens-scrub-set",
+        "colourCode": "black"
+      },
+      "mappingStatus": "Owner-confirmed product/color mapping; database draft awaiting sizes, stock and deployment",
+      "usage": "Color-specific product gallery; database product remains a draft"
+    },
+    {
+      "number": 60,
+      "sourceId": null,
+      "sourceName": "ELESAWY STUDIOS-60.jpg",
+      "sourceUrl": null,
+      "localSourcePath": "ELESAWY STUDIOS-20261021T195231Z-1-001/ELESAWY STUDIOS/ELESAWY STUDIOS-60.jpg",
+      "sha256": "d08cd28ccc50888dc2daf9b20ef99983c3a2e64fd883e0616180a7128ae98e91",
+      "sourceBytes": 10448319,
+      "sourceDimensions": {
+        "width": 2784,
+        "height": 4176,
+        "orientation": 1
+      },
+      "group": "black-mens-set",
+      "observedColour": "black",
+      "view": "pocket-detail",
+      "localPath": "apps/storefront/public/images/kova/studio-60.webp",
+      "publicPath": "/images/kova/studio-60.webp",
+      "dimensions": {
+        "width": 1333,
+        "height": 2000
+      },
+      "bytes": 523654,
+      "groupOrder": 9,
+      "alt": {
+        "en": "Black V-neck scrub set worn by a male model, pocket and garment detail",
+        "ar": "طقم سكراب أسود برقبة V على عارض، تفاصيل الجيوب والملابس"
+      },
+      "productAssociation": {
+        "productId": 21,
+        "productSlug": "kova-mens-scrub-set",
+        "colourCode": "black"
+      },
+      "mappingStatus": "Owner-confirmed product/color mapping; database draft awaiting sizes, stock and deployment",
+      "usage": "Color-specific product gallery; database product remains a draft"
+    },
+    {
+      "number": 61,
+      "sourceId": null,
+      "sourceName": "ELESAWY STUDIOS-61.jpg",
+      "sourceUrl": null,
+      "localSourcePath": "ELESAWY STUDIOS-20261021T195231Z-1-001/ELESAWY STUDIOS/ELESAWY STUDIOS-61.jpg",
+      "sha256": "6f995d8c2bc791327ab4b211170f7c1dba8aca8ca812123449ee84244d84641f",
+      "sourceBytes": 6831392,
+      "sourceDimensions": {
+        "width": 2784,
+        "height": 4176,
+        "orientation": 1
+      },
+      "group": "black-mens-set",
+      "observedColour": "black",
+      "view": "trouser-detail",
+      "localPath": "apps/storefront/public/images/kova/studio-61.webp",
+      "publicPath": "/images/kova/studio-61.webp",
+      "dimensions": {
+        "width": 1333,
+        "height": 2000
+      },
+      "bytes": 211420,
+      "groupOrder": 12,
+      "alt": {
+        "en": "Black V-neck scrub set worn by a male model, trouser detail",
+        "ar": "طقم سكراب أسود برقبة V على عارض، تفاصيل البنطلون"
+      },
+      "productAssociation": {
+        "productId": 21,
+        "productSlug": "kova-mens-scrub-set",
+        "colourCode": "black"
+      },
+      "mappingStatus": "Owner-confirmed product/color mapping; database draft awaiting sizes, stock and deployment",
+      "usage": "Color-specific product gallery; database product remains a draft"
+    },
+    {
+      "number": 62,
+      "sourceId": null,
+      "sourceName": "ELESAWY STUDIOS-62.jpg",
+      "sourceUrl": null,
+      "localSourcePath": "ELESAWY STUDIOS-20261021T195231Z-1-001/ELESAWY STUDIOS/ELESAWY STUDIOS-62.jpg",
+      "sha256": "1d6c1455f49c4d5913a42aff15839f10952cd6c7a815c8da1344a5daa8c69c90",
+      "sourceBytes": 7031435,
+      "sourceDimensions": {
+        "width": 2721,
+        "height": 4081,
+        "orientation": 1
+      },
+      "group": "burgundy-womens-set",
+      "observedColour": "burgundy",
+      "view": "side",
+      "localPath": "apps/storefront/public/images/kova/studio-62.webp",
+      "publicPath": "/images/kova/studio-62.webp",
+      "dimensions": {
+        "width": 1333,
+        "height": 2000
+      },
+      "bytes": 195934,
+      "groupOrder": 21,
+      "alt": {
+        "en": "Burgundy V-neck scrub set, side view",
+        "ar": "طقم سكراب نبيتي برقبة V، صورة جانبية"
+      },
+      "productAssociation": {
+        "productId": 20,
+        "productSlug": "kova-womens-scrub-set",
+        "colourCode": "burgundy"
+      },
+      "mappingStatus": "Owner-confirmed product/color mapping; database draft awaiting sizes, stock and deployment",
+      "usage": "Color-specific product gallery; database product remains a draft"
+    },
+    {
+      "number": 63,
+      "sourceId": null,
+      "sourceName": "ELESAWY STUDIOS-63.jpg",
+      "sourceUrl": null,
+      "localSourcePath": "ELESAWY STUDIOS-20261021T195231Z-1-001/ELESAWY STUDIOS/ELESAWY STUDIOS-63.jpg",
+      "sha256": "47cbcb628cdde90cd7fed15d6d84d9afce7e53026d59400bc1f02ff19d563f49",
+      "sourceBytes": 4841117,
+      "sourceDimensions": {
+        "width": 2784,
+        "height": 4176,
+        "orientation": 1
+      },
+      "group": "black-mens-set",
+      "observedColour": "black",
+      "view": "full-front",
+      "localPath": "apps/storefront/public/images/kova/studio-63.webp",
+      "publicPath": "/images/kova/studio-63.webp",
+      "dimensions": {
+        "width": 1333,
+        "height": 2000
+      },
+      "bytes": 157234,
+      "groupOrder": 4,
+      "alt": {
+        "en": "Black V-neck scrub set worn by a male model, full-length front view",
+        "ar": "طقم سكراب أسود برقبة V على عارض، صورة أمامية كاملة"
+      },
+      "productAssociation": {
+        "productId": 21,
+        "productSlug": "kova-mens-scrub-set",
+        "colourCode": "black"
+      },
+      "mappingStatus": "Owner-confirmed product/color mapping; database draft awaiting sizes, stock and deployment",
+      "usage": "Color-specific product gallery; database product remains a draft"
+    },
+    {
+      "number": 64,
+      "sourceId": null,
+      "sourceName": "ELESAWY STUDIOS-64.jpg",
+      "sourceUrl": null,
+      "localSourcePath": "ELESAWY STUDIOS-20261021T195231Z-1-001/ELESAWY STUDIOS/ELESAWY STUDIOS-64.jpg",
+      "sha256": "dc32f0836189cf564418eccbb19ffb78b48236b3bdc47f5120937947fe911cf9",
+      "sourceBytes": 6187449,
+      "sourceDimensions": {
+        "width": 2784,
+        "height": 4176,
+        "orientation": 1
+      },
+      "group": "black-mens-set",
+      "observedColour": "black",
+      "view": "trouser-detail",
+      "localPath": "apps/storefront/public/images/kova/studio-64.webp",
+      "publicPath": "/images/kova/studio-64.webp",
+      "dimensions": {
+        "width": 1333,
+        "height": 2000
+      },
+      "bytes": 160738,
+      "groupOrder": 13,
+      "alt": {
+        "en": "Black V-neck scrub set worn by a male model, trouser detail",
+        "ar": "طقم سكراب أسود برقبة V على عارض، تفاصيل البنطلون"
+      },
+      "productAssociation": {
+        "productId": 21,
+        "productSlug": "kova-mens-scrub-set",
+        "colourCode": "black"
+      },
+      "mappingStatus": "Owner-confirmed product/color mapping; database draft awaiting sizes, stock and deployment",
+      "usage": "Color-specific product gallery; database product remains a draft"
+    },
+    {
+      "number": 65,
+      "sourceId": null,
+      "sourceName": "ELESAWY STUDIOS-65.jpg",
+      "sourceUrl": null,
+      "localSourcePath": "ELESAWY STUDIOS-20261021T195231Z-1-001/ELESAWY STUDIOS/ELESAWY STUDIOS-65.jpg",
+      "sha256": "614358a5e5676ad67c38febbdbe4ef1f36d5667e0677cc1954d5de9f61128ca0",
+      "sourceBytes": 6794602,
+      "sourceDimensions": {
+        "width": 2721,
+        "height": 4081,
+        "orientation": 1
+      },
+      "group": "burgundy-womens-set",
+      "observedColour": "burgundy",
+      "view": "front-three-quarter",
+      "localPath": "apps/storefront/public/images/kova/studio-65.webp",
+      "publicPath": "/images/kova/studio-65.webp",
+      "dimensions": {
+        "width": 1333,
+        "height": 2000
+      },
+      "bytes": 218272,
+      "groupOrder": 1,
+      "alt": {
+        "en": "Burgundy V-neck scrub set, front or three-quarter pose",
+        "ar": "طقم سكراب نبيتي برقبة V، صورة أمامية أو بزاوية"
+      },
+      "productAssociation": {
+        "productId": 20,
+        "productSlug": "kova-womens-scrub-set",
+        "colourCode": "burgundy"
+      },
+      "mappingStatus": "Owner-confirmed product/color mapping; database draft awaiting sizes, stock and deployment",
+      "usage": "Color-specific product gallery; database product remains a draft"
+    },
+    {
+      "number": 66,
+      "sourceId": null,
+      "sourceName": "ELESAWY STUDIOS-66.jpg",
+      "sourceUrl": null,
+      "localSourcePath": "ELESAWY STUDIOS-20261021T195231Z-1-001/ELESAWY STUDIOS/ELESAWY STUDIOS-66.jpg",
+      "sha256": "da17184ae26d1738ddc1a43562246861221fd10f48d633459ac4e661d63f0cfc",
+      "sourceBytes": 6280512,
+      "sourceDimensions": {
+        "width": 2784,
+        "height": 4176,
+        "orientation": 1
+      },
+      "group": "black-mens-set",
+      "observedColour": "black",
+      "view": "front-three-quarter",
+      "localPath": "apps/storefront/public/images/kova/studio-66.webp",
+      "publicPath": "/images/kova/studio-66.webp",
+      "dimensions": {
+        "width": 1333,
+        "height": 2000
+      },
+      "bytes": 171578,
+      "groupOrder": 5,
+      "alt": {
+        "en": "Black V-neck scrub set worn by a male model, front or three-quarter pose",
+        "ar": "طقم سكراب أسود برقبة V على عارض، صورة أمامية أو بزاوية"
+      },
+      "productAssociation": {
+        "productId": 21,
+        "productSlug": "kova-mens-scrub-set",
+        "colourCode": "black"
+      },
+      "mappingStatus": "Owner-confirmed product/color mapping; database draft awaiting sizes, stock and deployment",
+      "usage": "Color-specific product gallery; database product remains a draft"
+    },
+    {
+      "number": 67,
+      "sourceId": null,
+      "sourceName": "ELESAWY STUDIOS-67.jpg",
+      "sourceUrl": null,
+      "localSourcePath": "ELESAWY STUDIOS-20261021T195231Z-1-001/ELESAWY STUDIOS/ELESAWY STUDIOS-67.jpg",
+      "sha256": "b86bba0c9a86d0baebb3c8da1e18a9814c266773e6daa912d0e3b88d5c5df6fb",
+      "sourceBytes": 7318627,
+      "sourceDimensions": {
+        "width": 2784,
+        "height": 4176,
+        "orientation": 1
+      },
+      "group": "black-mens-set",
+      "observedColour": "black",
+      "view": "front-three-quarter",
+      "localPath": "apps/storefront/public/images/kova/studio-67.webp",
+      "publicPath": "/images/kova/studio-67.webp",
+      "dimensions": {
+        "width": 1333,
+        "height": 2000
+      },
+      "bytes": 243860,
+      "groupOrder": 10,
+      "alt": {
+        "en": "Black V-neck scrub set worn by a male model, front or three-quarter pose",
+        "ar": "طقم سكراب أسود برقبة V على عارض، صورة أمامية أو بزاوية"
+      },
+      "productAssociation": {
+        "productId": 21,
+        "productSlug": "kova-mens-scrub-set",
+        "colourCode": "black"
+      },
+      "mappingStatus": "Owner-confirmed product/color mapping; database draft awaiting sizes, stock and deployment",
+      "usage": "Color-specific product gallery; database product remains a draft"
+    },
+    {
+      "number": 68,
+      "sourceId": null,
+      "sourceName": "ELESAWY STUDIOS-68.jpg",
+      "sourceUrl": null,
+      "localSourcePath": "ELESAWY STUDIOS-20261021T195231Z-1-001/ELESAWY STUDIOS/ELESAWY STUDIOS-68.jpg",
+      "sha256": "35f00003edf58decdbea89ec9c0299662b2652ed9c0415cdf3d41a060dcaa3b7",
+      "sourceBytes": 11187865,
+      "sourceDimensions": {
+        "width": 2784,
+        "height": 4176,
+        "orientation": 1
+      },
+      "group": "burgundy-demonstration",
+      "observedColour": "burgundy",
+      "view": "still-life",
+      "localPath": "apps/storefront/public/images/kova/studio-68.webp",
+      "publicPath": "/images/kova/studio-68.webp",
+      "dimensions": {
+        "width": 1333,
+        "height": 2000
+      },
+      "bytes": 367158,
+      "groupOrder": 2,
+      "alt": {
+        "en": "Burgundy scrub top on folded garments, still-life with a water bottle nearby",
+        "ar": "بلوزة سكراب نبيتي على ملابس مطوية، صورة ثابتة وبجوار الملابس زجاجة ماء"
+      },
+      "productAssociation": null,
+      "mappingStatus": "Not assigned: demonstration image excluded from product galleries",
+      "usage": "Not published: imagery is not evidence of fabric performance"
+    },
+    {
+      "number": 69,
+      "sourceId": null,
+      "sourceName": "ELESAWY STUDIOS-69.jpg",
+      "sourceUrl": null,
+      "localSourcePath": "ELESAWY STUDIOS-20261021T195231Z-1-001/ELESAWY STUDIOS/ELESAWY STUDIOS-69.jpg",
+      "sha256": "a66e4a1516949cd8d91479f1d11400b7abd5aeee06351901f7037da670cc6e78",
+      "sourceBytes": 13049878,
+      "sourceDimensions": {
+        "width": 2784,
+        "height": 4176,
+        "orientation": 1
+      },
+      "group": "burgundy-demonstration",
+      "observedColour": "burgundy",
+      "view": "water-demonstration",
+      "localPath": "apps/storefront/public/images/kova/studio-69.webp",
+      "publicPath": "/images/kova/studio-69.webp",
+      "dimensions": {
+        "width": 1333,
+        "height": 2000
+      },
+      "bytes": 475274,
+      "groupOrder": 7,
+      "alt": {
+        "en": "Burgundy scrub top on folded garments, water-pour demonstration frame",
+        "ar": "بلوزة سكراب نبيتي على ملابس مطوية، لقطة لسكب الماء على الملابس"
+      },
+      "productAssociation": null,
+      "mappingStatus": "Not assigned: demonstration image excluded from product galleries",
+      "usage": "Not published: imagery is not evidence of fabric performance"
+    },
+    {
+      "number": 70,
+      "sourceId": null,
+      "sourceName": "ELESAWY STUDIOS-70.jpg",
+      "sourceUrl": null,
+      "localSourcePath": "ELESAWY STUDIOS-20261021T195231Z-1-001/ELESAWY STUDIOS/ELESAWY STUDIOS-70.jpg",
+      "sha256": "39e5f5a47015bcb263555405f91629f186fa23ca089419698344e4f76e861acc",
+      "sourceBytes": 11196687,
+      "sourceDimensions": {
+        "width": 2784,
+        "height": 4176,
+        "orientation": 1
+      },
+      "group": "burgundy-demonstration",
+      "observedColour": "burgundy",
+      "view": "still-life",
+      "localPath": "apps/storefront/public/images/kova/studio-70.webp",
+      "publicPath": "/images/kova/studio-70.webp",
+      "dimensions": {
+        "width": 1333,
+        "height": 2000
+      },
+      "bytes": 373052,
+      "groupOrder": 3,
+      "alt": {
+        "en": "Burgundy scrub top on folded garments, still-life with a water bottle nearby",
+        "ar": "بلوزة سكراب نبيتي على ملابس مطوية، صورة ثابتة وبجوار الملابس زجاجة ماء"
+      },
+      "productAssociation": null,
+      "mappingStatus": "Not assigned: demonstration image excluded from product galleries",
+      "usage": "Not published: imagery is not evidence of fabric performance"
+    }
+  ]
+}

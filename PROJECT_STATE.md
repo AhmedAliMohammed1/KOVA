@@ -1,3 +1,13 @@
+# KOVA redesign checkpoint — 2026-10-21
+
+The current workspace is a two-application monorepo: storefront in `apps/storefront`, staff dashboard in `apps/admin`, shared components/contracts in `packages/shared`. Both applications build independently. Migrations and historical commerce records are preserved. The nine old products are archived; two new KOVA drafts (IDs 20/21) have owner-approved EGP 850 prices and EGP 200 COD deposits. All 70 photographs are inspected; 63 are mapped to the new galleries. Sizes and stock remain unconfirmed.
+
+Current evidence and external launch requirements are in `docs/KOVA_DELIVERY.md`. Deployment/root/environment/callback and rollback details are in `docs/KOVA_DEPLOYMENT.md`. The connected Vercel account could not inspect kovaadmin, so no deployment or production routing change was made. Authenticated/sandbox acceptance remains outstanding.
+
+The earlier state below is historical implementation context, not a claim that this redesign has passed production acceptance.
+
+---
+
 # Project state
 
 - **Current phase:** Production hardening and external-provider activation

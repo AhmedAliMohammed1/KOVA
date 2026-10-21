@@ -1,0 +1,138 @@
+{
+  "date": "2026-10-21T20:22:30.317Z",
+  "environment": "Local production Next.js; Edge headless; 375×812; fresh browser cache; warm server/image cache; CPU 4x; 150ms latency; 1.6 Mbps download; 750 Kbps upload; three runs per route; no Supabase credentials",
+  "limits": "Navigation LCP/CLS samples, not Lighthouse, not field p75, and no INP measurement. Representative image assets are local; production database latency is absent.",
+  "targets": {
+    "lcpMs": 2500,
+    "cls": 0.1,
+    "inpMs": 200
+  },
+  "routes": [
+    {
+      "route": "/en",
+      "medianLcpMs": 1160,
+      "medianCls": 0,
+      "medianTtfbMs": 9,
+      "medianTransferBytes": 296268
+    },
+    {
+      "route": "/ar",
+      "medianLcpMs": 1224,
+      "medianCls": 0,
+      "medianTtfbMs": 8,
+      "medianTransferBytes": 296388
+    },
+    {
+      "route": "/en/shop",
+      "medianLcpMs": 1068,
+      "medianCls": 0,
+      "medianTtfbMs": 8,
+      "medianTransferBytes": 294501
+    },
+    {
+      "route": "/en/products/kova-womens-scrub-set",
+      "medianLcpMs": 1144,
+      "medianCls": 0,
+      "medianTtfbMs": 8,
+      "medianTransferBytes": 316610
+    }
+  ],
+  "samples": [
+    {
+      "route": "/en",
+      "run": 1,
+      "lcpMs": 1100,
+      "cls": 0,
+      "ttfbMs": 13,
+      "transferBytes": 296268
+    },
+    {
+      "route": "/en",
+      "run": 2,
+      "lcpMs": 1160,
+      "cls": 0,
+      "ttfbMs": 9,
+      "transferBytes": 296263
+    },
+    {
+      "route": "/en",
+      "run": 3,
+      "lcpMs": 1160,
+      "cls": 0,
+      "ttfbMs": 8,
+      "transferBytes": 296269
+    },
+    {
+      "route": "/ar",
+      "run": 1,
+      "lcpMs": 1224,
+      "cls": 0,
+      "ttfbMs": 10,
+      "transferBytes": 296387
+    },
+    {
+      "route": "/ar",
+      "run": 2,
+      "lcpMs": 1180,
+      "cls": 0,
+      "ttfbMs": 8,
+      "transferBytes": 296391
+    },
+    {
+      "route": "/ar",
+      "run": 3,
+      "lcpMs": 1268,
+      "cls": 0,
+      "ttfbMs": 7,
+      "transferBytes": 296388
+    },
+    {
+      "route": "/en/shop",
+      "run": 1,
+      "lcpMs": 1076,
+      "cls": 0,
+      "ttfbMs": 8,
+      "transferBytes": 294501
+    },
+    {
+      "route": "/en/shop",
+      "run": 2,
+      "lcpMs": 1068,
+      "cls": 0,
+      "ttfbMs": 9,
+      "transferBytes": 294500
+    },
+    {
+      "route": "/en/shop",
+      "run": 3,
+      "lcpMs": 1068,
+      "cls": 0,
+      "ttfbMs": 8,
+      "transferBytes": 294506
+    },
+    {
+      "route": "/en/products/kova-womens-scrub-set",
+      "run": 1,
+      "lcpMs": 1188,
+      "cls": 0,
+      "ttfbMs": 12,
+      "transferBytes": 316610
+    },
+    {
+      "route": "/en/products/kova-womens-scrub-set",
+      "run": 2,
+      "lcpMs": 1144,
+      "cls": 0,
+      "ttfbMs": 8,
+      "transferBytes": 316611
+    },
+    {
+      "route": "/en/products/kova-womens-scrub-set",
+      "run": 3,
+      "lcpMs": 1124,
+      "cls": 0,
+      "ttfbMs": 8,
+      "transferBytes": 316603
+    }
+  ]
+}

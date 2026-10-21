@@ -1,3 +1,13 @@
+# KOVA redesign verification — 2026-10-21
+
+Current evidence: [delivery report](docs/KOVA_DELIVERY.md), [verification JSON](docs/qa/verification.json), [browser results](docs/qa/browser-results.json), [lab metrics](docs/qa/performance.json), and [route coverage](docs/KOVA_ROUTE_COVERAGE.md).
+
+39 files / 348 tests passed; zero-warning lint, both application TypeScript checks and both production builds passed. All 44 original route files are retained. Browser verification covered 19 public/recovery/access-boundary checks; protected staff/customer transactions remain explicitly unverified without a sandbox. The owner-authorized catalog transaction archived nine legacy products and created two KOVA drafts, preserving 19 orders, 22 linked items and one review. No deployment was changed.
+
+Historical verification follows and is not evidence of current production acceptance.
+
+---
+
 # Test report
 
 ## Production operations checkpoint — 2026-09-11

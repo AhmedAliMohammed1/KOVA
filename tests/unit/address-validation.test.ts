@@ -3,8 +3,8 @@ import {
   formatAddressDisplay,
   mapAddressRowToDomain,
   type AddressRow,
-} from "../../src/features/addresses/types";
-import { addressInputSchema } from "../../src/features/addresses/validation";
+} from "../../packages/shared/src/features/addresses/types";
+import { addressInputSchema } from "../../packages/shared/src/features/addresses/validation";
 
 describe("Customer Address Validation & Formatting", () => {
   it("validates and parses a valid clinic delivery address", () => {

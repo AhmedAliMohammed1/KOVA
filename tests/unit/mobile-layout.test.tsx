@@ -1,8 +1,10 @@
 import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { cleanup, render, screen } from "@testing-library/react";
-import { afterEach, describe, expect, it } from "vitest";
+import { afterEach, describe, expect, it, vi } from "vitest";
 import AdminLayout from "@/app/[locale]/admin/layout";
+
+vi.mock("@/server/auth/roles", () => ({ requireRoles: vi.fn(async () => ({ roles: ["admin"] })) }));
 
 afterEach(cleanup);
 
@@ -32,7 +34,7 @@ describe("mobile layout regressions", () => {
   });
 
   it("allows checkout grid children to shrink inside a phone viewport", () => {
-    const checkout = source("src/features/checkout/checkout-form.tsx");
+    const checkout = source("packages/shared/src/features/checkout/checkout-form.tsx");
 
     expect(checkout).toContain(
       "grid min-w-0 gap-6 sm:gap-8 lg:grid-cols-[minmax(0,1fr)_400px]",
@@ -45,7 +47,7 @@ describe("mobile layout regressions", () => {
   });
 
   it("contains wide admin tables instead of expanding the page", () => {
-    const admin = source("src/app/[locale]/admin/page.tsx");
+    const admin = source("apps/admin/src/app/[locale]/admin/page.tsx");
 
     expect(admin).toContain(
       'className="mt-4 min-w-0 scroll-mt-6 overflow-hidden',
@@ -58,8 +60,8 @@ describe("mobile layout regressions", () => {
   });
 
   it("stacks account orders and compacts cart lines on phones", () => {
-    const account = source("src/app/[locale]/account/page.tsx");
-    const cart = source("src/app/[locale]/cart/page.tsx");
+    const account = source("apps/storefront/src/app/[locale]/account/page.tsx");
+    const cart = source("apps/storefront/src/app/[locale]/cart/page.tsx");
 
     expect(account).toContain(
       "flex flex-col items-stretch justify-between gap-4 p-4",

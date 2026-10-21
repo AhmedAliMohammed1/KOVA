@@ -1,3 +1,17 @@
+# KOVA redesign checkpoint — 2026-10-21
+
+- [x] Audit and preserve all 44 original page/API routes and existing commerce contracts.
+- [x] Implement bilingual KOVA shared design system, storefront and customer/admin surface refresh.
+- [x] Visually inspect and optimize all 70 supplied local photographs (superseding the 13-file Drive subset); map 63 garment photos to the two owner-approved KOVA products.
+- [x] Split storefront/admin applications and move staff operations; add authenticated cache invalidation and prepared legacy redirects.
+- [x] Pass 348 regressions, lint, both TypeScript checks and production builds; record browser, contrast and local lab evidence.
+- [ ] Obtain requested Vercel project access; configure actual domains/env/auth callbacks; deploy and verify both previews.
+- [ ] Complete authenticated/provider-dependent sandbox acceptance, confirmed sizes/stock, standalone logo and business policy sign-off.
+
+See `docs/KOVA_DELIVERY.md` and `docs/KOVA_DEPLOYMENT.md` for precise evidence and external requirements. Earlier task history follows.
+
+---
+
 # Tasks
 
 ## Phase 0 — Discovery

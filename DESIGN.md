@@ -1,3 +1,11 @@
+# Current design system: KOVA Scrubs
+
+The authoritative specification is [KOVA master](design-system/kova/MASTER.md), with palette source in `packages/shared/tokens.css` and shared UI styles in `packages/shared/src/styles/globals.css`. The supplied navy/teal references supersede the earlier palette.
+
+The prior Scrub Vibe specification below is retained only as historical context. Its manufacturing/fabric claims and palette are not KOVA product facts.
+
+---
+
 ---
 name: Scrub Vibe
 description: Elevated Clinical-Editorial commerce system for Egyptian healthcare apparel

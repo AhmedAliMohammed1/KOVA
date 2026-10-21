@@ -89,15 +89,15 @@ describe("customer product reviews", () => {
   it("keeps customer and admin review pages responsive and paginated", () => {
     const root = resolve(__dirname, "../..");
     const customer = readFileSync(
-      resolve(root, "src/features/reviews/product-reviews-section.tsx"),
+      resolve(root, "packages/shared/src/features/reviews/product-reviews-section.tsx"),
       "utf8",
     );
     const admin = readFileSync(
-      resolve(root, "src/app/[locale]/admin/reviews/page.tsx"),
+      resolve(root, "apps/admin/src/app/[locale]/admin/reviews/page.tsx"),
       "utf8",
     );
     const card = readFileSync(
-      resolve(root, "src/components/store/product-card.tsx"),
+      resolve(root, "packages/shared/src/components/store/product-card.tsx"),
       "utf8",
     );
 

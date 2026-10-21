@@ -1,0 +1,1 @@
+export default function Loading() { return <main className="page-shell py-16" aria-busy="true"><p role="status" className="text-sm">KOVA · Loading / جار التحميل</p><div aria-hidden="true" className="mt-6 h-48 animate-pulse border border-[var(--border-subtle)] bg-white"/></main>; }

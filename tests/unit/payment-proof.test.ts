@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { paymentProofExtensionFromBytes } from "../../src/features/checkout/payment-proof";
+import { paymentProofExtensionFromBytes } from "../../packages/shared/src/features/checkout/payment-proof";
 
 describe("payment proof validation", () => {
   it.each([

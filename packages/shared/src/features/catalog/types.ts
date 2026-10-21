@@ -1,0 +1,42 @@
+export type ProductColour = {
+  id: string;
+  code: string;
+  swatch: string;
+  name: { en: string; ar: string };
+  sizes: string[];
+  variants: Record<string, string>;
+  allVariants: Record<string, string>;
+  stockBySize: Record<string, number>;
+  inStock: boolean;
+};
+
+export type ProductImage = {
+  id?: number;
+  src: string;
+  alt: { en: string; ar: string };
+  colourCode?: string | null;
+  position: number;
+};
+
+export type Product = {
+  id: string;
+  slug: string;
+  title: { en: string; ar: string };
+  description: { en: string; ar: string };
+  category: string;
+  price: number;
+  codDeposit: number;
+  compareAt?: number;
+  color: string;
+  colorCode: string;
+  colorName: { en: string; ar: string };
+  colors: ProductColour[];
+  sizes: string[];
+  inStock: boolean;
+  badge?: "new" | "sale" | "low";
+  availabilityPending?: boolean;
+  art: "clay" | "olive" | "ink" | "sand";
+  image: { src: string; alt: { en: string; ar: string } };
+  images?: ProductImage[];
+  rating?: { average: number; count: number };
+};

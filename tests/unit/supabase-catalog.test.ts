@@ -2,7 +2,7 @@ import { describe, expect, it } from "vitest";
 import {
   mapCatalogProduct,
   type CatalogProductRow,
-} from "../../src/features/catalog/map-supabase-product";
+} from "../../packages/shared/src/features/catalog/map-supabase-product";
 
 const row: CatalogProductRow = {
   id: 42,
@@ -161,6 +161,7 @@ describe("Supabase catalogue mapping", () => {
       ],
       sizes: ["S", "M"],
       inStock: true,
+      availabilityPending: false,
       badge: "sale",
       art: "clay",
       image: {
@@ -217,6 +218,7 @@ describe("Supabase catalogue mapping", () => {
       ],
       sizes: [],
       inStock: false,
+      availabilityPending: true,
       badge: "new",
       art: "sand",
       image: {

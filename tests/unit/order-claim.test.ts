@@ -3,9 +3,9 @@ import { timingSafeEqual } from "node:crypto";
 import {
   hashToken,
   issuePrivateToken,
-} from "../../src/features/checkout/security";
-import { checkEmailExistsAction } from "../../src/features/orders/claim-actions";
-import { validateClaimOwnership } from "../../src/features/orders/claim-validation";
+} from "../../packages/shared/src/features/checkout/security";
+import { checkEmailExistsAction } from "../../packages/shared/src/features/orders/claim-actions";
+import { validateClaimOwnership } from "../../packages/shared/src/features/orders/claim-validation";
 
 describe("Guest Order Claim & Account Verification", () => {
   describe("checkEmailExistsAction", () => {

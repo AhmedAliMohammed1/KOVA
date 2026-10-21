@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { discountPercent, formatMoney } from "../../src/lib/money";
+import { discountPercent, formatMoney } from "../../packages/shared/src/lib/money";
 describe("money", () => {
   it("stores and formats minor units", () => {
     expect(formatMoney(129900, "en")).toContain("1,299");

@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
-import { resolveProductGalleryImages } from '../../src/components/store/product-gallery';
-import type { Product } from '../../src/features/catalog/types';
+import { resolveProductGalleryImages } from '../../packages/shared/src/components/store/product-gallery';
+import type { Product } from '../../packages/shared/src/features/catalog/types';
 
 describe('resolveProductGalleryImages', () => {
   const baseProduct: Product = {

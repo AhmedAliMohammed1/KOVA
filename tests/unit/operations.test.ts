@@ -64,7 +64,7 @@ describe("production operations", () => {
   it("keeps every scheduled route behind the fail-closed bearer helper", () => {
     for (const route of ["commercial", "abandoned-cart"]) {
       const source = readFileSync(
-        resolve(`src/app/api/cron/${route}/route.ts`),
+        resolve(`apps/storefront/src/app/api/cron/${route}/route.ts`),
         "utf8",
       );
       expect(source).toContain("hasValidBearer");

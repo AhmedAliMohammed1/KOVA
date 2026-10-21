@@ -5,7 +5,7 @@ import {
   colourListSchema,
   colourItemSchema,
   parseSizesString,
-} from "../../src/features/admin/schemas";
+} from "../../apps/admin/src/features/admin/schemas";
 
 describe("Admin Product Edit & Delete Feature", () => {
   describe("updateProductSchema validation", () => {

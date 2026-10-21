@@ -1,5 +1,11 @@
 # Deployment
 
+Current KOVA monorepo instructions: [KOVA deployment runbook](KOVA_DEPLOYMENT.md). The previous deployment notes below describe the earlier single-application setup and are retained for rollback context.
+
+---
+
+# Deployment
+
 Vercel production deployment targets `main`; pull requests receive preview deployments. Production is hosted at `https://scrub-vibe-tau.vercel.app` and linked to Supabase project `iqufqtjotgpmhhtvlxwf`.
 
 Configure secrets in Vercel rather than committing them. Use `.env.example` as the environment contract. Server-controlled flag changes require redeployment. Paymob remains disabled until `PAYMOB_ACTIVATION.md` passes; OTP uses `CHECKOUT_PHONE_OTP_ENABLED`; scheduled automation requires `CRON_SECRET`.

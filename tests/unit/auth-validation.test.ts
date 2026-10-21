@@ -5,7 +5,7 @@ import {
   signInSchema,
   signUpSchema,
   updatePasswordSchema,
-} from "../../src/features/auth/validation";
+} from "../../packages/shared/src/features/auth/validation";
 
 describe("authentication validation", () => {
   it("accepts normalized sign-in and recovery input", () => {

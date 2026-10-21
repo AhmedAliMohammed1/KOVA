@@ -5,7 +5,7 @@ import {
   paginateItems,
   paginationPages,
   parsePage,
-} from "../../src/lib/pagination";
+} from "../../packages/shared/src/lib/pagination";
 
 describe("pagination", () => {
   it.each([

@@ -1,0 +1,213 @@
+{
+  "reviewedOn": "2026-10-21",
+  "scope": "All 70 local JPEGs visually reviewed in four numbered contact sheets; filenames 1 through 70 are contiguous, with the unsuffixed file treated as number 1.",
+  "groups": {
+    "grey-womens-set": {
+      "colour": "grey",
+      "subjectEn": "Grey V-neck scrub set with wide-leg trousers",
+      "subjectAr": "طقم سكراب رمادي برقبة V وبنطلون واسع",
+      "order": [
+        14,
+        1,
+        2,
+        3,
+        10,
+        18,
+        19,
+        13,
+        15,
+        16,
+        22,
+        24,
+        17,
+        23,
+        21,
+        11,
+        12,
+        20
+      ],
+      "approvedProductSlug": "kova-womens-scrub-set",
+      "approvedProductId": 20
+    },
+    "blue-womens-set": {
+      "colour": "blue",
+      "subjectEn": "Blue V-neck scrub set",
+      "subjectAr": "طقم سكراب أزرق برقبة V",
+      "order": [
+        29,
+        30,
+        33,
+        25,
+        26,
+        27,
+        4,
+        31,
+        5,
+        32
+      ],
+      "approvedProductSlug": "kova-womens-scrub-set",
+      "approvedProductId": 20
+    },
+    "burgundy-womens-set": {
+      "colour": "burgundy",
+      "subjectEn": "Burgundy V-neck scrub set",
+      "subjectAr": "طقم سكراب نبيتي برقبة V",
+      "order": [
+        65,
+        45,
+        47,
+        28,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        46,
+        48,
+        49,
+        50,
+        52,
+        62,
+        51
+      ],
+      "approvedProductSlug": "kova-womens-scrub-set",
+      "approvedProductId": 20
+    },
+    "black-mens-set": {
+      "colour": "black",
+      "subjectEn": "Black V-neck scrub set worn by a male model",
+      "subjectAr": "طقم سكراب أسود برقبة V على عارض",
+      "order": [
+        55,
+        54,
+        58,
+        63,
+        66,
+        56,
+        57,
+        59,
+        60,
+        67,
+        53,
+        61,
+        64
+      ],
+      "approvedProductSlug": "kova-mens-scrub-set",
+      "approvedProductId": 21
+    },
+    "burgundy-demonstration": {
+      "colour": "burgundy",
+      "subjectEn": "Burgundy scrub top on folded garments",
+      "subjectAr": "بلوزة سكراب نبيتي على ملابس مطوية",
+      "order": [
+        6,
+        68,
+        70,
+        7,
+        8,
+        9,
+        69
+      ]
+    }
+  },
+  "views": {
+    "full-front": [
+      1,
+      2,
+      3,
+      10,
+      13,
+      14,
+      18,
+      19,
+      24,
+      29,
+      30,
+      33,
+      34,
+      45,
+      47,
+      48,
+      55,
+      56,
+      58,
+      63
+    ],
+    "front-three-quarter": [
+      15,
+      16,
+      22,
+      25,
+      26,
+      27,
+      28,
+      35,
+      36,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      46,
+      49,
+      50,
+      52,
+      54,
+      59,
+      65,
+      66,
+      67
+    ],
+    "side": [
+      17,
+      23,
+      37,
+      62
+    ],
+    "pocket-detail": [
+      4,
+      11,
+      21,
+      31,
+      53,
+      57,
+      60
+    ],
+    "trouser-detail": [
+      12,
+      20,
+      32,
+      51,
+      61,
+      64
+    ],
+    "side-detail": [
+      5
+    ],
+    "still-life": [
+      6,
+      68,
+      70
+    ],
+    "water-demonstration": [
+      7,
+      8,
+      9,
+      69
+    ]
+  },
+  "mappingNotes": [
+    "Owner confirmed: grey, blue and burgundy belong to one new KOVA women's product; black belongs to a separate new KOVA men's product.",
+    "Both products are EGP 850 with an EGP 200 COD deposit. Sizes and stock remain unspecified; no variants or stock quantities are invented.",
+    "No complete rear view was identified. Seven still-life/water images remain outside the product galleries.",
+    "Previously retrieved Drive IDs are retained for 13 files; the other files have local provenance and hashes without invented Drive IDs."
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "date": "2026-10-21T20:30:10.427Z",
+  "environment": "Local production builds, Supabase connected, local draft catalog preview",
+  "storefrontOrigin": "http://localhost:3200",
+  "adminOrigin": "http://localhost:3201",
+  "results": [
+    {
+      "check": "en desktop homepage / images / reflow",
+      "pass": true
+    },
+    {
+      "check": "en mobile homepage / images / reflow",
+      "pass": true
+    },
+    {
+      "check": "en tablet homepage / images / reflow",
+      "pass": true
+    },
+    {
+      "check": "en landscape homepage / images / reflow",
+      "pass": true
+    },
+    {
+      "check": "ar desktop homepage / images / reflow",
+      "pass": true
+    },
+    {
+      "check": "ar mobile homepage / images / reflow",
+      "pass": true
+    },
+    {
+      "check": "ar tablet homepage / images / reflow",
+      "pass": true
+    },
+    {
+      "check": "ar landscape homepage / images / reflow",
+      "pass": true
+    },
+    {
+      "check": "Mobile dialog opens, Escape closes, focus returns",
+      "pass": true
+    },
+    {
+      "check": "Language switch retains catalog filters",
+      "pass": true
+    },
+    {
+      "check": "Catalog no-results recovery",
+      "pass": true
+    },
+    {
+      "check": "New KOVA colour gallery and selected colour survive language switching",
+      "pass": true
+    },
+    {
+      "check": "New products show approved price/deposit and cannot be ordered without confirmed sizes/stock",
+      "pass": true
+    },
+    {
+      "check": "Connected checkout renders without submitting a live order",
+      "pass": true
+    },
+    {
+      "check": "Retired Scrub Vibe product is absent from preview catalog",
+      "pass": true
+    },
+    {
+      "check": "All six help topics render in both languages",
+      "pass": true
+    },
+    {
+      "check": "Unavailable product displays not-found UI with noindex (Next streamed responses may use 200)",
+      "pass": true
+    },
+    {
+      "check": "Admin guest is redirected to host-local staff sign-in",
+      "pass": true
+    },
+    {
+      "check": "No browser page errors across tested flows",
+      "pass": true
+    }
+  ]
+}

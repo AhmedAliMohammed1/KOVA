@@ -4,7 +4,10 @@ import { defineConfig } from "vitest/config";
 export default defineConfig({
   resolve: {
     alias: {
-      "@": resolve(__dirname, "./src"),
+      "@/features/admin": resolve(__dirname, "./apps/admin/src/features/admin"),
+      "@/app/[locale]/admin": resolve(__dirname, "./apps/admin/src/app/[locale]/admin"),
+      "@/app": resolve(__dirname, "./apps/storefront/src/app"),
+      "@": resolve(__dirname, "./packages/shared/src"),
       "server-only": resolve(__dirname, "./tests/mocks/empty.ts"),
     },
   },

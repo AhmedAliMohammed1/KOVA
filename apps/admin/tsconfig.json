@@ -1,0 +1,70 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "paths": {
+      "@/*": [
+        "./src/*",
+        "../../packages/shared/src/*"
+      ],
+      "@/features/admin/*": [
+        "../admin/src/features/admin/*"
+      ],
+      "@/features/orders/admin-actions": [
+        "../admin/src/features/orders/admin-actions.ts"
+      ],
+      "@/features/shipping/admin-actions": [
+        "../admin/src/features/shipping/admin-actions.ts"
+      ],
+      "@/features/shipping/shipping-zone-form": [
+        "../admin/src/features/shipping/shipping-zone-form.tsx"
+      ],
+      "@/features/promotions/admin-actions": [
+        "../admin/src/features/promotions/admin-actions.ts"
+      ],
+      "@/features/promotions/admin-forms": [
+        "../admin/src/features/promotions/admin-forms.tsx"
+      ],
+      "@/features/cms/actions": [
+        "../admin/src/features/cms/actions.ts"
+      ],
+      "@/features/cms/admin-banners-manager": [
+        "../admin/src/features/cms/admin-banners-manager.tsx"
+      ],
+      "@/features/cms/banner-form": [
+        "../admin/src/features/cms/banner-form.tsx"
+      ],
+      "@/features/cms/banner-card": [
+        "../admin/src/features/cms/banner-card.tsx"
+      ],
+      "@/features/commercial/admin-actions": [
+        "../admin/src/features/commercial/admin-actions.ts"
+      ],
+      "@/features/commercial/return-review-form": [
+        "../admin/src/features/commercial/return-review-form.tsx"
+      ],
+      "@/features/catalog/size-guide-admin-actions": [
+        "../admin/src/features/catalog/size-guide-admin-actions.ts"
+      ],
+      "@/features/catalog/admin-size-editor": [
+        "../admin/src/features/catalog/admin-size-editor.tsx"
+      ],
+      "@/features/reviews/review-moderation-form": [
+        "../admin/src/features/reviews/review-moderation-form.tsx"
+      ],
+      "@/features/reviews/admin-actions": [
+        "../admin/src/features/reviews/admin-actions.ts"
+      ]
+    },
+    "tsBuildInfoFile": "./.next/cache/tsconfig.tsbuildinfo"
+  },
+  "include": [
+    "next-env.d.ts",
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    ".next/types/**/*.ts",
+    ".next/dev/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "date": "2026-10-21T20:28:50.194Z",
+  "environment": "Local production builds connected to existing Supabase; draft catalog preview; no new users/orders or email sent",
+  "checks": [
+    "en: sign-in, registration and recovery forms enabled",
+    "ar: sign-in, registration and recovery forms enabled",
+    "Sign-in server action reaches Auth and rejects invalid credentials",
+    "Legacy admin URL redirects to configured admin sign-in",
+    "Wishlist save, navigation and reload persistence",
+    "en: size guide opens, KOVA colours, mobile reflow, units, calculator, Escape",
+    "ar: size guide opens, KOVA colours, mobile reflow, units, calculator, Escape",
+    "Checkout route uses connected application, without submitting live orders"
+  ],
+  "runtimeErrors": [],
+  "limits": [
+    "No staff credentials supplied; successful staff/customer authentication and protected operations unverified",
+    "Server secret is unavailable locally; privileged checkout/payment operations remain unverified",
+    "No fabricated stock; buying remains disabled for draft products"
+  ]
+}

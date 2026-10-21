@@ -1,0 +1,263 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import { notFound } from "next/navigation";
+import { ChevronRight, RotateCcw, ShieldCheck, Truck } from "lucide-react";
+import { ProductInteractiveSection } from "@/components/store/product-interactive-section";
+import { ProductCard } from "@/components/store/product-card";
+import { BundleCard } from "@/features/commercial/bundle-card";
+import { StockNotifyForm } from "@/features/commercial/stock-notify-form";
+import { getProductMerchandising } from "@/features/commercial/repository";
+import { catalog } from "@/lib/catalog";
+import { discountPercent, formatMoney } from "@/lib/money";
+import { isLocale } from "@/lib/i18n";
+import { getSizeChartForProduct } from "@/features/catalog/size-guide-repository";
+import type { SizeCategory } from "@/features/catalog/size-guide-types";
+import { ProductReviewsSection } from "@/features/reviews/product-reviews-section";
+import { getProductReviewSnapshot } from "@/features/reviews/repository";
+import { ReviewStars } from "@/features/reviews/review-stars";
+import { parsePage } from "@/lib/pagination";
+import { getSiteOrigin } from "@/features/auth/site-url";
+
+type Props = {
+  params: Promise<{ locale: string; slug: string }>;
+  searchParams?: Promise<{ reviewPage?: string; colour?: string; size?: string }>;
+};
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale, slug } = await params;
+  if (!isLocale(locale)) return {};
+  const p = await catalog.bySlug(slug);
+  return p
+    ? {
+        title: p.title[locale],
+        description: p.description[locale],
+        alternates: { canonical: `/${locale}/products/${slug}`, languages: { en: `/en/products/${slug}`, ar: `/ar/products/${slug}` } },
+        openGraph: { title: p.title[locale], description: p.description[locale], images: [{ url: p.image.src, alt: p.image.alt[locale] }] },
+      }
+    : {};
+}
+
+export default async function ProductPage({ params, searchParams }: Props) {
+  const [{ locale, slug }, query] = await Promise.all([
+    params,
+    searchParams ?? Promise.resolve({ reviewPage: undefined, colour: undefined, size: undefined }),
+  ]);
+  if (!isLocale(locale)) notFound();
+  const ar = locale === "ar";
+  const p = await catalog.bySlug(slug);
+  if (!p) notFound();
+
+  const productId = Number(p.id);
+  const [sizeChartResult, merchandising, reviewSnapshot] = await Promise.all([
+    getSizeChartForProduct({
+      productId: productId || null,
+      category: (p.category as SizeCategory) || "unisex",
+    }),
+    getProductMerchandising(productId),
+    getProductReviewSnapshot(productId, parsePage(query.reviewPage)),
+  ]);
+  const sale = discountPercent(p.price, p.compareAt);
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: p.title[locale],
+    description: p.description[locale],
+    image: new URL(p.image.src, getSiteOrigin()).toString(),
+    brand: { "@type": "Brand", name: "KOVA Scrubs" },
+    sku: p.id,
+    ...(p.availabilityPending ? {} : { offers: {
+      "@type": "Offer",
+      price: p.price / 100,
+      priceCurrency: "EGP",
+      url: `${getSiteOrigin()}/${locale}/products/${p.slug}`,
+      availability: p.inStock
+        ? "https://schema.org/InStock"
+        : "https://schema.org/OutOfStock",
+      itemCondition: "https://schema.org/NewCondition",
+    } }),
+    ...(reviewSnapshot.summary.count > 0
+      ? {
+          aggregateRating: {
+            "@type": "AggregateRating",
+            ratingValue: reviewSnapshot.summary.average,
+            reviewCount: reviewSnapshot.summary.count,
+            bestRating: 5,
+            worstRating: 1,
+          },
+        }
+      : {}),
+  };
+
+  return (
+    <main
+      className="mx-auto max-w-[1440px] px-5 py-6 sm:px-6 md:px-10 md:py-12"
+      data-product-id={p.id}
+    >
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replaceAll("<", "\\u003c") }}
+      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: ar ? "المتجر" : "Shop", item: `${getSiteOrigin()}/${locale}/shop` }, { "@type": "ListItem", position: 2, name: p.title[locale], item: `${getSiteOrigin()}/${locale}/products/${p.slug}` }] }).replaceAll("<", "\\u003c") }} />
+
+      {/* Breadcrumb Navigation */}
+      <nav
+        aria-label={ar ? "مسار التنقل" : "Breadcrumb"}
+        className="mb-8 flex items-center gap-2 text-xs font-semibold text-[var(--text-muted)]"
+      >
+        <Link
+          href={`/${locale}/shop`}
+          className="transition-colors hover:text-[var(--brand-700)]"
+        >
+          {ar ? "المتجر" : "Shop"}
+        </Link>
+        <ChevronRight size={14} className="rtl:rotate-180 text-black/30" aria-hidden="true" />
+        <Link
+          href={`/${locale}/shop?category=${p.category}`}
+          className="capitalize transition-colors hover:text-[var(--brand-700)]"
+        >
+          {p.category}
+        </Link>
+        <ChevronRight size={14} className="rtl:rotate-180 text-black/30" aria-hidden="true" />
+        <span aria-current="page" className="truncate text-[var(--text-strong)]">
+          {p.title[locale]}
+        </span>
+      </nav>
+
+      {/* Interactive PDP Section: Dynamic Gallery & Purchase Pane */}
+      <ProductInteractiveSection
+        product={p}
+        locale={locale}
+        initialColourCode={query.colour}
+        initialSize={query.size}
+        sizeChartEntries={sizeChartResult.entries}
+        isProductOverride={sizeChartResult.isProductOverride}
+        headerContent={
+          <>
+            <p className="eyebrow text-[var(--brand-700)]">
+              KOVA SCRUBS · {p.category}
+            </p>
+
+            <h1 className="mt-3 font-serif text-3xl sm:text-4xl lg:text-5xl text-[var(--text-strong)] leading-tight">
+              {p.title[locale]}
+            </h1>
+
+            <a
+              href="#reviews"
+              className="mt-3 inline-flex min-h-11 items-center gap-2 text-xs font-semibold text-[var(--text-muted)] underline decoration-transparent underline-offset-4 hover:text-[var(--brand-700)] hover:decoration-current"
+            >
+              <ReviewStars
+                rating={reviewSnapshot.summary.average}
+                label={
+                  ar
+                    ? `${reviewSnapshot.summary.average} من 5`
+                    : `${reviewSnapshot.summary.average} out of 5`
+                }
+              />
+              {reviewSnapshot.summary.count
+                ? ar
+                  ? `${reviewSnapshot.summary.average.toFixed(1)} (${reviewSnapshot.summary.count} تقييم)`
+                  : `${reviewSnapshot.summary.average.toFixed(1)} (${reviewSnapshot.summary.count} reviews)`
+                : ar
+                  ? "لا توجد تقييمات بعد"
+                  : "No reviews yet"}
+            </a>
+
+            {/* Pricing Row */}
+            <div className="mt-5 flex flex-wrap items-baseline gap-3">
+              <strong className="text-2xl font-bold text-[var(--text-strong)]">
+                {formatMoney(p.price, locale)}
+              </strong>
+              {p.compareAt && (
+                <>
+                  <span className="text-sm text-[var(--text-muted)] line-through">
+                    {formatMoney(p.compareAt, locale)}
+                  </span>
+                  <span className="rounded-xs bg-[#a5472f] px-2 py-0.5 text-xs font-bold text-white shadow-2xs">
+                    -{sale}%
+                  </span>
+                </>
+              )}
+            </div>
+
+            {/* Description */}
+            <p className="mt-5 max-w-lg text-sm leading-relaxed text-[var(--text-muted)] sm:text-base">
+              {p.description[locale]}
+            </p>
+          </>
+        }
+        footerContent={
+          <>
+            {(!p.availabilityPending && (!p.inStock ||
+              p.colors.some((colour) =>
+                Object.values(colour.stockBySize).some(
+                  (quantity) => quantity <= 0,
+                ),
+              ))) && <StockNotifyForm product={p} locale={locale} />}
+
+            {/* Trust Assurances */}
+            <div className="mt-10 divide-y divide-[var(--border-subtle)] border-y border-[var(--border-subtle)] text-xs font-semibold text-[var(--text-strong)]">
+              {(ar
+                ? [
+                    [Truck, "رسوم التوصيل والمدة التقديرية تظهر عند الدفع"],
+                    [RotateCcw, "تابع أهلية طلب الاستبدال أو الإرجاع من حسابك"],
+                    [ShieldCheck, "دفع آمن ومحمي، مع خيار الدفع عند الاستلام بمقدم"],
+                  ]
+                : [
+                    [Truck, "Delivery fees and estimates shown at checkout"],
+                    [RotateCcw, "Check return and exchange eligibility in your account"],
+                    [
+                      ShieldCheck,
+                      "Secure payment, with cash on delivery with deposit option",
+                    ],
+                  ]
+              ).map(([Icon, text]) => {
+                const C = Icon as typeof Truck;
+                return (
+                  <div
+                    key={String(text)}
+                    className="flex items-center gap-3.5 py-4"
+                  >
+                    <C
+                      size={18}
+                      className="shrink-0 text-[var(--brand-700)]"
+                      strokeWidth={1.8}
+                      aria-hidden="true"
+                    />
+                    <span>{text as string}</span>
+                  </div>
+                );
+              })}
+            </div>
+          </>
+        }
+      />
+
+      {merchandising.bundles.map((bundle) => (
+        <BundleCard key={bundle.id} bundle={bundle} locale={locale} />
+      ))}
+
+      <ProductReviewsSection
+        locale={locale}
+        productId={productId}
+        productSlug={p.slug}
+        snapshot={reviewSnapshot}
+      />
+
+      {merchandising.related.length > 0 && (
+        <section className="mt-20 border-t border-[var(--border-subtle)] pt-10">
+          <p className="eyebrow text-[var(--brand-700)]">{ar ? "أكمل الإطلالة" : "COMPLETE THE LOOK"}</p>
+          <div className="mt-3 flex items-end justify-between gap-4">
+            <h2 className="font-serif text-3xl sm:text-4xl">{ar ? "اختيارات مناسبة مع هذا المنتج" : "Pairs well with your choice"}</h2>
+            <Link href={`/${locale}/shop`} className="shrink-0 text-xs font-bold underline underline-offset-4">{ar ? "عرض الكل" : "View all"}</Link>
+          </div>
+          <div className="mt-7 grid grid-cols-2 gap-x-3 gap-y-8 sm:grid-cols-3 lg:grid-cols-4 lg:gap-x-5">
+            {merchandising.related.slice(0, 4).map((product) => (
+              <ProductCard key={product.id} product={product} locale={locale} />
+            ))}
+          </div>
+        </section>
+      )}
+    </main>
+  );
+}

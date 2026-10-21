@@ -23,7 +23,7 @@ import {
   getFromAddress,
   getStaffEmail,
   type OrderEmailData,
-} from "../../src/features/notifications/email";
+} from "../../packages/shared/src/features/notifications/email";
 
 // ---------------------------------------------------------------------------
 // Fixtures
@@ -97,22 +97,22 @@ describe("getFromAddress", () => {
 
   it("defaults to onboarding@resend.dev when RESEND_FROM_EMAIL is not set", () => {
     vi.stubEnv("RESEND_FROM_EMAIL", "");
-    expect(getFromAddress()).toBe("Scrub Vibe <onboarding@resend.dev>");
+    expect(getFromAddress()).toBe("KOVA Scrubs <onboarding@resend.dev>");
   });
 
   it("falls back to onboarding@resend.dev when given a @gmail.com address", () => {
     vi.stubEnv("RESEND_FROM_EMAIL", "mytest@gmail.com");
-    expect(getFromAddress()).toBe("Scrub Vibe <onboarding@resend.dev>");
+    expect(getFromAddress()).toBe("KOVA Scrubs <onboarding@resend.dev>");
   });
 
   it("falls back to onboarding@resend.dev when given a @yahoo.com address", () => {
     vi.stubEnv("RESEND_FROM_EMAIL", "store@yahoo.com");
-    expect(getFromAddress()).toBe("Scrub Vibe <onboarding@resend.dev>");
+    expect(getFromAddress()).toBe("KOVA Scrubs <onboarding@resend.dev>");
   });
 
   it("uses custom verified domain when provided", () => {
     vi.stubEnv("RESEND_FROM_EMAIL", "noreply@scrub-vibe.com");
-    expect(getFromAddress()).toBe("Scrub Vibe <noreply@scrub-vibe.com>");
+    expect(getFromAddress()).toBe("KOVA Scrubs <noreply@scrub-vibe.com>");
   });
 });
 
@@ -193,7 +193,7 @@ describe("renderOrderPlaced", () => {
     const { html } = renderOrderPlaced(ORDER, "en");
     expect(html).toContain("<!DOCTYPE html>");
     expect(html).toContain("</html>");
-    expect(html).toContain("SCRUB VIBE");
+    expect(html).toContain("KOVA SCRUBS");
   });
 });
 

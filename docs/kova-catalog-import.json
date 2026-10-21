@@ -1,0 +1,639 @@
+{
+  "approval": "Owner approval in chat: new women's set with three colors, separate black men's set, EGP 850 and EGP 200 COD deposit each.",
+  "publication": "Drafts until sizes, inventory and deployment are confirmed.",
+  "products": [
+    {
+      "slug": "kova-womens-scrub-set",
+      "gender": "women",
+      "title_en": "KOVA Women's Scrub Set",
+      "title_ar": "طقم سكراب كوفا حريمي",
+      "description_en": "V-neck scrub set. Explore the color-specific studio gallery. Sizes and stock are awaiting confirmation.",
+      "description_ar": "طقم سكراب برقبة V. استعرض صور كل لون. المقاسات والمخزون في انتظار التأكيد.",
+      "brand": "KOVA",
+      "status": "draft",
+      "base_price_minor": 85000,
+      "cod_deposit_minor": 20000,
+      "colors": [
+        {
+          "code": "grey",
+          "label_en": "Grey",
+          "label_ar": "رمادي",
+          "swatch_hex": "#96959c",
+          "position": 1
+        },
+        {
+          "code": "blue",
+          "label_en": "Blue",
+          "label_ar": "أزرق",
+          "swatch_hex": "#205da1",
+          "position": 2
+        },
+        {
+          "code": "burgundy",
+          "label_en": "Burgundy",
+          "label_ar": "نبيتي",
+          "swatch_hex": "#792530",
+          "position": 3
+        }
+      ],
+      "images": [
+        {
+          "storage_path": "/images/kova/studio-1.webp",
+          "alt_en": "Grey V-neck scrub set with wide-leg trousers, full-length front view",
+          "alt_ar": "طقم سكراب رمادي برقبة V وبنطلون واسع، صورة أمامية كاملة",
+          "position": 2,
+          "colour_code": "grey",
+          "width": 1333,
+          "height": 2000
+        },
+        {
+          "storage_path": "/images/kova/studio-2.webp",
+          "alt_en": "Grey V-neck scrub set with wide-leg trousers, full-length front view",
+          "alt_ar": "طقم سكراب رمادي برقبة V وبنطلون واسع، صورة أمامية كاملة",
+          "position": 3,
+          "colour_code": "grey",
+          "width": 1333,
+          "height": 2000
+        },
+        {
+          "storage_path": "/images/kova/studio-3.webp",
+          "alt_en": "Grey V-neck scrub set with wide-leg trousers, full-length front view",
+          "alt_ar": "طقم سكراب رمادي برقبة V وبنطلون واسع، صورة أمامية كاملة",
+          "position": 4,
+          "colour_code": "grey",
+          "width": 1333,
+          "height": 2000
+        },
+        {
+          "storage_path": "/images/kova/studio-10.webp",
+          "alt_en": "Grey V-neck scrub set with wide-leg trousers, full-length front view",
+          "alt_ar": "طقم سكراب رمادي برقبة V وبنطلون واسع، صورة أمامية كاملة",
+          "position": 5,
+          "colour_code": "grey",
+          "width": 1333,
+          "height": 2000
+        },
+        {
+          "storage_path": "/images/kova/studio-11.webp",
+          "alt_en": "Grey V-neck scrub set with wide-leg trousers, pocket and garment detail",
+          "alt_ar": "طقم سكراب رمادي برقبة V وبنطلون واسع، تفاصيل الجيوب والملابس",
+          "position": 16,
+          "colour_code": "grey",
+          "width": 1333,
+          "height": 2000
+        },
+        {
+          "storage_path": "/images/kova/studio-12.webp",
+          "alt_en": "Grey V-neck scrub set with wide-leg trousers, trouser detail",
+          "alt_ar": "طقم سكراب رمادي برقبة V وبنطلون واسع، تفاصيل البنطلون",
+          "position": 17,
+          "colour_code": "grey",
+          "width": 1333,
+          "height": 2000
+        },
+        {
+          "storage_path": "/images/kova/studio-13.webp",
+          "alt_en": "Grey V-neck scrub set with wide-leg trousers, full-length front view",
+          "alt_ar": "طقم سكراب رمادي برقبة V وبنطلون واسع، صورة أمامية كاملة",
+          "position": 8,
+          "colour_code": "grey",
+          "width": 1333,
+          "height": 2000
+        },
+        {
+          "storage_path": "/images/kova/studio-14.webp",
+          "alt_en": "Grey V-neck scrub set with wide-leg trousers, full-length front view",
+          "alt_ar": "طقم سكراب رمادي برقبة V وبنطلون واسع، صورة أمامية كاملة",
+          "position": 1,
+          "colour_code": "grey",
+          "width": 1333,
+          "height": 2000
+        },
+        {
+          "storage_path": "/images/kova/studio-15.webp",
+          "alt_en": "Grey V-neck scrub set with wide-leg trousers, front or three-quarter pose",
+          "alt_ar": "طقم سكراب رمادي برقبة V وبنطلون واسع، صورة أمامية أو بزاوية",
+          "position": 9,
+          "colour_code": "grey",
+          "width": 1333,
+          "height": 2000
+        },
+        {
+          "storage_path": "/images/kova/studio-16.webp",
+          "alt_en": "Grey V-neck scrub set with wide-leg trousers, front or three-quarter pose",
+          "alt_ar": "طقم سكراب رمادي برقبة V وبنطلون واسع، صورة أمامية أو بزاوية",
+          "position": 10,
+          "colour_code": "grey",
+          "width": 1333,
+          "height": 2000
+        },
+        {
+          "storage_path": "/images/kova/studio-17.webp",
+          "alt_en": "Grey V-neck scrub set with wide-leg trousers, side view",
+          "alt_ar": "طقم سكراب رمادي برقبة V وبنطلون واسع، صورة جانبية",
+          "position": 13,
+          "colour_code": "grey",
+          "width": 1333,
+          "height": 2000
+        },
+        {
+          "storage_path": "/images/kova/studio-18.webp",
+          "alt_en": "Grey V-neck scrub set with wide-leg trousers, full-length front view",
+          "alt_ar": "طقم سكراب رمادي برقبة V وبنطلون واسع، صورة أمامية كاملة",
+          "position": 6,
+          "colour_code": "grey",
+          "width": 1333,
+          "height": 2000
+        },
+        {
+          "storage_path": "/images/kova/studio-19.webp",
+          "alt_en": "Grey V-neck scrub set with wide-leg trousers, full-length front view",
+          "alt_ar": "طقم سكراب رمادي برقبة V وبنطلون واسع، صورة أمامية كاملة",
+          "position": 7,
+          "colour_code": "grey",
+          "width": 1333,
+          "height": 2000
+        },
+        {
+          "storage_path": "/images/kova/studio-20.webp",
+          "alt_en": "Grey V-neck scrub set with wide-leg trousers, trouser detail",
+          "alt_ar": "طقم سكراب رمادي برقبة V وبنطلون واسع، تفاصيل البنطلون",
+          "position": 18,
+          "colour_code": "grey",
+          "width": 1333,
+          "height": 2000
+        },
+        {
+          "storage_path": "/images/kova/studio-21.webp",
+          "alt_en": "Grey V-neck scrub set with wide-leg trousers, pocket and garment detail",
+          "alt_ar": "طقم سكراب رمادي برقبة V وبنطلون واسع، تفاصيل الجيوب والملابس",
+          "position": 15,
+          "colour_code": "grey",
+          "width": 1333,
+          "height": 2000
+        },
+        {
+          "storage_path": "/images/kova/studio-22.webp",
+          "alt_en": "Grey V-neck scrub set with wide-leg trousers, front or three-quarter pose",
+          "alt_ar": "طقم سكراب رمادي برقبة V وبنطلون واسع، صورة أمامية أو بزاوية",
+          "position": 11,
+          "colour_code": "grey",
+          "width": 1333,
+          "height": 2000
+        },
+        {
+          "storage_path": "/images/kova/studio-23.webp",
+          "alt_en": "Grey V-neck scrub set with wide-leg trousers, side view",
+          "alt_ar": "طقم سكراب رمادي برقبة V وبنطلون واسع، صورة جانبية",
+          "position": 14,
+          "colour_code": "grey",
+          "width": 1333,
+          "height": 2000
+        },
+        {
+          "storage_path": "/images/kova/studio-24.webp",
+          "alt_en": "Grey V-neck scrub set with wide-leg trousers, full-length front view",
+          "alt_ar": "طقم سكراب رمادي برقبة V وبنطلون واسع، صورة أمامية كاملة",
+          "position": 12,
+          "colour_code": "grey",
+          "width": 1333,
+          "height": 2000
+        },
+        {
+          "storage_path": "/images/kova/studio-4.webp",
+          "alt_en": "Blue V-neck scrub set, pocket and garment detail",
+          "alt_ar": "طقم سكراب أزرق برقبة V، تفاصيل الجيوب والملابس",
+          "position": 107,
+          "colour_code": "blue",
+          "width": 1333,
+          "height": 2000
+        },
+        {
+          "storage_path": "/images/kova/studio-5.webp",
+          "alt_en": "Blue V-neck scrub set, side garment detail",
+          "alt_ar": "طقم سكراب أزرق برقبة V، تفاصيل جانبية للملابس",
+          "position": 109,
+          "colour_code": "blue",
+          "width": 1333,
+          "height": 2000
+        },
+        {
+          "storage_path": "/images/kova/studio-25.webp",
+          "alt_en": "Blue V-neck scrub set, front or three-quarter pose",
+          "alt_ar": "طقم سكراب أزرق برقبة V، صورة أمامية أو بزاوية",
+          "position": 104,
+          "colour_code": "blue",
+          "width": 1333,
+          "height": 2000
+        },
+        {
+          "storage_path": "/images/kova/studio-26.webp",
+          "alt_en": "Blue V-neck scrub set, front or three-quarter pose",
+          "alt_ar": "طقم سكراب أزرق برقبة V، صورة أمامية أو بزاوية",
+          "position": 105,
+          "colour_code": "blue",
+          "width": 1333,
+          "height": 2000
+        },
+        {
+          "storage_path": "/images/kova/studio-27.webp",
+          "alt_en": "Blue V-neck scrub set, front or three-quarter pose",
+          "alt_ar": "طقم سكراب أزرق برقبة V، صورة أمامية أو بزاوية",
+          "position": 106,
+          "colour_code": "blue",
+          "width": 1333,
+          "height": 2000
+        },
+        {
+          "storage_path": "/images/kova/studio-29.webp",
+          "alt_en": "Blue V-neck scrub set, full-length front view",
+          "alt_ar": "طقم سكراب أزرق برقبة V، صورة أمامية كاملة",
+          "position": 101,
+          "colour_code": "blue",
+          "width": 1333,
+          "height": 2000
+        },
+        {
+          "storage_path": "/images/kova/studio-30.webp",
+          "alt_en": "Blue V-neck scrub set, full-length front view",
+          "alt_ar": "طقم سكراب أزرق برقبة V، صورة أمامية كاملة",
+          "position": 102,
+          "colour_code": "blue",
+          "width": 1333,
+          "height": 2000
+        },
+        {
+          "storage_path": "/images/kova/studio-31.webp",
+          "alt_en": "Blue V-neck scrub set, pocket and garment detail",
+          "alt_ar": "طقم سكراب أزرق برقبة V، تفاصيل الجيوب والملابس",
+          "position": 108,
+          "colour_code": "blue",
+          "width": 1333,
+          "height": 2000
+        },
+        {
+          "storage_path": "/images/kova/studio-32.webp",
+          "alt_en": "Blue V-neck scrub set, trouser detail",
+          "alt_ar": "طقم سكراب أزرق برقبة V، تفاصيل البنطلون",
+          "position": 110,
+          "colour_code": "blue",
+          "width": 1333,
+          "height": 2000
+        },
+        {
+          "storage_path": "/images/kova/studio-33.webp",
+          "alt_en": "Blue V-neck scrub set, full-length front view",
+          "alt_ar": "طقم سكراب أزرق برقبة V، صورة أمامية كاملة",
+          "position": 103,
+          "colour_code": "blue",
+          "width": 1333,
+          "height": 2000
+        },
+        {
+          "storage_path": "/images/kova/studio-28.webp",
+          "alt_en": "Burgundy V-neck scrub set, front or three-quarter pose",
+          "alt_ar": "طقم سكراب نبيتي برقبة V، صورة أمامية أو بزاوية",
+          "position": 204,
+          "colour_code": "burgundy",
+          "width": 1333,
+          "height": 2000
+        },
+        {
+          "storage_path": "/images/kova/studio-34.webp",
+          "alt_en": "Burgundy V-neck scrub set, full-length front view",
+          "alt_ar": "طقم سكراب نبيتي برقبة V، صورة أمامية كاملة",
+          "position": 205,
+          "colour_code": "burgundy",
+          "width": 1333,
+          "height": 2000
+        },
+        {
+          "storage_path": "/images/kova/studio-35.webp",
+          "alt_en": "Burgundy V-neck scrub set, front or three-quarter pose",
+          "alt_ar": "طقم سكراب نبيتي برقبة V، صورة أمامية أو بزاوية",
+          "position": 206,
+          "colour_code": "burgundy",
+          "width": 1333,
+          "height": 2000
+        },
+        {
+          "storage_path": "/images/kova/studio-36.webp",
+          "alt_en": "Burgundy V-neck scrub set, front or three-quarter pose",
+          "alt_ar": "طقم سكراب نبيتي برقبة V، صورة أمامية أو بزاوية",
+          "position": 207,
+          "colour_code": "burgundy",
+          "width": 1333,
+          "height": 2000
+        },
+        {
+          "storage_path": "/images/kova/studio-37.webp",
+          "alt_en": "Burgundy V-neck scrub set, side view",
+          "alt_ar": "طقم سكراب نبيتي برقبة V، صورة جانبية",
+          "position": 208,
+          "colour_code": "burgundy",
+          "width": 1333,
+          "height": 2000
+        },
+        {
+          "storage_path": "/images/kova/studio-38.webp",
+          "alt_en": "Burgundy V-neck scrub set, front or three-quarter pose",
+          "alt_ar": "طقم سكراب نبيتي برقبة V، صورة أمامية أو بزاوية",
+          "position": 209,
+          "colour_code": "burgundy",
+          "width": 1333,
+          "height": 2000
+        },
+        {
+          "storage_path": "/images/kova/studio-39.webp",
+          "alt_en": "Burgundy V-neck scrub set, front or three-quarter pose",
+          "alt_ar": "طقم سكراب نبيتي برقبة V، صورة أمامية أو بزاوية",
+          "position": 210,
+          "colour_code": "burgundy",
+          "width": 1333,
+          "height": 2000
+        },
+        {
+          "storage_path": "/images/kova/studio-40.webp",
+          "alt_en": "Burgundy V-neck scrub set, front or three-quarter pose",
+          "alt_ar": "طقم سكراب نبيتي برقبة V، صورة أمامية أو بزاوية",
+          "position": 211,
+          "colour_code": "burgundy",
+          "width": 1333,
+          "height": 2000
+        },
+        {
+          "storage_path": "/images/kova/studio-41.webp",
+          "alt_en": "Burgundy V-neck scrub set, front or three-quarter pose",
+          "alt_ar": "طقم سكراب نبيتي برقبة V، صورة أمامية أو بزاوية",
+          "position": 212,
+          "colour_code": "burgundy",
+          "width": 1333,
+          "height": 2000
+        },
+        {
+          "storage_path": "/images/kova/studio-42.webp",
+          "alt_en": "Burgundy V-neck scrub set, front or three-quarter pose",
+          "alt_ar": "طقم سكراب نبيتي برقبة V، صورة أمامية أو بزاوية",
+          "position": 213,
+          "colour_code": "burgundy",
+          "width": 1333,
+          "height": 2000
+        },
+        {
+          "storage_path": "/images/kova/studio-43.webp",
+          "alt_en": "Burgundy V-neck scrub set, front or three-quarter pose",
+          "alt_ar": "طقم سكراب نبيتي برقبة V، صورة أمامية أو بزاوية",
+          "position": 214,
+          "colour_code": "burgundy",
+          "width": 1333,
+          "height": 2000
+        },
+        {
+          "storage_path": "/images/kova/studio-44.webp",
+          "alt_en": "Burgundy V-neck scrub set, front or three-quarter pose",
+          "alt_ar": "طقم سكراب نبيتي برقبة V، صورة أمامية أو بزاوية",
+          "position": 215,
+          "colour_code": "burgundy",
+          "width": 1333,
+          "height": 2000
+        },
+        {
+          "storage_path": "/images/kova/studio-45.webp",
+          "alt_en": "Burgundy V-neck scrub set, full-length front view",
+          "alt_ar": "طقم سكراب نبيتي برقبة V، صورة أمامية كاملة",
+          "position": 202,
+          "colour_code": "burgundy",
+          "width": 1333,
+          "height": 2000
+        },
+        {
+          "storage_path": "/images/kova/studio-46.webp",
+          "alt_en": "Burgundy V-neck scrub set, front or three-quarter pose",
+          "alt_ar": "طقم سكراب نبيتي برقبة V، صورة أمامية أو بزاوية",
+          "position": 216,
+          "colour_code": "burgundy",
+          "width": 1333,
+          "height": 2000
+        },
+        {
+          "storage_path": "/images/kova/studio-47.webp",
+          "alt_en": "Burgundy V-neck scrub set, full-length front view",
+          "alt_ar": "طقم سكراب نبيتي برقبة V، صورة أمامية كاملة",
+          "position": 203,
+          "colour_code": "burgundy",
+          "width": 1333,
+          "height": 2000
+        },
+        {
+          "storage_path": "/images/kova/studio-48.webp",
+          "alt_en": "Burgundy V-neck scrub set, full-length front view",
+          "alt_ar": "طقم سكراب نبيتي برقبة V، صورة أمامية كاملة",
+          "position": 217,
+          "colour_code": "burgundy",
+          "width": 1333,
+          "height": 2000
+        },
+        {
+          "storage_path": "/images/kova/studio-49.webp",
+          "alt_en": "Burgundy V-neck scrub set, front or three-quarter pose",
+          "alt_ar": "طقم سكراب نبيتي برقبة V، صورة أمامية أو بزاوية",
+          "position": 218,
+          "colour_code": "burgundy",
+          "width": 1333,
+          "height": 2000
+        },
+        {
+          "storage_path": "/images/kova/studio-50.webp",
+          "alt_en": "Burgundy V-neck scrub set, front or three-quarter pose",
+          "alt_ar": "طقم سكراب نبيتي برقبة V، صورة أمامية أو بزاوية",
+          "position": 219,
+          "colour_code": "burgundy",
+          "width": 1333,
+          "height": 2000
+        },
+        {
+          "storage_path": "/images/kova/studio-51.webp",
+          "alt_en": "Burgundy V-neck scrub set, trouser detail",
+          "alt_ar": "طقم سكراب نبيتي برقبة V، تفاصيل البنطلون",
+          "position": 222,
+          "colour_code": "burgundy",
+          "width": 1333,
+          "height": 2000
+        },
+        {
+          "storage_path": "/images/kova/studio-52.webp",
+          "alt_en": "Burgundy V-neck scrub set, front or three-quarter pose",
+          "alt_ar": "طقم سكراب نبيتي برقبة V، صورة أمامية أو بزاوية",
+          "position": 220,
+          "colour_code": "burgundy",
+          "width": 1333,
+          "height": 2000
+        },
+        {
+          "storage_path": "/images/kova/studio-62.webp",
+          "alt_en": "Burgundy V-neck scrub set, side view",
+          "alt_ar": "طقم سكراب نبيتي برقبة V، صورة جانبية",
+          "position": 221,
+          "colour_code": "burgundy",
+          "width": 1333,
+          "height": 2000
+        },
+        {
+          "storage_path": "/images/kova/studio-65.webp",
+          "alt_en": "Burgundy V-neck scrub set, front or three-quarter pose",
+          "alt_ar": "طقم سكراب نبيتي برقبة V، صورة أمامية أو بزاوية",
+          "position": 201,
+          "colour_code": "burgundy",
+          "width": 1333,
+          "height": 2000
+        }
+      ],
+      "sizes": null,
+      "stock": null,
+      "database_id": 20
+    },
+    {
+      "slug": "kova-mens-scrub-set",
+      "gender": "men",
+      "title_en": "KOVA Men's Scrub Set",
+      "title_ar": "طقم سكراب كوفا رجالي",
+      "description_en": "V-neck scrub set. Explore the color-specific studio gallery. Sizes and stock are awaiting confirmation.",
+      "description_ar": "طقم سكراب برقبة V. استعرض صور كل لون. المقاسات والمخزون في انتظار التأكيد.",
+      "brand": "KOVA",
+      "status": "draft",
+      "base_price_minor": 85000,
+      "cod_deposit_minor": 20000,
+      "colors": [
+        {
+          "code": "black",
+          "label_en": "Black",
+          "label_ar": "أسود",
+          "swatch_hex": "#191d1b",
+          "position": 1
+        }
+      ],
+      "images": [
+        {
+          "storage_path": "/images/kova/studio-53.webp",
+          "alt_en": "Black V-neck scrub set worn by a male model, pocket and garment detail",
+          "alt_ar": "طقم سكراب أسود برقبة V على عارض، تفاصيل الجيوب والملابس",
+          "position": 11,
+          "colour_code": "black",
+          "width": 1333,
+          "height": 2000
+        },
+        {
+          "storage_path": "/images/kova/studio-54.webp",
+          "alt_en": "Black V-neck scrub set worn by a male model, front or three-quarter pose",
+          "alt_ar": "طقم سكراب أسود برقبة V على عارض، صورة أمامية أو بزاوية",
+          "position": 2,
+          "colour_code": "black",
+          "width": 1333,
+          "height": 2000
+        },
+        {
+          "storage_path": "/images/kova/studio-55.webp",
+          "alt_en": "Black V-neck scrub set worn by a male model, full-length front view",
+          "alt_ar": "طقم سكراب أسود برقبة V على عارض، صورة أمامية كاملة",
+          "position": 1,
+          "colour_code": "black",
+          "width": 1333,
+          "height": 2000
+        },
+        {
+          "storage_path": "/images/kova/studio-56.webp",
+          "alt_en": "Black V-neck scrub set worn by a male model, full-length front view",
+          "alt_ar": "طقم سكراب أسود برقبة V على عارض، صورة أمامية كاملة",
+          "position": 6,
+          "colour_code": "black",
+          "width": 1333,
+          "height": 2000
+        },
+        {
+          "storage_path": "/images/kova/studio-57.webp",
+          "alt_en": "Black V-neck scrub set worn by a male model, pocket and garment detail",
+          "alt_ar": "طقم سكراب أسود برقبة V على عارض، تفاصيل الجيوب والملابس",
+          "position": 7,
+          "colour_code": "black",
+          "width": 1333,
+          "height": 2000
+        },
+        {
+          "storage_path": "/images/kova/studio-58.webp",
+          "alt_en": "Black V-neck scrub set worn by a male model, full-length front view",
+          "alt_ar": "طقم سكراب أسود برقبة V على عارض، صورة أمامية كاملة",
+          "position": 3,
+          "colour_code": "black",
+          "width": 1333,
+          "height": 2000
+        },
+        {
+          "storage_path": "/images/kova/studio-59.webp",
+          "alt_en": "Black V-neck scrub set worn by a male model, front or three-quarter pose",
+          "alt_ar": "طقم سكراب أسود برقبة V على عارض، صورة أمامية أو بزاوية",
+          "position": 8,
+          "colour_code": "black",
+          "width": 1333,
+          "height": 2000
+        },
+        {
+          "storage_path": "/images/kova/studio-60.webp",
+          "alt_en": "Black V-neck scrub set worn by a male model, pocket and garment detail",
+          "alt_ar": "طقم سكراب أسود برقبة V على عارض، تفاصيل الجيوب والملابس",
+          "position": 9,
+          "colour_code": "black",
+          "width": 1333,
+          "height": 2000
+        },
+        {
+          "storage_path": "/images/kova/studio-61.webp",
+          "alt_en": "Black V-neck scrub set worn by a male model, trouser detail",
+          "alt_ar": "طقم سكراب أسود برقبة V على عارض، تفاصيل البنطلون",
+          "position": 12,
+          "colour_code": "black",
+          "width": 1333,
+          "height": 2000
+        },
+        {
+          "storage_path": "/images/kova/studio-63.webp",
+          "alt_en": "Black V-neck scrub set worn by a male model, full-length front view",
+          "alt_ar": "طقم سكراب أسود برقبة V على عارض، صورة أمامية كاملة",
+          "position": 4,
+          "colour_code": "black",
+          "width": 1333,
+          "height": 2000
+        },
+        {
+          "storage_path": "/images/kova/studio-64.webp",
+          "alt_en": "Black V-neck scrub set worn by a male model, trouser detail",
+          "alt_ar": "طقم سكراب أسود برقبة V على عارض، تفاصيل البنطلون",
+          "position": 13,
+          "colour_code": "black",
+          "width": 1333,
+          "height": 2000
+        },
+        {
+          "storage_path": "/images/kova/studio-66.webp",
+          "alt_en": "Black V-neck scrub set worn by a male model, front or three-quarter pose",
+          "alt_ar": "طقم سكراب أسود برقبة V على عارض، صورة أمامية أو بزاوية",
+          "position": 5,
+          "colour_code": "black",
+          "width": 1333,
+          "height": 2000
+        },
+        {
+          "storage_path": "/images/kova/studio-67.webp",
+          "alt_en": "Black V-neck scrub set worn by a male model, front or three-quarter pose",
+          "alt_ar": "طقم سكراب أسود برقبة V على عارض، صورة أمامية أو بزاوية",
+          "position": 10,
+          "colour_code": "black",
+          "width": 1333,
+          "height": 2000
+        }
+      ],
+      "sizes": null,
+      "stock": null,
+      "database_id": 21
+    }
+  ]
+}

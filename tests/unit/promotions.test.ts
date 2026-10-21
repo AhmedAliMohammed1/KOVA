@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
-import { mapDiscountPreview, normalizeDiscountCode } from "../../src/features/promotions/types";
-import { campaignFormSchema, discountCodeFormSchema, discountPreviewSchema } from "../../src/features/promotions/validation";
+import { mapDiscountPreview, normalizeDiscountCode } from "../../packages/shared/src/features/promotions/types";
+import { campaignFormSchema, discountCodeFormSchema, discountPreviewSchema } from "../../packages/shared/src/features/promotions/validation";
 
 describe("promotion validation", () => {
   it("normalizes customer codes and validates a preview request", () => {

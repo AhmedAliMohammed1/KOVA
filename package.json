@@ -1,14 +1,14 @@
 {
-  "name": "scrub-vibe-commerce",
+  "name": "kova-commerce",
   "version": "0.1.0",
   "private": true,
-  "packageManager": "pnpm@10.17.1",
+  "packageManager": "pnpm@11.25.0",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "dev": "pnpm --filter @kova/storefront dev",
+    "build": "pnpm --filter @kova/storefront build && pnpm --filter @kova/admin build",
+    "start": "pnpm --filter @kova/storefront start",
     "lint": "eslint . --max-warnings=0",
-    "typecheck": "tsc --noEmit",
+    "typecheck": "pnpm --filter @kova/storefront typecheck && pnpm --filter @kova/admin typecheck",
     "test": "vitest run",
     "test:watch": "vitest",
     "test:integration": "vitest run tests/integration",
@@ -16,7 +16,10 @@
     "verify:release": "pnpm lint && pnpm typecheck && pnpm test && pnpm build",
     "ops:verify-backup": "node scripts/operations/verify-backup.mjs",
     "ops:set-role": "node scripts/operations/set-user-role.mjs",
-    "ops:remove-role": "node scripts/operations/set-user-role.mjs --remove"
+    "ops:remove-role": "node scripts/operations/set-user-role.mjs --remove",
+    "dev:admin": "pnpm --filter @kova/admin dev",
+    "build:storefront": "pnpm --filter @kova/storefront build",
+    "build:admin": "pnpm --filter @kova/admin build"
   },
   "dependencies": {
     "@supabase/ssr": "0.12.5",
