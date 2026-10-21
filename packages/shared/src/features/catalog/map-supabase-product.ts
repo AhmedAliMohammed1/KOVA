@@ -47,6 +47,7 @@ export type CatalogProductRow = Pick<
   product_images: ProductImage[];
   product_options: ProductOption[];
   product_variants: ProductVariant[];
+  categories?: { id: number; slug: string } | null;
 };
 
 function titleFor(translations: ProductTranslation[], locale: "en" | "ar") {
@@ -209,7 +210,7 @@ export function mapCatalogProduct(row: CatalogProductRow): Product {
         descriptionFor(row.product_translations, "ar") ||
         descriptionFor(row.product_translations, "en"),
     },
-    category: row.gender ?? "unisex",
+    category: row.categories?.slug ?? row.gender ?? "unisex",
     price: row.base_price_minor,
     codDeposit: row.cod_deposit_minor,
     compareAt: row.compare_at_price_minor ?? undefined,

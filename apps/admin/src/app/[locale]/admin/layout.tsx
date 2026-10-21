@@ -2,6 +2,7 @@ import type { Route } from "next";
 import Link from "next/link";
 import {
   BadgePercent,
+  FolderTree,
   ImageIcon,
   LayoutDashboard,
   MessageSquareText,
@@ -36,6 +37,7 @@ export default async function AdminLayout({
     [ShoppingBag, ar ? "الطلبات" : "Orders", `/${locale}/admin/orders`],
     [MessageSquareText, ar ? "التقييمات" : "Reviews", `/${locale}/admin/reviews`],
     [Package, ar ? "المنتجات" : "Products", `/${locale}/admin#products`],
+    [FolderTree, ar ? "الأقسام" : "Categories", `/${locale}/admin/categories`],
     [Truck, ar ? "الشحن" : "Shipping", `/${locale}/admin/shipping`],
     [BadgePercent, ar ? "الخصومات" : "Discounts", `/${locale}/admin/discounts`],
     [
@@ -46,7 +48,7 @@ export default async function AdminLayout({
     [ImageIcon, ar ? "المحتوى" : "Content", `/${locale}/admin/banners`],
     [Ruler, ar ? "المقاسات" : "Sizes", `/${locale}/admin/sizes`],
     ...(canManageUserRoles(roles) ? [[ShieldCheck, ar ? "صلاحيات المستخدمين" : "User roles", `/${locale}/admin/users`] as const] : []),
-  ] as const).filter((_, index) => elevated || index === 6 || (index === 1 && roles.some(role => ["support", "warehouse"].includes(role))) || (index === 2 && roles.some(role => ["content_editor", "product_manager"].includes(role))));
+  ] as const).filter((item) => elevated || item[2].endsWith("/commercial") || (item[2].endsWith("/orders") && roles.some(role => ["support", "warehouse"].includes(role))) || (item[2].endsWith("/reviews") && roles.some(role => ["content_editor", "product_manager"].includes(role))) || (item[2].endsWith("/categories") && roles.includes("product_manager")) || (item[2].includes("#products") && roles.includes("product_manager")));
   return (
     <div className="min-h-screen bg-[var(--surface-canvas)]">
       <header className="sticky top-0 z-50 border-b border-white/10 bg-[var(--brand-950)] text-white shadow-sm">

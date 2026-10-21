@@ -7,7 +7,8 @@ export type CatalogCategory =
   | "men"
   | "kids"
   | "unisex"
-  | "accessories";
+  | "accessories"
+  | (string & {});
 export type CatalogPrice = "under-700" | "700-900" | "over-900";
 export type CatalogSort = "featured" | "price-asc" | "price-desc" | "name";
 
@@ -55,6 +56,7 @@ function list(value: string | string[] | undefined, pattern: RegExp) {
 
 export function parseCatalogFilters(
   searchParams: CatalogSearchParams,
+  extraCategories?: Set<string>,
 ): CatalogFilters {
   const query = (first(searchParams.q) ?? "").trim().slice(0, 80);
   const categoryValue = first(searchParams.category);
@@ -64,7 +66,7 @@ export function parseCatalogFilters(
   return {
     query,
     category:
-      categoryValue && categories.has(categoryValue as CatalogCategory)
+      categoryValue && (categories.has(categoryValue as CatalogCategory) || Boolean(extraCategories?.has(categoryValue)))
         ? (categoryValue as CatalogCategory)
         : undefined,
     sizes: [

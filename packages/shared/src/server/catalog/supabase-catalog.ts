@@ -12,6 +12,7 @@ const catalogSelect = `
   id,
   slug,
   gender,
+  categories(id, slug),
   base_price_minor,
   cod_deposit_minor,
   compare_at_price_minor,

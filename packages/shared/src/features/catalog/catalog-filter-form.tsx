@@ -161,6 +161,13 @@ export function CatalogFilterForm({
               <option value="women">{t.women}</option>
               <option value="men">{t.men}</option>
               <option value="unisex">{t.unisex}</option>
+              {[...new Set(products.map((p) => p.category))]
+                .filter((cat) => !["women", "men", "unisex"].includes(cat))
+                .map((cat) => (
+                  <option key={cat} value={cat}>
+                    {cat}
+                  </option>
+                ))}
             </select>
           </label>
 

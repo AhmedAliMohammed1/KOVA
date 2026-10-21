@@ -19,6 +19,7 @@ import {
   TriangleAlert,
   Users,
   CheckCircle2,
+  FolderTree,
 } from "lucide-react";
 import { notFound } from "next/navigation";
 import { ProductForm } from "@/features/admin/product-form";
@@ -246,6 +247,14 @@ export default async function AdminPage({
                 <span className="flex items-center gap-2">
                   <Sparkles size={14} />
                   {ar ? "البانرات" : "Banners"}
+                </span>
+              </Link>
+              <Link
+                href={`/${locale}/admin/categories` as Route}
+              >
+                <span className="flex items-center gap-2">
+                  <FolderTree size={14} />
+                  {ar ? "الأقسام" : "Categories"}
                 </span>
               </Link>
               <Link

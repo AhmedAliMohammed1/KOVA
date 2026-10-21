@@ -7,7 +7,7 @@ assert.ok(!Object.keys(store).some(route=>route.includes('/admin')),'Storefront 
 assert.ok(Object.keys(admin).some(route=>route.includes('/admin/orders')));
 assert.ok(!Object.keys(admin).some(route=>route.includes('/api/cron')||route.includes('/api/payments/')),'Operational jobs/webhooks must have one owner');
 const storeActions=fs.readFileSync('apps/storefront/.next/server/server-reference-manifest.json','utf8');
-for(const name of ['createProductAction','updateProductAction','deleteProductAction','moderateReviewAction','createBannerAction','adjustInventoryAction']) assert.ok(!storeActions.includes(`"${name}"`),`${name} leaked into storefront action manifest`);
+for(const name of ['createProductAction','updateProductAction','deleteProductAction','moderateReviewAction','createBannerAction','adjustInventoryAction','createCategoryAction','updateCategoryAction','deleteCategoryAction']) assert.ok(!storeActions.includes(`"${name}"`),`${name} leaked into storefront action manifest`);
 const srgb=c=>{c/=255;return c<=.04045?c/12.92:((c+.055)/1.055)**2.4;};
 const luminance=hex=>{const rgb=hex.match(/[a-f\d]{2}/gi).map(c=>srgb(parseInt(c,16)));return .2126*rgb[0]+.7152*rgb[1]+.0722*rgb[2];};
 const contrast=(fg,bg)=>{const a=luminance(fg),b=luminance(bg);return Math.round((Math.max(a,b)+.05)/(Math.min(a,b)+.05)*100)/100;};

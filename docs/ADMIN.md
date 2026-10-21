@@ -7,6 +7,7 @@ Production: https://admin-two-tau-18.vercel.app. Source owner: apps/admin. Sign 
 | Workspace | Explicitly allowed roles |
 |---|---|
 | Overview, banners, discounts, shipping, sizing | admin, super_admin |
+| Categories | product_manager, admin, super_admin |
 | Product editing | product_manager, admin, super_admin |
 | Orders | support, warehouse, admin, super_admin |
 | Reviews | content_editor, product_manager, admin, super_admin |

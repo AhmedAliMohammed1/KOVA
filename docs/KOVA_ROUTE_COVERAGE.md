@@ -1,6 +1,6 @@
 # Route and journey inventory
 
-Generated from current app page.tsx/route.ts files on 2026-10-22. There are **54**
+Generated from current app page.tsx/route.ts files on 2026-10-22. There are **55**
 route source files across both applications; locale placeholders cover English
 and Arabic. Metadata assets (icon/social image/robots/sitemap), proxy redirects,
 error/loading boundaries and Server Actions are additional surfaces, not omitted
@@ -48,6 +48,7 @@ API owners. A source/build check does not certify a live financial transaction.
 | admin | `/[locale]/account` | [source](../apps/admin/src/app/[locale]/account/page.tsx) | Staff sign-in/recovery boundary implemented; callback/email delivery must be verified for each environment. |
 | admin | `/[locale]/account/update-password` | [source](../apps/admin/src/app/[locale]/account/update-password/page.tsx) | Staff sign-in/recovery boundary implemented; callback/email delivery must be verified for each environment. |
 | admin | `/[locale]/admin/banners` | [source](../apps/admin/src/app/[locale]/admin/banners/page.tsx) | Built; page/action/database role checks remain required; transactional writes need sandbox acceptance. |
+| admin | `/[locale]/admin/categories` | [source](../apps/admin/src/app/[locale]/admin/categories/page.tsx) | Built; role-scoped taxonomy management (product_manager, admin, super_admin); validated bilingual inputs and deletion guardrails. |
 | admin | `/[locale]/admin/commercial` | [source](../apps/admin/src/app/[locale]/admin/commercial/page.tsx) | Built; page/action/database role checks remain required; transactional writes need sandbox acceptance. |
 | admin | `/[locale]/admin/discounts` | [source](../apps/admin/src/app/[locale]/admin/discounts/page.tsx) | Built; page/action/database role checks remain required; transactional writes need sandbox acceptance. |
 | admin | `/[locale]/admin/orders` | [source](../apps/admin/src/app/[locale]/admin/orders/page.tsx) | Built; page/action/database role checks remain required; transactional writes need sandbox acceptance. |

@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-10-22 — Admin Category Management and Dynamic Catalog Alignment
+
+- Added staff Category Management in `apps/admin/src/app/[locale]/admin/categories` with bilingual names (EN/AR), URL slugs, display ordering, and visibility toggle.
+- Added server actions for category creation, editing, active toggle, and product dependency guarded deletion with cross-app cache invalidation.
+- Connected product creation and edit forms to dynamically list database categories.
+- Added Category navigation in desktop and mobile admin headers, plus overview shortcuts.
+- Extended storefront catalog mapping and filter parser to support dynamic category slugs on `/shop`.
+- Added 8 unit tests in `tests/unit/admin-categories.test.ts` (46 test files / 386 tests passing); both production builds passed.
+
 ## 2026-10-22 — KOVA documentation and continuation handoff
 
 - Reconciled active documentation with the deployed two-app KOVA architecture, selected Supabase project, active products/variants and current role-management release.

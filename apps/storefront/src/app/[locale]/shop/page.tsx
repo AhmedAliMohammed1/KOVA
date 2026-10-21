@@ -98,7 +98,9 @@ export default async function ShopPage({
     ? ar
       ? `نتائج البحث عن “${filters.query}”`
       : `Results for “${filters.query}”`
-    : t[filters.category ?? "all"];
+    : (filters.category && (t as Record<string, unknown>)[filters.category]
+        ? String((t as Record<string, unknown>)[filters.category])
+        : filters.category ?? t.all);
 
   // Quick navigation pills
   const activeCategory = filters.category;
