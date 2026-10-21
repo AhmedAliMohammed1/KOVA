@@ -30,6 +30,7 @@ import {
 import { formatMoney } from "@/lib/money";
 import { isLocale, type Locale } from "@/lib/i18n";
 import { requireRoles } from "@/server/auth/roles";
+import { canManageUserRoles } from "@/server/auth/policy";
 import { PaginationNav } from "@/components/ui/pagination-nav";
 import { paginateItems, parsePage } from "@/lib/pagination";
 
@@ -152,7 +153,7 @@ export default async function AdminPage({
   if (!isLocale(locale)) notFound();
   const period =
     query.period === "7" || query.period === "90" ? Number(query.period) : 30;
-  const { supabase } = await requireRoles(["admin", "super_admin"]);
+  const { supabase, roles } = await requireRoles(["admin", "super_admin"]);
 
   const [
     productsResult,
@@ -227,7 +228,8 @@ export default async function AdminPage({
                   : "Manage the catalogue and inventory while turning real shopper behaviour into marketing decisions."}
               </p>
             </div>
-            <div className="flex gap-2">
+            <div className="flex flex-wrap gap-2">
+              {canManageUserRoles(roles) && <Link href={`/${locale}/admin/users` as Route} className="inline-flex min-h-11 items-center gap-2 border border-[var(--brand-highlight)] px-4 py-3 text-sm font-semibold text-[var(--brand-highlight)] hover:bg-white/10"><Users size={16} aria-hidden="true"/>{ar ? "المستخدمون والصلاحيات" : "Users & roles"}</Link>}
               <Link
                 href={`/${locale}/admin/discounts` as Route}
                 className="border border-white/25 px-4 py-3 text-[10px] font-bold uppercase tracking-[.14em]"

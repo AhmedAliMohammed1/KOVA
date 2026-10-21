@@ -8,6 +8,7 @@ import {
   Package,
   Ruler,
   ShoppingBag,
+  ShieldCheck,
   TrendingUp,
   Truck,
 } from "lucide-react";
@@ -16,6 +17,7 @@ import { storefrontUrl } from "@/lib/application-urls";
 import { requireRoles } from "@/server/auth/roles";
 import { isLocale } from "@/lib/i18n";
 import { signOutAction } from "@/features/auth/actions";
+import { canManageUserRoles } from "@/server/auth/policy";
 
 export default async function AdminLayout({
   children,
@@ -43,6 +45,7 @@ export default async function AdminLayout({
     ],
     [ImageIcon, ar ? "المحتوى" : "Content", `/${locale}/admin/banners`],
     [Ruler, ar ? "المقاسات" : "Sizes", `/${locale}/admin/sizes`],
+    ...(canManageUserRoles(roles) ? [[ShieldCheck, ar ? "صلاحيات المستخدمين" : "User roles", `/${locale}/admin/users`] as const] : []),
   ] as const).filter((_, index) => elevated || index === 6 || (index === 1 && roles.some(role => ["support", "warehouse"].includes(role))) || (index === 2 && roles.some(role => ["content_editor", "product_manager"].includes(role))));
   return (
     <div className="min-h-screen bg-[var(--surface-canvas)]">
@@ -58,7 +61,7 @@ export default async function AdminLayout({
             </span>
           </Link>
           <nav
-            className="hidden min-h-16 items-stretch lg:flex"
+            className="hidden min-h-16 min-w-0 flex-1 items-stretch overflow-x-auto lg:flex"
             aria-label={ar ? "تنقل لوحة الإدارة" : "Admin navigation"}
           >
             {items.map(([Icon, label, href]) => (

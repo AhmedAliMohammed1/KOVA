@@ -23,3 +23,7 @@ export function hasRequiredRole(
 export function canAccessAdminDashboard(actual: readonly AppRole[]) {
   return hasRequiredRole(actual, adminDashboardRoles);
 }
+
+export function canManageUserRoles(actual: readonly AppRole[]) {
+  return actual.includes("super_admin");
+}

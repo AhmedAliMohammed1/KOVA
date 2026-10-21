@@ -2338,6 +2338,14 @@ export type Database = {
       }
     }
     Functions: {
+      super_admin_list_users: {
+        Args: { p_query?: string; p_page?: number }
+        Returns: Json
+      }
+      super_admin_change_role: {
+        Args: { p_user_id: string; p_role: Database["public"]["Enums"]["app_role"]; p_enabled: boolean }
+        Returns: Json
+      }
       admin_adjust_inventory: {
         Args: { p_new_on_hand: number; p_reason: string; p_variant_id: number }
         Returns: undefined
