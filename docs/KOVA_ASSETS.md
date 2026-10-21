@@ -12,7 +12,7 @@ Source/local provenance, original dimensions, SHA-256, group and view, candidate
 | Black men's set | 53–61, 63–64, 66–67 | 13 |
 | Burgundy still-life / water demonstration | 6–9, 68–70 | 7 |
 
-Owner confirmation establishes two new KOVA products: women's set (ID 20), with grey/blue/burgundy, and men's set (ID 21), with black. Both cost EGP 850 with an EGP 200 COD deposit. The women's gallery contains 50 photographs; the men's gallery contains 13. All associations and bilingual alt text are recorded in the manifest. Seven still-life/water frames remain excluded from product galleries and performance claims. No full rear view was identified.
+Owner confirmation establishes two new KOVA products: women's set (ID 2), with grey/blue/burgundy, and men's set (ID 3), with black. Both cost EGP 850 with an EGP 200 COD deposit. The women's gallery contains 50 photographs; the men's gallery contains 13. All associations and bilingual alt text are recorded in the manifest. Seven still-life/water frames remain excluded from product galleries and performance claims. No full rear view was identified.
 
 The nine old Scrub Vibe products were archived at the owner's request. The cutover preserved all 19 orders, 22 linked order items and the existing review. New products are database drafts with no invented sizes, variants or stock. The local development preview displays the approved products with ordering disabled. Publishing requires confirmed sizes/stock and deployed assets. Home images 14, 10 and 55 show the hero, women's and men's edits respectively.
 
@@ -30,3 +30,5 @@ The preparation script supports the old numbered `.kova-assets/` source as an ex
 The shield/wordmark is a proportional crop from `5cb5ebdc-ec30-4ead-9d74-edc2083c17be.jpg`. A standalone logo was not supplied. Replace it with an owner-approved SVG or transparent master when available. Reference launch slogans are not used as availability statements. Legacy `/images/scrub-vibe/` paths remain valid to preserve historical order and receipt media.
 
 Still required: available sizes and stock by size/color, approved material/care data, and the official standalone logo.
+
+Current database mapping is to project `khccehpehasicomumani`, product IDs 2/3. The historical archive and order counts above refer to the original project, which remains untouched by the fresh-project installation.

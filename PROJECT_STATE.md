@@ -1,3 +1,9 @@
+# Current database selection — 2026-10-21
+
+The owner selected `khccehpehasicomumani` as the new KOVA database. Its schema, security policies and four storage buckets are installed. Only two KOVA draft products (IDs 2/3) exist, with EGP 850 prices, EGP 200 COD deposits and 50/13 photos. No sizes/stock are invented. Both local apps use the new project's public connection; hosting requires matching project keys and a redeploy. Old users/orders remain untouched in the former project; accounts were not transferred. A verified-email, one-time admin bootstrap is configured privately.
+
+See `docs/KOVA_DATABASE_SETUP.md` for the fresh-project bootstrap and verification. Earlier checkpoints below are historical.
+
 # KOVA redesign checkpoint — 2026-10-21
 
 The current workspace is a two-application monorepo: storefront in `apps/storefront`, staff dashboard in `apps/admin`, shared components/contracts in `packages/shared`. Both applications build independently. Migrations and historical commerce records are preserved. The nine old products are archived; two new KOVA drafts (IDs 20/21) have owner-approved EGP 850 prices and EGP 200 COD deposits. All 70 photographs are inspected; 63 are mapped to the new galleries. Sizes and stock remain unconfirmed.

@@ -1,3 +1,7 @@
+# Latest database checkpoint
+
+The owner-selected project is now `khccehpehasicomumani`. The fresh schema and KOVA drafts are installed; see `KOVA_DATABASE_SETUP.md` and `qa/new-database-verification.json`. Both local apps use the new public connection. All 350 tests pass across 40 files; both builds and lint pass. Historical checkpoints below refer to the former database unless explicitly dated as the new installation. No accounts/orders were copied and no hosted environment keys were changed.
+
 # KOVA redesign delivery
 
 Implemented: navy/teal bilingual storefront and shared account/checkout/admin design tokens; editorial studio photography; accessible native mobile navigation; persistent variant URLs across locale switches; explicit choose-size card actions; support, sizing, shipping, returns, privacy and terms pages; order-tracking entry; branded metadata, invoices, email templates, social card and actual-catalog sitemap; focused form error feedback; purchase reporting deduplication and private query-string exclusion from first-party analytics.

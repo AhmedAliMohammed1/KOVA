@@ -1,3 +1,5 @@
+Current database: the owner selected `khccehpehasicomumani`. See [new database setup](docs/KOVA_DATABASE_SETUP.md) before configuring keys or admin accounts. Prior database references below are historical.
+
 # KOVA Scrubs Commerce
 
 Bilingual Egyptian medical apparel commerce with independently built Next.js storefront and admin applications, shared TypeScript commerce code and design tokens, and one authoritative Supabase database.

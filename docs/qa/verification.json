@@ -4,8 +4,8 @@
     "lint": "PASS, zero warnings",
     "typecheck": "PASS, both apps (also enforced by production builds)",
     "unitAndIntegrationTests": {
-      "files": 39,
-      "passed": 348,
+      "files": 40,
+      "passed": 350,
       "failed": 0
     },
     "productionBuilds": {
@@ -130,10 +130,11 @@
     ]
   },
   "localConfiguration": {
-    "supabasePublicConnection": "restored in ignored per-app environment files",
+    "supabasePublicConnection": "owner-selected project khccehpehasicomumani in both ignored app files",
     "adminRouting": "restored localhost:3200 to localhost:3201",
     "serverSecret": "unavailable; Vercel sensitive variables return no readable value",
     "draftCatalog": "explicit localhost-only preview flag; ignored on Vercel",
     "productionConfigChanged": false
-  }
+  },
+  "currentDatabaseCheckpoint": "new-database-verification.json"
 }

@@ -4,6 +4,8 @@ const assert=require('node:assert/strict');
 const fs=require('node:fs');
 const store=process.env.KOVA_STOREFRONT_URL||'http://localhost:3200';
 const admin=process.env.KOVA_ADMIN_URL||'http://localhost:3201';
+const configuredUrl=fs.readFileSync('apps/storefront/.env.local','utf8').match(/^NEXT_PUBLIC_SUPABASE_URL="?([^"\r\n]+)/m)?.[1];
+const supabaseProject=configuredUrl?new URL(configuredUrl).hostname.split('.')[0]:'unconfigured';
 let browser;
 (async()=>{
  browser=await chromium.launch({headless:true,channel:'msedge'});
@@ -59,7 +61,7 @@ let browser;
  assert.equal(await page.getByText('Checkout is temporarily unavailable',{exact:true}).count(),0);
  checks.push('Checkout route uses connected application, without submitting live orders');
  assert.deepEqual(errors,[]);
- const result={date:new Date().toISOString(),environment:'Local production builds connected to existing Supabase; draft catalog preview; no new users/orders or email sent',checks,runtimeErrors:errors,limits:['No staff credentials supplied; successful staff/customer authentication and protected operations unverified','Server secret is unavailable locally; privileged checkout/payment operations remain unverified','No fabricated stock; buying remains disabled for draft products']};
+ const result={date:new Date().toISOString(),environment:'Local production builds connected to configured Supabase; draft catalog preview; no new users/orders or email sent',supabaseProject,checks,runtimeErrors:errors,limits:['No staff credentials supplied; successful staff/customer authentication and protected operations unverified','Server secret is unavailable locally; privileged checkout/payment operations remain unverified','No fabricated stock; buying remains disabled for draft products']};
  fs.writeFileSync('docs/qa/connected-browser-results.json',JSON.stringify(result,null,2)+'\n');
  console.log(JSON.stringify(result,null,2));await browser.close();
 })().catch(async error=>{console.error(error);await browser?.close();process.exitCode=1;});

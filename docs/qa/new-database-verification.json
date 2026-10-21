@@ -1,0 +1,56 @@
+{
+  "project": "khccehpehasicomumani",
+  "date": "2026-10-21",
+  "publicTables": 45,
+  "publicTablesWithoutRls": [],
+  "products": [
+    {
+      "id": 2,
+      "slug": "kova-womens-scrub-set",
+      "status": "draft",
+      "priceMinor": 85000,
+      "codDepositMinor": 20000,
+      "images": 50,
+      "variants": 0
+    },
+    {
+      "id": 3,
+      "slug": "kova-mens-scrub-set",
+      "status": "draft",
+      "priceMinor": 85000,
+      "codDepositMinor": 20000,
+      "images": 13,
+      "variants": 0
+    }
+  ],
+  "storage": {
+    "product-media": "public",
+    "banners": "public",
+    "payment-proofs": "private",
+    "return-evidence": "private"
+  },
+  "orders": 0,
+  "users": 0,
+  "legacyBundles": 0,
+  "rollbackTests": {
+    "unverifiedAdminDenied": true,
+    "verifiedApprovedEmailGrantedAdmin": true,
+    "newVariantsStartAtZeroStock": true,
+    "archivePreservesProductAndImages": true,
+    "usersAndVariantsRemaining": 0
+  },
+  "localAppsUseNewPublicConnection": true,
+  "vercelEnvironmentChanged": false,
+  "oldDatabaseModified": false,
+  "commerceHistoryTransferred": false,
+  "keysMissingLocally": [
+    "SUPABASE_SECRET_KEY"
+  ],
+  "testResults": {
+    "files": 40,
+    "passed": 350,
+    "failed": 0
+  },
+  "sourceTests": "scripts/operations/kova-bootstrap/verify-security-rollback.sql",
+  "advisors": "new-database-security-advisors.json"
+}

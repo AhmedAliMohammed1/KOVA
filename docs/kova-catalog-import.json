@@ -490,7 +490,7 @@
       ],
       "sizes": null,
       "stock": null,
-      "database_id": 20
+      "database_id": 2
     },
     {
       "slug": "kova-mens-scrub-set",
@@ -633,7 +633,8 @@
       ],
       "sizes": null,
       "stock": null,
-      "database_id": 21
+      "database_id": 3
     }
-  ]
+  ],
+  "database_project": "khccehpehasicomumani"
 }

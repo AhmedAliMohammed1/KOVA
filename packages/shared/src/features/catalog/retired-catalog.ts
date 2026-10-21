@@ -5,3 +5,8 @@ export const retiredCatalogSlugs = new Set([
   "male-design-2-scrub-set", "male-design-5-scrub-set", "classic-medical-lab-coat",
 ]);
 export const retiredCatalogIds = new Set(["6","7","8","9","10","11","12","13","14","sv-f2","sv-f9","sv-f4","sv-f7","sv-f6","sv-m1","sv-m2","sv-m5","sv-lab"]);
+
+export function isRetiredCatalogId(id: string) {
+  const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
+  return (!url || new URL(url).hostname === "iqufqtjotgpmhhtvlxwf.supabase.co") && retiredCatalogIds.has(id);
+}

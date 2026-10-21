@@ -1,6 +1,6 @@
 # Runtime configuration and admin access
 
-The repository contains two independently deployed applications. Configure Vercel root directories as `apps/storefront` and `apps/admin`, enabling access to workspace files outside each root. Pushing source does not configure either project's environment or root directory. Both applications use the existing Supabase project `iqufqtjotgpmhhtvlxwf`.
+The repository contains two independently deployed applications. Configure Vercel root directories as `apps/storefront` and `apps/admin`, enabling access to workspace files outside each root. Pushing source does not configure either project's environment or root directory. Both applications use the owner-selected Supabase project `khccehpehasicomumani`.
 
 ## Required for the store and dashboard
 
@@ -40,6 +40,8 @@ In production, use the actual admin deployment origin followed by `/en/admin` or
 
 ## Catalog prerequisite
 
-Nine legacy products are archived. New KOVA products 20/21 remain drafts at EGP 850 each, with EGP 200 COD deposits, until sizes and stock are confirmed and assets are deployed. Keys do not replace inventory. `KOVA_LOCAL_CATALOG_PREVIEW=true` only allows reviewing the approved drafts on localhost; it is ignored on Vercel. No purchased stock or product variants are fabricated.
+The legacy products and commerce history remain in the original database; they were not copied to this fresh KOVA project. New KOVA products 2/3 remain drafts at EGP 850 each, with EGP 200 COD deposits, until sizes and stock are confirmed and assets are deployed. Keys do not replace inventory. `KOVA_LOCAL_CATALOG_PREVIEW=true` only allows reviewing the approved drafts on localhost; it is ignored on Vercel. No purchased stock or product variants are fabricated.
 
 See `KOVA_DEPLOYMENT.md` for deployment, provider acceptance and rollback, and `qa/connected-browser-results.json` for exactly which connected interactions were verified.
+
+The owner selected the new project on 2026-10-21. Both local apps now use its matching URL/publishable key. Existing Vercel environment variables have not been changed: replace the URL, publishable key and server secret in BOTH projects with matching values from this new project, then redeploy. An old project's secret is not valid for the new URL. Configure Auth Site URL and allowed locale-specific `/auth/confirm` callbacks for the actual storefront and admin origins. The private one-time admin approval requires ownership of the email explicitly supplied by the owner and a confirmed email; no password or account was created by this setup.

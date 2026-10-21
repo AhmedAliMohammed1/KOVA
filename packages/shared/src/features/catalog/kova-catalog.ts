@@ -4,8 +4,8 @@ import type { Product } from "./types";
 // Owner-approved on 2026-10-21: one women's set / three colours, one men's set;
 // EGP 850 each, EGP 200 COD deposit. No sizes, variants or stock were supplied.
 const definitions = [
-  { id: "20", slug: "kova-womens-scrub-set", category: "women", title: {en:"KOVA Women's Scrub Set",ar:"طقم سكراب كوفا حريمي"}, groups: ["grey-womens-set","blue-womens-set","burgundy-womens-set"] },
-  { id: "21", slug: "kova-mens-scrub-set", category: "men", title: {en:"KOVA Men's Scrub Set",ar:"طقم سكراب كوفا رجالي"}, groups: ["black-mens-set"] },
+  { id: "2", slug: "kova-womens-scrub-set", category: "women", title: {en:"KOVA Women's Scrub Set",ar:"طقم سكراب كوفا حريمي"}, groups: ["grey-womens-set","blue-womens-set","burgundy-womens-set"] },
+  { id: "3", slug: "kova-mens-scrub-set", category: "men", title: {en:"KOVA Men's Scrub Set",ar:"طقم سكراب كوفا رجالي"}, groups: ["black-mens-set"] },
 ];
 const colours:Record<string,{code:string;swatch:string;name:{en:string;ar:string}}> = {
   "grey-womens-set":{code:"grey",swatch:"#96959c",name:{en:"Grey",ar:"رمادي"}},

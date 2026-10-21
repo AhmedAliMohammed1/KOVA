@@ -1,3 +1,7 @@
+# Current database selection
+
+The owner selected `khccehpehasicomumani` on 2026-10-21. Its fresh KOVA schema, storage, security policies and two product drafts are installed. Both local apps now use this project's matching public key. Configure the new URL, publishable key and server secret in both hosted projects; the former project's server secret is incompatible. No hosted environment was changed during database initialization. Old accounts/orders remain in the original database and were not transferred. See `KOVA_DATABASE_SETUP.md` and `KOVA_RUNTIME_SETUP.md`. Earlier discovery checkpoints below are historical.
+
 # KOVA two-application deployment and operations
 
 ## Repository and build settings

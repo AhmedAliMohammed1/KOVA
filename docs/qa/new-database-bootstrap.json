@@ -1,0 +1,222 @@
+{
+  "project": "khccehpehasicomumani",
+  "date": "2026-10-21",
+  "installation": "Fresh KOVA schema, not a transfer of the former project's Auth users, orders or storage files",
+  "remoteMigrations": [
+    {
+      "version": "20261021204535",
+      "name": "foundation_identity_catalogue"
+    },
+    {
+      "version": "20261021204640",
+      "name": "optimize_inventory_select_policy"
+    },
+    {
+      "version": "20261021204645",
+      "name": "admin_catalogue_analytics"
+    },
+    {
+      "version": "20261021204650",
+      "name": "multi_colour_variants"
+    },
+    {
+      "version": "20261021204654",
+      "name": "checkout_orders"
+    },
+    {
+      "version": "20261021204721",
+      "name": "optimize_order_policies"
+    },
+    {
+      "version": "20261021204744",
+      "name": "add_cod_deposits"
+    },
+    {
+      "version": "20261021204750",
+      "name": "harden_payment_processing"
+    },
+    {
+      "version": "20261021204754",
+      "name": "shipping_zone_pricing"
+    },
+    {
+      "version": "20261021204758",
+      "name": "discount_campaigns"
+    },
+    {
+      "version": "20261021204943",
+      "name": "customer_cart_wishlist"
+    },
+    {
+      "version": "20261021204947",
+      "name": "optimize_discount_foreign_keys"
+    },
+    {
+      "version": "20261021205017",
+      "name": "fix_cart_sync_swatch"
+    },
+    {
+      "version": "20261021205025",
+      "name": "size_charts"
+    },
+    {
+      "version": "20261021205031",
+      "name": "customer_addresses"
+    },
+    {
+      "version": "20261021205036",
+      "name": "idempotent_cart_sync"
+    },
+    {
+      "version": "20261021205042",
+      "name": "cms_banners"
+    },
+    {
+      "version": "20261021205049",
+      "name": "abandoned_cart_recovery"
+    },
+    {
+      "version": "20261021205121",
+      "name": "cart_recovery_functions"
+    },
+    {
+      "version": "20261021205145",
+      "name": "commercial_growth_suite_schema_only"
+    },
+    {
+      "version": "20261021205149",
+      "name": "commercial_return_guardrails"
+    },
+    {
+      "version": "20261021205253",
+      "name": "commercial_policy_optimization"
+    },
+    {
+      "version": "20261021205341",
+      "name": "fix_return_review_permissions"
+    },
+    {
+      "version": "20261021205344",
+      "name": "add_partial_return_statuses"
+    },
+    {
+      "version": "20261021205403",
+      "name": "complete_return_workflow"
+    },
+    {
+      "version": "20261021205413",
+      "name": "harden_return_workflow_rpc"
+    },
+    {
+      "version": "20261021205528",
+      "name": "product_management_archive_only"
+    },
+    {
+      "version": "20261021205532",
+      "name": "product_archive_permissions"
+    },
+    {
+      "version": "20261021205536",
+      "name": "multi_images_kova"
+    },
+    {
+      "version": "20261021205558",
+      "name": "cleanup_overloaded_functions"
+    },
+    {
+      "version": "20261021205604",
+      "name": "customer_product_reviews"
+    },
+    {
+      "version": "20261021205608",
+      "name": "product_review_summary"
+    },
+    {
+      "version": "20261021205612",
+      "name": "product_review_summary"
+    },
+    {
+      "version": "20261021205616",
+      "name": "product_review_catalog_summaries"
+    },
+    {
+      "version": "20261021205621",
+      "name": "optimize_product_review_policies"
+    },
+    {
+      "version": "20261021205627",
+      "name": "production_operations_hardening"
+    },
+    {
+      "version": "20261021205657",
+      "name": "seed_kova_catalog"
+    },
+    {
+      "version": "20261021205705",
+      "name": "verified_admin_bootstrap"
+    },
+    {
+      "version": "20261021205833",
+      "name": "kova_product_management_contract"
+    },
+    {
+      "version": "20261021210331",
+      "name": "disable_legacy_product_creator"
+    }
+  ],
+  "baselineSources": [
+    "20260829191320_foundation_identity_catalogue.sql",
+    "20260829194305_optimize_inventory_select_policy.sql",
+    "20260906043757_admin_catalogue_analytics.sql",
+    "20260906092933_multi_colour_variants.sql",
+    "20260906100228_checkout_orders.sql",
+    "20260906102312_optimize_order_policies.sql",
+    "20260907004058_add_cod_deposits.sql",
+    "20260907212403_harden_payment_processing.sql",
+    "20260907220250_shipping_zone_pricing.sql",
+    "20260908022202_discount_campaigns.sql",
+    "20260908023000_customer_cart_wishlist.sql",
+    "20260908024439_optimize_discount_foreign_keys.sql",
+    "20260908035000_fix_cart_sync_swatch.sql",
+    "20260908054500_size_charts.sql",
+    "20260908064000_customer_addresses.sql",
+    "20260908073000_idempotent_cart_sync.sql",
+    "20260908104000_cms_banners.sql",
+    "20260908200000_abandoned_cart_recovery.sql",
+    "20260908203000_cart_recovery_functions.sql",
+    "20260909115338_commercial_growth_suite.sql",
+    "20260909121458_commercial_return_guardrails.sql",
+    "20260909131714_commercial_policy_optimization.sql",
+    "20260910011740_fix_return_review_permissions.sql",
+    "20260910021400_add_partial_return_statuses.sql",
+    "20260910021429_complete_return_workflow.sql",
+    "20260910052930_harden_return_workflow_rpc.sql",
+    "20260910100000_admin_product_edit_and_delete.sql",
+    "20260910104500_fix_admin_delete_product_permissions.sql",
+    "20260910111500_multi_images_per_colour.sql",
+    "20260910113000_cleanup_overloaded_functions.sql",
+    "20260910195424_customer_product_reviews.sql",
+    "20260910195556_product_review_summary.sql",
+    "20260910200445_product_review_summary.sql",
+    "20260910201201_product_review_catalog_summaries.sql",
+    "20260910201532_optimize_product_review_policies.sql",
+    "20260910215258_production_operations_hardening.sql"
+  ],
+  "excludedLegacySeeds": [
+    "20260905154310_seed_initial_catalogue.sql",
+    "20260905230532_rebrand_scrub_vibe_catalogue.sql"
+  ],
+  "safeSubstitutions": {
+    "20260909115338_commercial_growth_suite.sql": "scripts/operations/kova-bootstrap/commercial_growth_suite_schema_only.sql",
+    "20260910100000_admin_product_edit_and_delete.sql": "scripts/operations/kova-bootstrap/product_management_archive_only.sql",
+    "20260910104500_fix_admin_delete_product_permissions.sql": "scripts/operations/kova-bootstrap/product_archive_rpc.sql",
+    "20260910111500_multi_images_per_colour.sql": "scripts/operations/kova-bootstrap/multi_images_kova.sql"
+  },
+  "migrationHistoryNotice": "MCP assigned remote version timestamps. Match source names against this ledger before using CLI db push; do not blindly reapply the historical data seeds.",
+  "additionalSources": [
+    "supabase/migrations/20261021205012_seed_kova_catalog.sql",
+    "supabase/migrations/20261021205115_verified_admin_bootstrap.sql",
+    "supabase/migrations/20261021205756_kova_product_management_contract.sql",
+    "supabase/migrations/20261021210316_disable_legacy_product_creator.sql"
+  ]
+}

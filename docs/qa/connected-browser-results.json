@@ -1,6 +1,6 @@
 {
-  "date": "2026-10-21T20:28:50.194Z",
-  "environment": "Local production builds connected to existing Supabase; draft catalog preview; no new users/orders or email sent",
+  "date": "2026-10-21T21:01:45.806Z",
+  "environment": "Local production builds connected to owner-selected KOVA Supabase; draft catalog preview; no new users/orders or email sent",
   "checks": [
     "en: sign-in, registration and recovery forms enabled",
     "ar: sign-in, registration and recovery forms enabled",
@@ -16,5 +16,6 @@
     "No staff credentials supplied; successful staff/customer authentication and protected operations unverified",
     "Server secret is unavailable locally; privileged checkout/payment operations remain unverified",
     "No fabricated stock; buying remains disabled for draft products"
-  ]
+  ],
+  "supabaseProject": "khccehpehasicomumani"
 }

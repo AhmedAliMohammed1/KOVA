@@ -22,7 +22,8 @@ import {
 import { trackStoreEvent } from "@/lib/analytics";
 import { createClient } from "@/lib/supabase/client";
 import { hasSupabaseEnvironment } from "@/lib/supabase/config";
-import { retiredCatalogSlugs, retiredCatalogIds } from "@/features/catalog/retired-catalog";
+import { retiredCatalogSlugs, isRetiredCatalogId } from "@/features/catalog/retired-catalog";
+import { shopStorageKey } from "@/lib/shop-storage";
 
 export type { CartLine };
 
@@ -51,11 +52,11 @@ function storedShop(): { cartItems: CartLine[]; wishlist: string[] } {
   if (typeof window === "undefined") return { cartItems: [], wishlist: [] };
   try {
     const value = JSON.parse(
-      window.localStorage.getItem("scrub-vibe-shop") ?? "{}",
+      window.localStorage.getItem(shopStorageKey()) ?? "{}",
     ) as StoredShop;
     return {
       cartItems: Array.isArray(value.cartItems) ? value.cartItems.filter(item => !retiredCatalogSlugs.has(item.slug)) : [],
-      wishlist: Array.isArray(value.wishlist) ? value.wishlist.filter(id => !retiredCatalogIds.has(id)) : [],
+      wishlist: Array.isArray(value.wishlist) ? value.wishlist.filter(id => !isRetiredCatalogId(id)) : [],
     };
   } catch {
     return { cartItems: [], wishlist: [] };
@@ -112,7 +113,7 @@ export function ShopProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     try {
       window.localStorage.setItem(
-        "scrub-vibe-shop",
+        shopStorageKey(),
         JSON.stringify({ version: 2, cartItems, wishlist }),
       );
     } catch {
@@ -142,7 +143,7 @@ export function ShopProvider({ children }: { children: React.ReactNode }) {
         const res = await syncCartAndWishlistAction(localCart, localWishlist);
         if (res && active) {
           const currentCart = res.cart.filter(item => !retiredCatalogSlugs.has(item.slug));
-          const currentWishlist = res.wishlist.filter(id => !retiredCatalogIds.has(id));
+          const currentWishlist = res.wishlist.filter(id => !isRetiredCatalogId(id));
           lastSyncedUserIdRef.current = userId;
           cartItemsRef.current = currentCart;
           wishlistRef.current = currentWishlist;
@@ -191,7 +192,7 @@ export function ShopProvider({ children }: { children: React.ReactNode }) {
         setCartItems([]);
         setWishlist([]);
         try {
-          window.localStorage.removeItem("scrub-vibe-shop");
+          window.localStorage.removeItem(shopStorageKey());
         } catch {
           // ignore
         }
