@@ -1,6 +1,7 @@
 import "server-only";
 
 import { createClient } from "@/lib/supabase/server";
+import { createPublicClient } from "@/lib/supabase/public";
 import { hasSupabaseEnvironment } from "@/lib/supabase/config";
 import { getPagination } from "@/lib/pagination";
 import type {
@@ -77,35 +78,30 @@ export async function getProductReviewSnapshot(
     return { reviews: [], summary: emptySummary, totalReviews: 0, currentPage: 1, pageSize, viewer: { authenticated: false, ownReview: null, eligiblePurchase: null } };
   }
   const supabase = await createClient();
+  const publicClient = createPublicClient();
   const [
     { data: summaryRows, error: summaryError },
-    countResult,
     claimsResult,
   ] = await Promise.all([
-    supabase.rpc("get_product_review_summary", { p_product_id: productId }),
-    supabase
-      .from("product_reviews")
-      .select("id", { count: "exact", head: true })
-      .eq("product_id", productId)
-      .eq("status", "approved"),
+    publicClient.rpc("get_product_review_summary", { p_product_id: productId }, { get: true }),
     supabase.auth.getClaims(),
   ]);
-  if (summaryError || countResult.error)
+  if (summaryError)
     throw new Error("Reviews could not be loaded.");
 
   const pagination = getPagination(
-    countResult.count ?? 0,
+    Number(summaryRows?.[0]?.review_count ?? 0),
     requestedPage,
     pageSize,
   );
-  const { data: reviewRows, error: reviewsError } = await supabase
+  const { data: reviewRows, error: reviewsError } = pagination.totalItems ? await publicClient
     .from("product_reviews")
     .select("*")
     .eq("product_id", productId)
     .eq("status", "approved")
     .order("is_featured", { ascending: false })
     .order("published_at", { ascending: false })
-    .range(pagination.from, pagination.to);
+    .range(pagination.from, pagination.to) : { data: [], error: null };
   if (reviewsError) throw new Error("Reviews could not be loaded.");
 
   const userId = claimsResult.data?.claims?.sub;

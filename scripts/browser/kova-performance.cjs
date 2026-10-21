@@ -32,7 +32,7 @@ let browser;
   const values=samples.filter(s=>s.route===route);const median=key=>values.map(s=>s[key]).sort((a,b)=>a-b)[1];
   return {route,medianLcpMs:median('lcpMs'),medianCls:median('cls'),medianTtfbMs:median('ttfbMs'),medianTransferBytes:median('transferBytes')};
  });
- const result={date:new Date().toISOString(),environment:'Local production Next.js; Edge headless; 375×812; fresh browser cache; warm server/image cache; CPU 4x; 150ms latency; 1.6 Mbps download; 750 Kbps upload; three runs per route; no Supabase credentials',limits:'Navigation LCP/CLS samples, not Lighthouse, not field p75, and no INP measurement. Representative image assets are local; production database latency is absent.',targets:{lcpMs:2500,cls:0.1,inpMs:200},routes,samples};
+ const result={date:new Date().toISOString(),environment:'Local production Next.js; Edge headless; 375×812; fresh browser cache; warm server/image cache; CPU 4x; 150ms latency; 1.6 Mbps download; 750 Kbps upload; three runs per route; connected KOVA Supabase',limits:'Navigation LCP/CLS samples, not Lighthouse, not field p75, and no INP measurement. Representative image assets are local; public database reads use the configured Supabase project and a warm server data cache.',targets:{lcpMs:2500,cls:0.1,inpMs:200},routes,samples};
  fs.writeFileSync('docs/qa/performance.json',JSON.stringify(result,null,2)+'\n');console.log(JSON.stringify(routes,null,2));
  await browser.close();
 })().catch(async e=>{console.error(e);await browser?.close();process.exitCode=1;});

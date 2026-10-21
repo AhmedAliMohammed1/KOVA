@@ -12,7 +12,7 @@ for(const line of fs.readFileSync('apps/storefront/.env.local','utf8').split(/\r
  assert.equal(url,'https://khccehpehasicomumani.supabase.co');
  const client=createClient(url,values.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY,{auth:{persistSession:false,autoRefreshToken:false}});
  const products=await client.from('products').select('id,slug');
- assert.equal(products.error,null);assert.deepEqual(products.data,[]);
+ assert.equal(products.error,null);assert.deepEqual(products.data.map(p=>p.slug).sort(),['kova-mens-scrub-set','kova-womens-scrub-set']);
  const categories=await client.from('categories').select('slug');
  assert.equal(categories.error,null);assert.equal(categories.data.length,2);
  const shipping=await client.from('shipping_governorates').select('code').eq('is_active',true);
@@ -21,6 +21,6 @@ for(const line of fs.readFileSync('apps/storefront/.env.local','utf8').split(/\r
  assert.ok(archive.error);assert.equal(archive.error.code,'42501');
  const orders=await client.from('orders').select('id').limit(1);
  assert.ok(orders.error || orders.data.length===0);
- const result={date:new Date().toISOString(),project:'khccehpehasicomumani',checks:{publicApiConnected:true,draftProductsHidden:true,categories:categories.data.length,shippingGovernorates:shipping.data.length,anonymousProductMutationDenied:true,anonymousOrdersNotExposed:true},writesPerformed:false};
+ const result={date:new Date().toISOString(),project:'khccehpehasicomumani',checks:{publicApiConnected:true,approvedProductsVisible:true,categories:categories.data.length,shippingGovernorates:shipping.data.length,anonymousProductMutationDenied:true,anonymousOrdersNotExposed:true},writesPerformed:false};
  fs.writeFileSync('docs/qa/new-database-public-api.json',JSON.stringify(result,null,2)+'\n');console.log(JSON.stringify(result,null,2));
 })().catch(error=>{console.error(error);process.exitCode=1;});

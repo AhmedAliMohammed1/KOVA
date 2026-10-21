@@ -1,13 +1,15 @@
 import { afterEach, describe, expect, it, vi } from "vitest";
 import { POST } from "@/app/api/revalidate/route";
 const invalidate = vi.hoisted(() => vi.fn());
-vi.mock("next/cache", () => ({ revalidatePath: invalidate }));
-afterEach(() => { vi.unstubAllEnvs(); invalidate.mockClear(); });
+const invalidateTag = vi.hoisted(() => vi.fn());
+vi.mock("next/cache", () => ({ revalidatePath: invalidate, revalidateTag: invalidateTag }));
+afterEach(() => { vi.unstubAllEnvs(); invalidate.mockClear(); invalidateTag.mockClear(); });
 describe("cross-application cache invalidation", () => {
   it("fails closed when a deployment has no secret", async () => {
     vi.stubEnv("STOREFRONT_REVALIDATION_SECRET", "");
     const response = await POST(new Request("https://store.test/api/revalidate", {method:"POST"}));
     expect(response.status).toBe(503);
+    expect(invalidateTag).not.toHaveBeenCalled();
     expect(invalidate).not.toHaveBeenCalled();
   });
   it("rejects missing, incorrect and length-matched unauthorized credentials", async () => {
@@ -22,6 +24,7 @@ describe("cross-application cache invalidation", () => {
     vi.stubEnv("STOREFRONT_REVALIDATION_SECRET", "kova-test-only-secret");
     const response = await POST(new Request("https://store.test/api/revalidate", {method:"POST",headers:{authorization:"Bearer kova-test-only-secret"},body:JSON.stringify({path:"/api/private"})}));
     expect(response.status).toBe(200);
+    expect(invalidateTag).toHaveBeenCalledWith("kova-public-storefront", { expire: 0 });
     expect(invalidate.mock.calls).toEqual([["/[locale]","layout"],["/api/google/merchant-feed"],["/sitemap.xml"]]);
     expect(response.headers.get("cache-control")).toBe("no-store");
   });

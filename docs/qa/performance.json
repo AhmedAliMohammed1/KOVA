@@ -1,7 +1,7 @@
 {
-  "date": "2026-10-21T20:22:30.317Z",
-  "environment": "Local production Next.js; Edge headless; 375×812; fresh browser cache; warm server/image cache; CPU 4x; 150ms latency; 1.6 Mbps download; 750 Kbps upload; three runs per route; no Supabase credentials",
-  "limits": "Navigation LCP/CLS samples, not Lighthouse, not field p75, and no INP measurement. Representative image assets are local; production database latency is absent.",
+  "date": "2026-10-21T21:39:28.806Z",
+  "environment": "Local production Next.js; Edge headless; 375\u00d7812; fresh browser cache; warm server/image cache; CPU 4x; 150ms latency; 1.6 Mbps download; 750 Kbps upload; three runs per route; connected KOVA Supabase",
+  "limits": "Navigation LCP/CLS samples, not Lighthouse, not field p75, and no INP measurement. Representative image assets are local; public Supabase reads use the warm server data cache.",
   "targets": {
     "lcpMs": 2500,
     "cls": 0.1,
@@ -10,129 +10,129 @@
   "routes": [
     {
       "route": "/en",
-      "medianLcpMs": 1160,
+      "medianLcpMs": 1176,
       "medianCls": 0,
-      "medianTtfbMs": 9,
-      "medianTransferBytes": 296268
+      "medianTtfbMs": 10,
+      "medianTransferBytes": 296143
     },
     {
       "route": "/ar",
-      "medianLcpMs": 1224,
+      "medianLcpMs": 1220,
       "medianCls": 0,
-      "medianTtfbMs": 8,
-      "medianTransferBytes": 296388
+      "medianTtfbMs": 11,
+      "medianTransferBytes": 296259
     },
     {
       "route": "/en/shop",
-      "medianLcpMs": 1068,
+      "medianLcpMs": 1052,
       "medianCls": 0,
-      "medianTtfbMs": 8,
-      "medianTransferBytes": 294501
+      "medianTtfbMs": 10,
+      "medianTransferBytes": 294408
     },
     {
       "route": "/en/products/kova-womens-scrub-set",
-      "medianLcpMs": 1144,
+      "medianLcpMs": 1156,
       "medianCls": 0,
-      "medianTtfbMs": 8,
-      "medianTransferBytes": 316610
+      "medianTtfbMs": 16,
+      "medianTransferBytes": 316624
     }
   ],
   "samples": [
     {
       "route": "/en",
       "run": 1,
-      "lcpMs": 1100,
+      "lcpMs": 1140,
       "cls": 0,
       "ttfbMs": 13,
-      "transferBytes": 296268
+      "transferBytes": 296143
     },
     {
       "route": "/en",
       "run": 2,
-      "lcpMs": 1160,
+      "lcpMs": 1184,
       "cls": 0,
       "ttfbMs": 9,
-      "transferBytes": 296263
+      "transferBytes": 296143
     },
     {
       "route": "/en",
       "run": 3,
-      "lcpMs": 1160,
-      "cls": 0,
-      "ttfbMs": 8,
-      "transferBytes": 296269
-    },
-    {
-      "route": "/ar",
-      "run": 1,
-      "lcpMs": 1224,
+      "lcpMs": 1176,
       "cls": 0,
       "ttfbMs": 10,
-      "transferBytes": 296387
+      "transferBytes": 296141
+    },
+    {
+      "route": "/ar",
+      "run": 1,
+      "lcpMs": 1220,
+      "cls": 0,
+      "ttfbMs": 11,
+      "transferBytes": 296259
     },
     {
       "route": "/ar",
       "run": 2,
-      "lcpMs": 1180,
+      "lcpMs": 1228,
       "cls": 0,
-      "ttfbMs": 8,
-      "transferBytes": 296391
+      "ttfbMs": 14,
+      "transferBytes": 296261
     },
     {
       "route": "/ar",
       "run": 3,
-      "lcpMs": 1268,
+      "lcpMs": 1212,
       "cls": 0,
-      "ttfbMs": 7,
-      "transferBytes": 296388
+      "ttfbMs": 10,
+      "transferBytes": 296254
     },
     {
       "route": "/en/shop",
       "run": 1,
-      "lcpMs": 1076,
+      "lcpMs": 1052,
       "cls": 0,
-      "ttfbMs": 8,
-      "transferBytes": 294501
+      "ttfbMs": 10,
+      "transferBytes": 294409
     },
     {
       "route": "/en/shop",
       "run": 2,
       "lcpMs": 1068,
+      "cls": 0,
+      "ttfbMs": 10,
+      "transferBytes": 294408
+    },
+    {
+      "route": "/en/shop",
+      "run": 3,
+      "lcpMs": 1036,
       "cls": 0,
       "ttfbMs": 9,
-      "transferBytes": 294500
-    },
-    {
-      "route": "/en/shop",
-      "run": 3,
-      "lcpMs": 1068,
-      "cls": 0,
-      "ttfbMs": 8,
-      "transferBytes": 294506
+      "transferBytes": 293044
     },
     {
       "route": "/en/products/kova-womens-scrub-set",
       "run": 1,
-      "lcpMs": 1188,
+      "lcpMs": 1120,
       "cls": 0,
-      "ttfbMs": 12,
-      "transferBytes": 316610
+      "ttfbMs": 11,
+      "transferBytes": 316626
     },
     {
       "route": "/en/products/kova-womens-scrub-set",
       "run": 2,
-      "lcpMs": 1144,
+      "lcpMs": 1176,
       "cls": 0,
-      "ttfbMs": 8,
-      "transferBytes": 316611
+      "ttfbMs": 17,
+      "transferBytes": 316624
     },
     {
       "route": "/en/products/kova-womens-scrub-set",
       "run": 3,
-      "lcpMs": 1124,
+      "lcpMs": 1156,
       "cls": 0,
-      "ttfbMs": 8,
-      "transferBytes": 316603
+      "ttfbMs": 16,
+      "transferBytes": 316621
     }
   ]
 }

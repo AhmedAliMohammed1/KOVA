@@ -69,7 +69,7 @@ export class SupabaseCatalog implements CatalogRepository {
       .from("products")
       .select(catalogSelect)
       .eq("status", "active")
-      .lte("published_at", new Date().toISOString())
+      .lte("published_at", "now")
       .order("published_at", { ascending: false });
 
     if (error)
@@ -84,7 +84,7 @@ export class SupabaseCatalog implements CatalogRepository {
       .from("products")
       .select(catalogSelect)
       .eq("status", "active")
-      .lte("published_at", new Date().toISOString())
+      .lte("published_at", "now")
       .eq("slug", slug)
       .maybeSingle();
 

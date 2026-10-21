@@ -1,9 +1,9 @@
 {
-  "date": "2026-10-21T21:00:24.343Z",
+  "date": "2026-10-21T21:41:16.230Z",
   "project": "khccehpehasicomumani",
   "checks": {
     "publicApiConnected": true,
-    "draftProductsHidden": true,
+    "approvedProductsVisible": true,
     "categories": 2,
     "shippingGovernorates": 27,
     "anonymousProductMutationDenied": true,

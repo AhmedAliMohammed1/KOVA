@@ -9,5 +9,8 @@
       "path": "/api/cron/commercial",
       "schedule": "30 8 * * *"
     }
+  ],
+  "regions": [
+    "dub1"
   ]
 }
