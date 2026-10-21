@@ -1,36 +1,25 @@
-# Payments and phone verification
+# Payments and checkout phone verification
 
-Scrub Vibe supports four Egypt-focused checkout methods:
+Reviewed 2026-10-22. Source: shared features/checkout and storefront API routes. [Environment matrix](ENVIRONMENT.md) and [Paymob activation](../PAYMOB_ACTIVATION.md) define setup.
 
-- Cash on delivery creates a confirmed order with payment due at delivery.
-- Vodafone Cash and InstaPay are always available and require a JPG, PNG or WebP transfer screenshot. The proof is stored in the private `payment-proofs` bucket and must be approved by staff before fulfilment.
-- Paymob Unified Checkout is the automated option for cards and the mobile-wallet integrations enabled on the merchant account. Paymob webhook HMAC verification is the only source of truth for payment success.
+## Authority and methods
 
-The server always recalculates prices from active Supabase variants, locks inventory, and reserves it in the same database transaction. Browser totals and product descriptions are never trusted.
+Server/database logic re-reads active variants, prices, shipping, promotions and deposit rules; it reserves stock and creates immutable order snapshots transactionally. Browser totals, photo selection, uploaded screenshots and return URLs are not evidence of payment or available stock.
 
-Checkout requires a privileged server-only Supabase key for private proof storage, the OTP-disabled verification bridge, inventory reservation and transactional order creation. Set either `SUPABASE_SECRET_KEY` (recommended for the current Supabase secret-key format) or `SUPABASE_SERVICE_ROLE_KEY` (supported alias). Never prefix either name with `NEXT_PUBLIC_`.
+COD, Vodafone Cash and InstaPay flows are implemented. COD can require the per-product deposit; the approved KOVA deposit is EGP 200, subject to actual stored product rules. Manual transfer/deposit proof is JPG/PNG/WebP in private payment-proofs storage and requires authorized staff review. Follow returned order/payment states rather than assuming every COD request immediately becomes confirmed.
 
-## Production setup
+Paymob Unified Checkout is implemented but held pending signed callback/sandbox acceptance. Only verified server callbacks can establish success. The callback is on the current storefront: https://kova-green-delta.vercel.app/api/payments/paymob/webhook. Do not configure it on the admin or legacy host.
 
-1. Create and verify an Egypt Paymob merchant account.
-2. Enable the card and mobile-wallet integrations required by the store. Vodafone Cash is included in Paymob's supported Egyptian mobile wallets when enabled for the account.
-3. Set `PAYMOB_SECRET_KEY`, `PAYMOB_PUBLIC_KEY`, `PAYMOB_HMAC_SECRET`, and a comma-separated `PAYMOB_INTEGRATION_ID` list in Vercel Production, Preview and Development as appropriate.
-4. Configure the Paymob processed callback as `https://scrub-vibe-tau.vercel.app/api/payments/paymob/webhook`.
-5. Set `NEXT_PUBLIC_VODAFONE_CASH_NUMBER` and `NEXT_PUBLIC_INSTAPAY_ADDRESS` to display the transfer destinations directly. Until configured, checkout sends customers to the official Scrub Vibe WhatsApp contact to request the correct details; manual methods and protected proof review remain available.
+Checkout/private storage/transactional order creation use a server-only same-project Supabase secret. Payment destination values are owner-provided public details, not API keys; do not invent wallet/bank details. Credentials do not replace provider acceptance or stock.
 
-InstaPay does not expose a general merchant checkout API for this integration. It is intentionally handled as a manual bank transfer with protected proof review.
+## Phone OTP
 
-## OTP setup
+CHECKOUT_PHONE_OTP_ENABLED is server-controlled. Code and .env.example default to true; false, 0, off and no disable it after trim/case normalization. The chosen current deployment setting was false. Explicitly configure the desired environment and redeploy; an old process/deployment or encrypted env export can still yield unexpected behavior. Disabling it does not disable Egyptian phone syntax validation or Supabase email confirmation.
 
-Checkout phone verification uses Twilio Verify so it does not replace an existing Supabase email session. Create a Verify Service and set:
+Enabled OTP uses Twilio Verify, with phone/IP rate limiting and a short-lived single-use checkout token, independently of the customer's Supabase email session. TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN, TWILIO_VERIFY_SERVICE_SID and a separate OTP_RATE_LIMIT_SALT are needed only for that enabled flow. CHECKOUT_TEST_OTP is development-only and ignored in production.
 
-- `TWILIO_ACCOUNT_SID`
-- `TWILIO_AUTH_TOKEN`
-- `TWILIO_VERIFY_SERVICE_SID`
-- `OTP_RATE_LIMIT_SALT` to a long random secret
+## Acceptance and failures
 
-The application accepts Egyptian mobile numbers only, limits OTP sends per phone and IP, and issues a single-use 15-minute checkout token after successful verification. `CHECKOUT_TEST_OTP` is available for local development only and is ignored in production.
+Use non-production inventory/users/provider settings to test successful and declined transactions, proof upload/replacement/approval/rejection, duplicate callbacks, wrong amount/currency/integration/signature, reservation release and retries. Do not submit real orders, emails or transfers to diagnose a cosmetic issue. If an originating transaction succeeds but a notification/cache refresh fails, repair that secondary operation without replaying the order or inventory change.
 
-Set `CHECKOUT_PHONE_OTP_ENABLED=false` in Vercel to allow checkout without sending or entering an OTP. The flag defaults to `true`; values `false`, `0`, `off`, and `no` disable verification. Because it is server-controlled, changing it requires a new Vercel deployment. The phone number field remains required and validated as an Egyptian mobile number in either mode.
-
-Never store card data, OTP codes, Paymob secrets, Twilio secrets, or payment screenshots in public storage.
+Never store card details, OTPs, secrets or proof images publicly or in logs. Remaining provider and operational acceptance is tracked in [TASKS](../TASKS.md).

@@ -1,5 +1,7 @@
 # Arabic typography refinement
 
+Reviewed 2026-10-22. Current deployment/data: [PROJECT_STATE](../PROJECT_STATE.md); entry point: [agent handoff](AGENT_HANDOFF.md). Feature evidence below is scoped to its recorded release.
+
 Arabic pages use self-hosted Noto Sans Arabic for interface text and Noto Naskh
 Arabic for editorial headings, with variable weights 400–700. The verified
 UI/UX Pro Max “Arabic Elegant” typography result informed the pairing.

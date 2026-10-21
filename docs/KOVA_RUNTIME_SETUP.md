@@ -1,47 +1,21 @@
-# Runtime configuration and admin access
+# Runtime setup and admin access
 
-The repository contains two independently deployed applications. Configure Vercel root directories as `apps/storefront` and `apps/admin`, enabling access to workspace files outside each root. Pushing source does not configure either project's environment or root directory. Both applications use the owner-selected Supabase project `khccehpehasicomumani`.
+Reviewed 2026-10-22. Follow [root local setup](../README.md), the [environment matrix](ENVIRONMENT.md) and [deployment guide](KOVA_DEPLOYMENT.md); this file no longer duplicates competing env values.
 
-## Required for the store and dashboard
+1. Install the pinned workspace dependencies using Node 22/24 and pnpm 11.25.0.
+2. Configure ignored env files inside both apps. Public URL/key and any server secret must belong to khccehpehasicomumani or an explicitly chosen non-production project.
+3. Set each app's own origin, cross-app links and shared cache invalidation secret. Match local ports to the command actually used: dev 3000/3001; optional production previews 3200/3201.
+4. Explicitly set CHECKOUT_PHONE_OTP_ENABLED=false for the chosen OTP-free checkout. Code/example default true is not the current policy; email verification remains independent.
+5. Start both apps or verify exact production deployments. A working catalog does not prove privileged commerce/provider configuration.
 
-| Variable | Purpose | Where |
-|---|---|---|
-| `NEXT_PUBLIC_SUPABASE_URL` | Existing Supabase project URL | Both apps |
-| `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY` | Public browser/API key | Both apps |
-| `SUPABASE_SECRET_KEY` | Server access for privileged commerce operations; existing service-role key alias also supported | Both apps, server only |
-| `NEXT_PUBLIC_APP_URL` | Actual origin of that application, including its port locally | Each app's own origin |
-| `NEXT_PUBLIC_ADMIN_URL` | Staff links and redirects from former storefront admin routes | Storefront, admin origin |
-| `NEXT_PUBLIC_STOREFRONT_URL` | Return-to-store links | Admin, storefront origin |
-| `STOREFRONT_REVALIDATION_URL` | Target storefront origin for cache refresh after staff edits | Admin |
-| `STOREFRONT_REVALIDATION_SECRET` | Same separately generated random secret for authenticated cache refresh | Both apps, server only |
+## Administration
 
-For local work, put these in `apps/storefront/.env.local` and `apps/admin/.env.local`. Those files are ignored by Git. For hosting, configure each Vercel project's environment settings and redeploy. Public variables are embedded at build time. Keep server secrets out of `NEXT_PUBLIC_*` variables. The public connection is restored locally; the server secret is still missing. Vercel marks the existing server secret sensitive and does not return its value. Obtain it securely from the owner-managed Supabase API Keys settings or existing secret store; do not paste it into chat.
+Production admin: https://admin-two-tau-18.vercel.app/ar/admin or /en/admin. Staff sign-in is on the admin origin. The overview requires admin/super_admin; narrower workspaces have their own role sets. Only super_admin sees /{locale}/admin/users.
 
-## Payments, email and background jobs
+The owner and requested second admin accounts already exist and are email-confirmed; the one-time bootstrap is claimed. Current role assignments are a dated snapshot in [PROJECT_STATE](../PROJECT_STATE.md). Do not create a new password or duplicate account to fix configuration. Use ordinary recovery if the owner needs a password reset.
 
-| Feature | Variables |
-|---|---|
-| Vodafone Cash / InstaPay proof payments and COD deposit destinations | Storefront: `NEXT_PUBLIC_VODAFONE_CASH_NUMBER`, `NEXT_PUBLIC_INSTAPAY_ADDRESS`; these are payment destination details, not API keys |
-| Order/staff emails | Both apps: `RESEND_API_KEY`, `RESEND_FROM_EMAIL` with a verified sender, `STAFF_EMAIL`. Supabase Auth handles sign-up/recovery email separately through its Auth email/SMTP configuration. |
-| Scheduled jobs | Storefront: `CRON_SECRET`; `OPERATIONS_SECRET` protects detailed readiness output |
-| Phone verification, when enabled | Storefront: `TWILIO_ACCOUNT_SID`, `TWILIO_AUTH_TOKEN`, `TWILIO_VERIFY_SERVICE_SID`; set `OTP_RATE_LIMIT_SALT` to a separate random secret. If phone verification is not required, explicitly set `CHECKOUT_PHONE_OTP_ENABLED=false`. |
-| Optional Paymob card payments | Storefront: `PAYMOB_SECRET_KEY`, `PAYMOB_PUBLIC_KEY`, `PAYMOB_HMAC_SECRET`, `PAYMOB_INTEGRATION_ID`. Keep `PAYMOB_ENABLED=false` until the existing activation checklist passes. |
-| Optional analytics | `NEXT_PUBLIC_GA_MEASUREMENT_ID`, `NEXT_PUBLIC_META_PIXEL_ID`; server Meta reporting also uses `META_CONVERSIONS_API_TOKEN`. |
+## Diagnose missing functionality
 
-Other `.env.example` settings tune features; Sentry/Upstash entries are reserved placeholders and do not currently make core commerce work. Never enable a test OTP in production. Provider credentials alone do not complete provider acceptance or establish approved inventory.
+Check origin/root -> matching public configuration -> session/callback -> current database role -> intended RPC permission -> server-only key/provider configuration -> real variant stock -> cache/invalidation. Never weaken RLS, fake stock or treat fallback demo content as a successful production connection.
 
-## Access the admin dashboard
-
-The running local production preview uses storefront `http://localhost:3200` and admin `http://localhost:3201`. Open `http://localhost:3201/en/admin` or `/ar/admin`. Guests are redirected to the admin app's `/en/account` or `/ar/account` staff sign-in. Sign in with an existing Supabase staff account. Roles are checked on the server; the main dashboard requires `admin` or `super_admin`. Other existing staff roles retain access to the operations they are authorized to use.
-
-The storefront's `/en/admin` and `/ar/admin` routes redirect to the configured admin origin. The header/footer staff link is shown to authorized viewers. The usual development commands still use ports 3000 (`pnpm dev`) and 3001 (`pnpm dev:admin`); update each app's URL settings to match if switching to those ports.
-
-In production, use the actual admin deployment origin followed by `/en/admin` or `/ar/admin`. No KOVA admin production URL has been verified or deployed by this work. Configure Supabase Auth redirect allowlists for both actual app origins and their locale-specific `/auth/confirm` callbacks. Existing accounts and roles are preserved; no new administrator password was created.
-
-## Catalog prerequisite
-
-The legacy products and commerce history remain in the original database; they were not copied to this fresh KOVA project. New KOVA products 2/3 remain drafts at EGP 850 each, with EGP 200 COD deposits, until sizes and stock are confirmed and assets are deployed. Keys do not replace inventory. `KOVA_LOCAL_CATALOG_PREVIEW=true` only allows reviewing the approved drafts on localhost; it is ignored on Vercel. No purchased stock or product variants are fabricated.
-
-See `KOVA_DEPLOYMENT.md` for deployment, provider acceptance and rollback, and `qa/connected-browser-results.json` for exactly which connected interactions were verified.
-
-The owner selected the new project on 2026-10-21. Both local apps now use its matching URL/publishable key. Existing Vercel environment variables have not been changed: replace the URL, publishable key and server secret in BOTH projects with matching values from this new project, then redeploy. An old project's secret is not valid for the new URL. Configure Auth Site URL and allowed locale-specific `/auth/confirm` callbacks for the actual storefront and admin origins. The private one-time admin approval requires ownership of the email explicitly supplied by the owner and a confirmed email; no password or account was created by this setup.
+If OTP still appears, check exact flag name/value, app/env scope, deployment commit and runtime; rebuild after configuration changes. Disabled request/verify endpoints return the disabled response rather than contacting Twilio. See [payments](PAYMENTS.md).

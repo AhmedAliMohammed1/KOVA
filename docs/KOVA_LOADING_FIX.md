@@ -1,8 +1,10 @@
 # Loading and hosted catalog checkpoint
 
+Historical performance measurements below retain their original commit/sample scope. Current deployment, catalog and roles: [PROJECT_STATE](../PROJECT_STATE.md). Latest Arabic font/content-height behavior: [typography](KOVA_ARABIC_TYPOGRAPHY.md). Do not interpret these dated samples as field p75/INP.
+
 The hosted storefront at `https://kova-green-delta.vercel.app` was already deploying commit `8a93d9d` successfully. Its public Supabase URL/key matched the new project. Product cards were absent because both approved products were drafts, while only the localhost preview exposed drafts.
 
-Both approved products were made publicly visible on 2026-10-21 at their existing EGP 850 prices and EGP 200 COD deposits. Publication did not create sizes, variants, stock or orders. Subsequent staff changes to the women's variants/inventory are preserved. The men's set has no variants yet. Purchase controls continue to follow actual database variants/stock; no checkout validation was bypassed.
+Both approved products were made publicly visible on 2026-10-21 at their existing EGP 850 prices and EGP 200 COD deposits. Publication did not create sizes, variants, stock or orders. Subsequent staff changes to the women's variants/inventory are preserved. The men's set later received owner-maintained variants; inspect the current database rather than this initial checkpoint. Purchase controls continue to follow actual database variants/stock; no checkout validation was bypassed.
 
 ## Performance changes
 
@@ -18,7 +20,7 @@ The previous live diagnostic received the first byte in about 0.68 seconds but d
 
 ## Administrator access
 
-The owner-supplied email's account is now confirmed and has the `admin` role in the new project. Sign in at `https://admin-two-tau-18.vercel.app/en/admin` using the password chosen during registration. No password is generated or retrieved by this work. Use the recovery link if needed; successful email delivery depends on the configured Supabase Auth callback and email settings.
+The owner-supplied email's account is now confirmed and has the `admin` and `super_admin` roles in the new project; the second requested account has regular `admin` access. Sign in at `https://admin-two-tau-18.vercel.app/en/admin` using the password chosen during registration. No password is generated or retrieved by this work. Use the recovery link if needed; successful email delivery depends on the configured Supabase Auth callback and email settings.
 
 ## Live acceptance
 

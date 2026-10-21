@@ -1,34 +1,25 @@
-# Incident-response runbook
+# Incident response
+
+Reviewed 2026-10-22. Use current KOVA app/database targets in [PROJECT_STATE](../../PROJECT_STATE.md); legacy history is a separate protected system.
 
 ## Severity
 
-- **SEV-1:** checkout unavailable, data loss/corruption, security compromise, incorrect payment capture, or broad account exposure.
-- **SEV-2:** a major customer/admin workflow is unavailable, fulfilment is blocked, or notification/cron failures accumulate.
-- **SEV-3:** isolated defect with a workaround and no material data/payment risk.
+SEV-1: broad checkout outage, data corruption/loss, exposure, incorrect payment capture or overselling. SEV-2: major customer/staff workflow failure, blocked fulfilment or accumulating job/notification failures. SEV-3: isolated defect with a safe workaround.
 
-## First 15 minutes
+## First response
 
-1. Assign incident commander, technical lead and communications owner.
-2. Record start time, affected workflows, first known event and deployment commit.
-3. Preserve Vercel runtime/build logs, Supabase logs/advisors and provider event IDs without copying secrets or PII.
-4. Contain risk: disable Paymob, OTP, recovery emails or cron jobs as appropriate; do not delete evidence.
-5. Decide whether to rollback code, forward-fix, or invoke database recovery.
+Assign an incident owner; record time, affected journeys and exact deployed commits/env changes. Preserve Vercel/Supabase/provider evidence without tokens, connection strings, personal proofs or unnecessary customer data. Contain the affected feature rather than weakening RLS or changing all flags. Confirm whether rollback, forward fix or authorized data recovery is appropriate.
 
-## Diagnosis order
+Diagnose actual KOVA health/readiness -> recent code/env changes -> route/runtime errors -> Supabase Auth/DB/Storage/locks/advisors -> relevant provider identifiers. The legacy smoke workflow does not establish current health. Distinguish phone OTP, email verification, missing server configuration, real stock, private access and optional-provider holds.
 
-1. Liveness and readiness endpoints.
-2. Recent deployment/build changes and environment-variable changes.
-3. Vercel Runtime Logs filtered by route/request ID and `event`.
-4. Supabase database/Auth/Storage logs, locks, advisors and migration history.
-5. Resend, Twilio and Paymob dashboards using stored provider identifiers.
+## Commerce and access
 
-## Commerce-specific response
+- Pause affected products when inventory is inconsistent; reconcile reservations/movements before an audited adjustment.
+- Keep fulfilment blocked until payment/deposit evidence is accepted. Reconcile verified Paymob server events; browser return status is not payment.
+- Preserve successful order transactions when email/cache refresh fails; retry the secondary operation without duplicate mutations or communications.
+- For unexpected staff access, inspect current user_roles and private role-change audit, contain compromised access through an authorized super admin/operator, and retain self/last-super-admin protections.
+- Do not run restore scripts until current target protections and exact URL/ref are independently verified. Never restore a drill into current KOVA or legacy history.
 
-- For inventory mismatches, pause affected products, compare `inventory`, reservations and movements, and correct only through audited admin/database procedures.
-- For failed or ambiguous payments, never infer success from a browser redirect. Use the Paymob transaction and verified webhook record, then reconcile the order.
-- For delayed manual proofs, keep fulfilment blocked until staff approval.
-- For notification failures, keep the order transaction successful, repair delivery separately and avoid duplicate customer messages.
+## Closure
 
-## Recovery and closure
-
-Verify English/Arabic storefront, auth, checkout, payment, tracking and staff workflows. Reconcile affected orders and payments, notify customers when service or financial expectations changed, monitor for recurrence, then write a blameless post-incident review within two business days with root cause, timeline, impact and preventive actions.
+Verify affected Arabic/English, auth, commerce and staff boundaries using safe fixtures. Reconcile records/payments before resuming. Customer/staff communications require the appropriate authorization and factual scope. Record cause, timeline, impact, recovery evidence and preventive tasks, including measured RPO/RTO where applicable. [Release/rollback](RELEASE_ROLLBACK.md), [monitoring](MONITORING.md).

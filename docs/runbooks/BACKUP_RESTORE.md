@@ -1,57 +1,33 @@
 # Backup and restore runbook
 
-## Scope
+Reviewed 2026-10-22. Protect both current KOVA khccehpehasicomumani and legacy-history iqufqtjotgpmhhtvlxwf. Never use either as a restore-drill target.
 
-Supabase database backups do not contain Storage object bytes; database and Storage backups must both succeed. Keep backups encrypted outside the repository and restrict access to the smallest operator group.
+## Blocking safeguard gap
 
-## Create a verified logical backup
+The checked-in restore-drill.ps1 and restore-storage.mjs currently reject only the legacy ref. They do not yet automatically reject current KOVA or fully establish URL/ref identity. Before using them, implement/review current-target protections and independently verify the connection URL, target project and explicit confirmation all refer to a disposable non-production project. Documentation prohibitions are not an implemented runtime guard. Track this in [TASKS](../../TASKS.md).
 
-1. Install project dependencies and PostgreSQL client tools.
-2. Obtain the Session Pooler connection string from Supabase **Connect** and set it only in the current shell as `SUPABASE_DB_URL`.
-3. Set `NEXT_PUBLIC_SUPABASE_URL` and a server-only `SUPABASE_SECRET_KEY` so private Storage objects are included.
-4. Choose an encrypted output directory outside the repository.
-5. Run:
+## Backup
 
-```powershell
-./scripts/operations/backup-supabase.ps1 -OutputRoot "D:\EncryptedBackups\ScrubVibe"
-```
+Database backups do not include Storage object bytes. Keep DB/schema/roles/data plus Storage backups encrypted, outside the repository, with restricted access and an off-site copy. Confirm current provider retention/PITR capabilities; do not assume a plan or an old drill proves recovery.
 
-The command writes roles, schema, data and Storage objects, creates SHA-256 checksums, and refuses success unless verification passes. Never commit the output.
+1. Verify source project/ref and approved operator access. Obtain database connection details securely from Supabase Connect.
+2. Configure shell-only SUPABASE_DB_URL and same-project Storage access (NEXT_PUBLIC_SUPABASE_URL and server-only SUPABASE_SECRET_KEY) without logging them.
+3. Read scripts/operations/backup-supabase.ps1 and verify available PostgreSQL tools before execution. Choose an encrypted output directory outside this workspace.
+4. Run the reviewed backup script with -OutputRoot pointing to that directory. Existing filenames may retain legacy brand prefixes; those are not proof of the source project.
+5. Require scripts/operations/verify-backup.mjs checksum/manifest success. Record source ref, timestamp, operator, manifest hash, sizes and result without credentials/customer data.
 
-## Retention
+A proposed retention policy is 7 daily, 4 weekly and 12 monthly verified backups; confirm the actual business policy and storage capacity. File existence alone is not a successful restore test.
 
-- Keep 7 daily, 4 weekly and 12 monthly verified logical backups.
-- Maintain at least one encrypted copy in a separate provider/account.
-- Record backup timestamp, operator, manifest hash, size and verification result—never the database URL or secret.
-- Paid Supabase plans provide managed daily backups; consider PITR when the required RPO is below 24 hours.
+## Disposable restore drill
 
-## Restore drill
+After the safeguard gap is fixed, inspect installed script parameters: restore-drill.ps1 takes BackupDirectory, TargetDbUrl, TargetProjectRef and ConfirmTargetProjectRef. Use a separately created disposable target, explicit exact confirmation and single-transaction error-stopping restore. Never weaken guards to accommodate a production URL.
 
-Restore drills are prohibited against `iqufqtjotgpmhhtvlxwf`. Create a disposable non-production Supabase project in the same region, obtain its connection string, and run:
+Storage restoration separately uses RESTORE_TARGET_SUPABASE_URL, RESTORE_TARGET_SUPABASE_SECRET_KEY and RESTORE_TARGET_PROJECT_REF plus the positional confirmed ref. Create matching buckets/policies first; validate both object bytes and metadata. Do not infer safe targeting from an arbitrary ref argument.
 
-```powershell
-./scripts/operations/restore-drill.ps1 `
-  -BackupDirectory "D:\EncryptedBackups\ScrubVibe\scrub-vibe-..." `
-  -TargetDbUrl $env:RESTORE_TARGET_DB_URL `
-  -TargetProjectRef "non-production-ref" `
-  -ConfirmTargetProjectRef "non-production-ref"
-```
+Verify schema/history, RLS/grants, Auth callbacks, bucket privacy, product/order counts, test sign-in, sandbox transactional behavior, authorized/denied staff access and scoped proof downloads. Record measured RPO/RTO and cleanup. No current successful KOVA restore drill is claimed by the documentation baseline.
 
-Then set the three `RESTORE_TARGET_SUPABASE_*` variables and restore Storage only after creating matching buckets/policies:
+## Production recovery
 
-```powershell
-node ./scripts/operations/restore-storage.mjs "D:\EncryptedBackups\ScrubVibe\scrub-vibe-..." "non-production-ref"
-```
+A real production restore requires explicit incident authorization and a verified target/timestamp. Freeze affected mutations/deployments, preserve evidence and identify a known-good point. Use the approved provider restore/PITR procedure with independent operator confirmation. Database downtime and separate Storage restoration must be planned.
 
-Validate migrations, RLS/grants, Auth configuration, bucket privacy, catalogue counts, a test sign-in, checkout rollback, admin access and signed proof download links. Record measured RPO/RTO and destroy the drill project after evidence is retained.
-
-## Production restoration
-
-A production restore is a declared severity-1 incident. Freeze deployments and checkout, preserve logs, identify the last known-good point, and use Supabase Dashboard managed restore/PITR with a second operator confirming the target timestamp. Expect database downtime. Storage is separate: restore missing object bytes from the encrypted Storage backup, then verify metadata/object parity.
-
-After restoration, rotate exposed credentials if compromise is suspected, reapply provider webhooks/settings, verify auth redirects, run smoke tests, reconcile orders/payments created near the recovery point and document any lost transactions.
-
-## References
-
-- [Supabase Database Backups](https://supabase.com/docs/guides/platform/backups)
-- [Supabase CLI backup and restore](https://supabase.com/docs/guides/platform/migrating-within-supabase/backup-restore)
+After recovery, verify credentials/callbacks/provider configuration, application/schema compatibility, access and private media. Reconcile orders/payments near the recovery point before resuming. Follow [incident response](INCIDENT_RESPONSE.md) and [release rollback](RELEASE_ROLLBACK.md); code rollback does not undo live business data.

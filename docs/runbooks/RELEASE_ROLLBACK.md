@@ -1,29 +1,25 @@
-# Release and rollback runbook
+# Release and rollback
 
-## Release gate
+Reviewed 2026-10-22. The existing kova and admin projects are separate deployments using one database. [Current targets](../../PROJECT_STATE.md), [deployment guide](../KOVA_DEPLOYMENT.md).
 
-1. Confirm the branch is current with `main` and the worktree is clean.
-2. Run `pnpm install --frozen-lockfile`, lint, typecheck, tests and production build.
-3. Review database migrations for RLS, grants, indexes, reversibility and compatibility with the currently deployed app.
-4. Apply additive/backward-compatible migrations before promoting code that depends on them.
-5. Verify the Vercel preview with critical English/Arabic, checkout and admin smoke journeys.
-6. Confirm required environment variables, provider readiness and health endpoint results.
-7. Promote the tested artifact or merge to `main`; record commit, deployment URL, operator and time.
-8. Watch runtime errors, checkout failures, cron jobs and payment callbacks for at least 30 minutes.
+## Gate and release
+
+1. Inspect branch/diff, preserve unrelated changes, confirm user scope and exact app/project/environment. Record compatible known-good deployments and current migration state.
+2. Application changes: use the pinned lockfile and pnpm verify:release. Documentation-only changes: check links, source/config references and stale facts; do not claim a new runtime suite run.
+3. Review migrations/RLS/grants/types and apply additive changes once before dependent apps. Never reset/reseed live products, roles or commerce history.
+4. Test affected English/Arabic/mobile/access/error journeys. Transactions/providers require known sandbox fixtures and destinations.
+5. Configure exact origins, callbacks, public/server variables and revalidation secrets. Keep feature holds unless acceptance authorizes activation.
+6. Push/promote within user authorization. Verify READY state, matching commit and production aliases on both affected projects; push output alone is insufficient.
+7. Inspect runtime/health, invalidation, cron ownership, payment/proof queues and advisor changes; record actual tests and limits.
 
 ## Application rollback
 
-Use Vercel Instant Rollback to restore the last known-good deployment. Confirm the target commit and deployment before acting. A rollback changes application code but does not reverse Supabase migrations, Storage changes or cron definitions; Vercel cron schedules can remain unchanged after Instant Rollback and must be reviewed separately.
+Restore a known-good compatible deployment separately for each app. Check root/build/env settings and schema compatibility; a prior monolith is historical, not the automatic rollback target. Code rollback does not reverse migrations, uploaded media, user roles, inventory, payment records or every cron setting.
 
-After rollback, check `/api/health/live`, `/api/health/ready`, authentication, catalogue, cart, checkout and admin orders. Confirm current code remains compatible with the live schema.
+Verify current-host health/readiness, Arabic default, explicit English, catalog/colour/cart, auth callbacks and permitted/denied staff access. Recheck schedules on both current and old projects; do not enable duplicate recovery/stock jobs.
 
-## Database rollback policy
+## Database and payment policy
 
-Production migrations are forward-fixed by default. Do not run destructive down migrations during an incident. Add a corrective migration that preserves data, or restore to a confirmed backup only for a severity-1 data-loss/corruption event under the backup runbook.
+Prefer additive forward fixes to destructive down migrations. A production restore needs explicit incident authorization, verified backup/target/timestamp and the [backup procedure](BACKUP_RESTORE.md). Current restore scripts have an unresolved target-guard gap; do not run drills against either production/history database.
 
-## Emergency payment stop
-
-- Set `PAYMOB_ENABLED=false` and redeploy to stop new Paymob intentions.
-- Do not delete webhook audit events or manually mark Paymob payments paid.
-- Keep Vodafone Cash/InstaPay proof review and COD available only if their operational queues are healthy.
-- Reconcile provider transactions before re-enabling payment methods.
+Emergency Paymob hold: set PAYMOB_ENABLED=false in storefront and redeploy. Preserve callbacks/audit and reconcile transactions; never infer paid status from a redirect or repeat successful orders to recover email/cache failures. Manual methods require healthy staff review queues before continued use.

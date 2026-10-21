@@ -1,5 +1,7 @@
 # Super-admin user-role management
 
+Reviewed 2026-10-22. Current deployment/data: [PROJECT_STATE](../PROJECT_STATE.md); entry point: [agent handoff](AGENT_HANDOFF.md). Feature evidence below is scoped to its recorded release.
+
 Entry: `/{locale}/admin/users` in the existing admin deployment. Both navigation
 and overview links render only for users with the `super_admin` database role.
 

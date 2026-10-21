@@ -1,84 +1,48 @@
-# Current database selection — 2026-10-21
+# Project state â€” verified 2026-10-22
 
-The owner selected `khccehpehasicomumani` as the new KOVA database. Its schema, security policies and four storage buckets are installed. Only two KOVA draft products (IDs 2/3) exist, with EGP 850 prices, EGP 200 COD deposits and 50/13 photos. No sizes/stock are invented. Both local apps use the new project's public connection; hosting requires matching project keys and a redeploy. Old users/orders remain untouched in the former project; accounts were not transferred. A verified-email, one-time admin bootstrap is configured privately.
+Read this dated snapshot together with the [agent handoff](docs/AGENT_HANDOFF.md). Recheck mutable live data before changing it.
 
-See `docs/KOVA_DATABASE_SETUP.md` for the fresh-project bootstrap and verification. Earlier checkpoints below are historical.
+## Current deployment
 
-# KOVA redesign checkpoint — 2026-10-21
+| Item | Verified value |
+|---|---|
+| Repository | AhmedAliMohammed1/KOVA; main |
+| Last application release | c0a2b234f9297d3bbf9d397c2b8f2cfbadc6fc06 |
+| Storefront | https://kova-green-delta.vercel.app; Vercel project kova; root apps/storefront |
+| Admin | https://admin-two-tau-18.vercel.app; Vercel project admin; root apps/admin |
+| Supabase | khccehpehasicomumani; Ireland eu-west-1 |
+| Vercel functions | dub1 for both apps |
+| Runtime | Next 16.3.3, React 19.2, TypeScript 5.9, Tailwind 4.1; pnpm 11.25.0 |
 
-The current workspace is a two-application monorepo: storefront in `apps/storefront`, staff dashboard in `apps/admin`, shared components/contracts in `packages/shared`. Both applications build independently. Migrations and historical commerce records are preserved. The nine old products are archived; two new KOVA drafts (IDs 20/21) have owner-approved EGP 850 prices and EGP 200 COD deposits. All 70 photographs are inspected; 63 are mapped to the new galleries. Sizes and stock remain unconfirmed.
+Both application deployments for c0a2b23 were READY. Publishing source alone does not verify a future deployment. Do not create a replacement Vercel project merely because the legacy kovaadmin name is inaccessible.
 
-Current evidence and external launch requirements are in `docs/KOVA_DELIVERY.md`. Deployment/root/environment/callback and rollback details are in `docs/KOVA_DEPLOYMENT.md`. The connected Vercel account could not inspect kovaadmin, so no deployment or production routing change was made. Authenticated/sandbox acceptance remains outstanding.
+## Current behavior
 
-The earlier state below is historical implementation context, not a claim that this redesign has passed production acceptance.
+- Storefront / redirects to /ar; /en remains English. Arabic UI uses self-hosted Noto Sans Arabic and Noto Naskh Arabic, with RTL spacing and upright headings.
+- Home/shop/shared product-card swatches change the card photograph and link to the corresponding product colour through ?colour=code.
+- Anonymous catalog/CMS/sizing/review reads use a 60-second allowlisted cache and eight-second complete-response deadline. Private clients stay uncached. Admin changes invalidate public data through a bearer-protected fixed-scope endpoint.
+- Active women's product ID 2: kova-womens-scrub-set, grey/blue/burgundy, 50 mapped photos. Live snapshot: 18 variants.
+- Active men's product ID 3: kova-mens-scrub-set, black, 13 mapped photos. Live snapshot: 6 variants.
+- Both base prices are EGP 850 (85000 minor units); approved COD deposit EGP 200 (20000). Do not invent or overwrite owner-maintained sizes/stock.
+- 70 unique source photographs were reviewed; optimized derivatives exist in both apps. Seven water/still-life frames are excluded from published product galleries; imagery does not substantiate fabric claims.
+- Four storage buckets: public product-media/banners; private payment-proofs/return-evidence. Public application tables have RLS enabled.
 
----
+## Identity and administration
 
-# Project state
+- ahmedelsaify213@gmail.com: verified account with customer, admin, super_admin.
+- mslammohamed51@gmail.com: verified account with customer, admin.
+- Super admins alone see /{locale}/admin/users and can grant/revoke staff roles. Page, action and private database function enforce permission independently. Self-super-admin removal and last-super-admin removal are blocked; changes are audited.
+- The one-time initial admin bootstrap has already been claimed. Do not recreate accounts or assign a password. Use existing sign-in/recovery and the super-admin page for routine access changes.
+- Roles are relational user_roles data, not editable user metadata. Existing sessions recheck roles on subsequent protected requests; refresh old navigation after access changes.
 
-- **Current phase:** Production hardening and external-provider activation
-- **Current branch:** `main`
-- **Hosted application:** `https://scrub-vibe-tau.vercel.app`
-- **Supabase project:** `iqufqtjotgpmhhtvlxwf`
-- **Latest feature:** Production operations foundation: health/readiness, structured runtime errors, fail-closed cron security, operational escalation, verified backup/restore drills, release/rollback and incident runbooks, and automated smoke/security workflows
-- **Known application bugs:** None confirmed in the implemented scope
+## Configuration baseline and limits
 
-## Implemented
+Both deployed apps use the new database. The chosen checkout setting was CHECKOUT_PHONE_OTP_ENABLED=false; code/example default is true, so explicit configuration and redeployment matter. Phone syntax validation and Supabase email verification remain independent. Paymob remains held pending provider acceptance. Provider secrets/SMTP/sender state must be inspected securely before transactional testing; a configured variable is not evidence of successful delivery or payment acceptance.
 
-- Responsive bilingual English/Arabic storefront with LTR/RTL layouts, accessible navigation, catalogue search/filter/sort, SEO metadata and mobile-first product discovery.
-- Normalized Supabase catalogue with localized products, multi-colour and multi-size variants, colour-specific multi-image galleries, live inventory and safe admin creation/editing/deletion.
-- Supabase Auth with PKCE sessions, registration, sign-in/out, password recovery, server-validated RBAC and owner-scoped account data.
-- Persistent authenticated cart and wishlist with guest merge, optimistic updates, quantity controls and idempotent synchronization.
-- Egypt-only transactional checkout with validated customer names and mobile numbers, simple/detailed addresses, saved-address prefill, shipping zones, promotions, stock reservation and actionable bilingual errors.
-- COD with per-product deposits, Vodafone Cash and InstaPay private proof verification, replacement proof upload, and a complete but intentionally dormant Paymob integration.
-- Customer order history, guest/account tracking, invoices, shipment details, fulfilment timeline and bilingual lifecycle email notifications.
-- Customer returns/exchanges with evidence, item quantities, status history and customer-facing notes; role-scoped admin approval, receiving, restocking and refund/store-credit/exchange settlement.
-- Verified-purchase product reviews with star ratings, fit and recommendation feedback, customer edit/delete, admin moderation/responses/featured reviews, aggregates and structured SEO data.
-- Interactive size calculator and database-backed category/product size-chart administration.
-- Admin-managed campaigns and discount codes with schedules, eligibility, caps, usage limits, budgets, atomic redemption and reporting.
-- Storefront CMS for announcements, hero carousels and promotional sections with Supabase Storage media.
-- Product bundles, cross-sell/complete-the-look recommendations, low-stock alerts, back-in-stock subscriptions and notification automation.
-- First-party commerce analytics, admin dashboards, CSV exports, Google Merchant feed, optional GA4/Meta scripts and Meta Conversions API integration.
-- Three-stage abandoned-cart recovery with signed unsubscribe, recovery discounts, conversion attribution and Vercel Cron scheduling.
-- Pagination for long customer and admin collections, responsive admin tools and role-aware navigation.
-- RLS, least-privilege grants, private storage, server-authoritative commerce operations, idempotent callbacks and security regression coverage.
-- Production operations with liveness/readiness endpoints, structured server-error logs, fail-closed cron authentication, expired-reservation cleanup, stale proof/payment/webhook escalation, database and Storage backup integrity tooling, non-production restore drills, hourly smoke monitoring, weekly dependency/CodeQL scanning and complete operator runbooks.
+The legacy database iqufqtjotgpmhhtvlxwf and its historical orders/users remain separate. Earlier KOVA drafts 20/21 and nine archived legacy products refer to the old database, not current IDs 2/3. Accounts/orders were not copied between projects.
 
-## Remaining or externally blocked
+## Verification and next work
 
-1. Activate and acceptance-test Paymob with merchant sandbox/live credentials and registered webhook.
-2. Configure and validate production Twilio Verify credentials if checkout phone OTP is enabled.
-3. Implement automated WhatsApp Business notifications; current WhatsApp usage is link-based only.
-4. Verify a Scrub Vibe sender domain in Resend and set `RESEND_FROM_EMAIL`.
-5. Configure GA4, Meta Pixel and Meta CAPI credentials and validate event deduplication in production.
-6. Configure `CRON_SECRET` and `OPERATIONS_SECRET` in Vercel and confirm the deployed health/cron workflows.
-7. Optionally add longer-retention external observability and distributed rate limiting (Vercel-native structured logging and smoke monitoring are implemented; Sentry and Upstash remain optional extensions).
-8. Add committed Playwright end-to-end journeys for authentication, checkout, proof review, returns, reviews and admin operations.
-9. Run the first encrypted backup and non-production restore drill, then record the measured RPO/RTO.
-10. Upgrade Supabase to Pro if leaked-password protection is required; the setting is unavailable on the current Free plan. Re-review the remaining intentional/optimization advisor findings before launch sign-off.
+Last application release: 45 test files / 378 passing tests, lint and both production builds passed. Authenticated owner browser checks covered Arabic/English role directory, correct role badges, mobile/landscape reflow, confirmation wording, search recovery, self-demotion prevention and focus restoration. Grant/revoke/denial/audit database tests ran inside a rolled-back transaction. Payment/order/return sandbox acceptance and field performance remain separate gaps.
 
-## External configuration required
-
-- Supabase URL, publishable key and server secret.
-- Vodafone Cash destination and InstaPay address.
-- Resend API key, verified sender and staff destination.
-- `CRON_SECRET` for scheduled automation.
-- Twilio Verify credentials only when OTP is enabled.
-- Paymob keys/HMAC/integration IDs only when Paymob is activated.
-- Optional GA4 and Meta credentials for external marketing attribution.
-
-## Verification baseline
-
-- Production operations checkpoint: **34 test files / 332 tests passed**; ESLint, strict TypeScript and the Next.js 16.3.3 production build passed.
-- Live migration verification confirmed three operational indexes, eleven optimized owner policies and revoked direct access to trigger-only functions.
-- Responsive English, Arabic/RTL and 390px product/review/admin flows remain covered by the previous browser QA checkpoint.
-- Supabase leaked-password protection remains unavailable on the current Free plan; other remaining advisor entries are intentional access patterns or future optimization work.
-- Full historical verification evidence is recorded in `TEST_REPORT.md`.
-
-## Next action
-
-Choose the next production-hardening or customer-growth feature after reviewing the remaining list above.
-
-## Resume protocol
-
-Read this file, `TASKS.md`, `IMPLEMENTATION_PLAN.md`, `DECISIONS.md`, `TEST_REPORT.md`, then inspect `git status` and `git log` before changing code.
+Actual operations gaps found during the documentation audit: the hourly smoke workflow still targets the legacy hostname; restore scripts hardcode only the old production ref as a deny target. Treat both databases as protected production/history and fix those safeguards before restore use. Shared instrumentation also has no discovered app-local entrypoint; verify wiring before claiming automatic runtime coverage. See [TASKS](TASKS.md) and [operations](docs/OPERATIONS.md).

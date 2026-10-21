@@ -1,3 +1,5 @@
+> Historical, superseded by [KOVA master](../kova/MASTER.md). Do not apply this legacy palette/brand to current UI.
+
 # Scrub Vibe — UI/UX Design System
 
 > Page-specific files in `pages/` override this master. Generated with UI/UX Pro Max and refined against the existing bilingual commerce architecture and live storefront audit.

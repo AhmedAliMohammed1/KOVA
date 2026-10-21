@@ -1,5 +1,7 @@
 # Arabic fonts
 
+Maintained documentation: [current implementation context](../../../../docs/KOVA_ARABIC_TYPOGRAPHY.md). Reviewed 2026-10-22.
+
 Self-hosted Arabic-subset WOFF2 variable fonts, weights 400–700, downloaded
 from the official Google Fonts CSS API on 2026-10-22:
 

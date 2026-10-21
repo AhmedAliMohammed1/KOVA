@@ -1,0 +1,19 @@
+{
+  "commit": "c0a2b234f9297d3bbf9d397c2b8f2cfbadc6fc06",
+  "origin": "https://admin-two-tau-18.vercel.app",
+  "authenticatedBrowser": "Existing owner session; no password or new login token needed",
+  "checks": [
+    "Arabic and English user directories rendered with current database roles",
+    "Mohamed has customer/admin; Ahmed has customer/admin/super_admin",
+    "Arabic empty search returned zero users and a recovery message",
+    "Mobile 375x812 dialog and 812x375 landscape page had no horizontal overflow",
+    "Desktop English page had no horizontal overflow",
+    "Role selection changed grant/revoke wording correctly",
+    "Self-super-admin revocation disabled in the live dialog",
+    "Cancel closed the dialog and restored focus to its trigger",
+    "Browser viewport reset and no additional role mutations submitted"
+  ],
+  "automatedTests": 378,
+  "databaseIntegration": "Passed; all test writes rolled back",
+  "screenshots": ["user-roles-live-ar.png", "user-roles-live-mobile-dialog.png"]
+}

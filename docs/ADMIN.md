@@ -1,23 +1,30 @@
 # Administration
 
-The main dashboard at `/en/admin` covers catalogue, inventory and marketing analytics. Order operations are at `/en/admin/orders` and are available to support, warehouse, admin and super-admin roles according to their database policies.
+Production: https://admin-two-tau-18.vercel.app. Source owner: apps/admin. Sign in at /ar/account or /en/account with an existing staff account. Admin / redirects to /en/admin; storefront staff routes redirect to the configured admin origin. Host-scoped cookies can require a separate sign-in.
 
-Role-scoped workspaces also manage products, shipping zones, size charts, discount campaigns, CMS banners, commercial merchandising/returns and review moderation. Long collections use server-driven pagination. Product managers can edit localized content, pricing, COD deposits, statuses, colour/size inventory and colour-specific image galleries; permanent deletion uses a guarded database operation.
+## Page-level access
 
-The order dashboard provides collected revenue, paid average-order value, proof-review queue and fulfilment queue. Staff can:
+| Workspace | Explicitly allowed roles |
+|---|---|
+| Overview, banners, discounts, shipping, sizing | admin, super_admin |
+| Product editing | product_manager, admin, super_admin |
+| Orders | support, warehouse, admin, super_admin |
+| Reviews | content_editor, product_manager, admin, super_admin |
+| Commercial | support, warehouse, content_editor, product_manager, analyst, admin, super_admin; each mutation has narrower role checks |
+| Users & roles | super_admin only |
 
-- inspect immutable product, price, colour, size and address snapshots;
-- open short-lived signed links for private payment proofs;
-- approve or reject transfer proofs;
-- update order and payment status with a customer-facing note;
-- add a courier, shipment number and courier tracking URL;
-- progress an order through confirmed, preparing, ready, shipped, out for delivery and delivered;
-- cancel an undelivered order and release its inventory reservation.
+This is a navigation aid, not permission to generalize across actions. RequireRoles checks in each route/action and database RPC/RLS remain authoritative. A staff role does not automatically imply overview access or every mutation in its workspace.
 
-Marking an order delivered converts its reservation into a sale and deducts on-hand stock atomically. Shipment numbers are required for shipped and out-for-delivery states. Cancelled and returned orders are treated as terminal states.
+## Workflows
 
-For manual transfers, approve the screenshot and set payment to `paid` before changing the order to `confirmed`. For COD, use `cod_due` until delivery and `cod_collected` once cash is received.
+- Product content, prices, COD deposits, publication, colour galleries and size inventory are edited through admin; preserve current live variants/stock. Guarded deletion/archive behavior must respect historical references.
+- Orders display immutable snapshots, private proof review, payment state, shipment/tracking and fulfilment transitions. Do not infer paid status from an upload or redirect. Shipping states require the contract's shipment details. Delivery/cancellation update reservations/inventory atomically.
+- Commercial operations handle merchandising, bundles/recommendations, stock alerts, role-scoped return receiving/restock/settlement and CSV exports.
+- Reviews support moderation, responses and featured approved reviews with history.
+- CMS, sizing, shipping and campaigns use their existing forms and server mutations; successful writes request storefront invalidation.
 
-The commercial workspace manages bundles, recommendations, low-stock alerts, operational exports and return/exchange/refund cases. Return review, warehouse receiving/restocking and final settlement have distinct authorization checks. Customer-facing notes are shown in the customer's return history.
+## User roles
 
-The reviews workspace provides rating metrics, filtering and pagination. Authorized staff can approve or reject reviews, publish responses and feature selected approved reviews; moderation changes are retained in review history.
+A super admin sees Users & roles in navigation and overview, at /{locale}/admin/users. Search by name/email, open Manage roles, choose a role, read grant/revoke wording, check confirmation and submit. Unverified users cannot receive staff roles. Customer access is automatic. Self-super-admin and final-super-admin removal are protected; actual changes are privately audited. [Implementation/security details](KOVA_USER_ROLES.md).
+
+The initial bootstrap has been claimed. Routine role administration should use this page; offline operator scripts require server secrets and bypass application-level workflow, so use only for explicitly authorized recovery after verifying the target database.

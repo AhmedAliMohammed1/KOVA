@@ -1,15 +1,21 @@
 # Authentication and authorization
 
-Supabase Auth will provide PKCE cookie sessions through `@supabase/ssr`. Route visibility is not authorization: every sensitive mutation and read validates the user and required permission on the server. Administrative roles are customer, support, warehouse, content editor, product manager, analyst, admin and super admin.
+Reviewed 2026-10-22. Supabase Auth is implemented using PKCE and host-scoped cookies through @supabase/ssr; it is not a planned future integration.
 
-## Implemented boundary
+Browser/server session clients use the publishable key. Each app's proxy refreshes and verifies claims, supplies locale context and propagates SSR cache-prevention headers. Server Components tolerate unavailable cookie writes; callback routes and proxy handle writes. Role checks query current user_roles rows under RLS, independently of client visibility. Never authorize from editable user_metadata or only a navigation item.
 
-- Browser and server clients use the publishable key only.
-- Next.js 16 `proxy.ts` verifies claims early, refreshes cookies and applies the no-cache headers supplied by `@supabase/ssr`.
-- Server Components tolerate cookie writes being unavailable; Proxy owns refreshes.
-- `requireUser` verifies JWT claims and `requireRoles` loads server-controlled role rows under RLS.
-- Missing local credentials leave the public development storefront operational; protected operations fail with a configuration error rather than silently weakening authorization.
-- Localized server actions implement email/password sign-in, registration, sign-out, recovery requests and password updates.
-- Registration and recovery email links terminate at `/{locale}/auth/confirm`, which accepts PKCE authorization codes or hashed OTP tokens and writes the resulting session cookies server-side.
-- Callback destinations are restricted to the selected locale's account subtree to prevent open redirects.
-- Authenticated account rendering trusts verified JWT claims, then loads only the current user's profile through owner-scoped RLS.
+## Sign-in and callbacks
+
+Storefront and admin each have /{locale}/account, recovery/update-password and /{locale}/auth/confirm routes. Registration is storefront-owned. Callbacks accept PKCE codes or supported hashed email tokens and restrict continuation URLs to permitted locale/account destinations. Do not introduce open redirects.
+
+Configure Supabase Auth Site URL to the intended storefront and allow the exact locale callbacks for both actual origins: /en/auth/confirm and /ar/auth/confirm. Local callback URLs must match ports actually used. Changing NEXT_PUBLIC_APP_URL or provider allowlists does not repair an already-issued link pointing at an obsolete host.
+
+Supabase email verification/recovery delivery is separate from Resend application notifications and checkout Twilio phone OTP. CHECKOUT_PHONE_OTP_ENABLED=false affects checkout phone verification only. Use existing account passwords/recovery; do not recreate the claimed bootstrap or retrieve passwords.
+
+## Roles
+
+customer, support, warehouse, content_editor, product_manager, analyst, admin, super_admin are the database enum values. Roles are not a blanket hierarchy: pages/actions/RLS specify allowed sets. Main overview and storefront staff links require admin or super_admin; narrower staff workspaces permit their explicit operational roles.
+
+Only super_admin may view the user directory or change staff roles. Server actions recheck the actor before RPC; the private database function rechecks after taking its role-change lock. Customer access remains automatic; last-super-admin and self-super-admin removal are blocked. See [role management](KOVA_USER_ROLES.md) and [admin access matrix](ADMIN.md).
+
+The current project is khccehpehasicomumani. Legacy users were not migrated automatically. The dated owner/admin assignments live in [PROJECT_STATE](../PROJECT_STATE.md); do not use those email addresses as hardcoded application authorization rules.

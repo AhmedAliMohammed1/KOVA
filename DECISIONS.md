@@ -1,5 +1,7 @@
 # Architectural decisions
 
+Reviewed 2026-10-22. Earlier decisions preserve implementation history; current KOVA deployment, brand and role decisions below supersede obsolete identity/configuration details. See [PROJECT_STATE](PROJECT_STATE.md).
+
 ## ADR-001 — Supabase PostgreSQL as system of record
 
 **Status:** Accepted. **Reason:** Commerce data is relational and needs transactions, constraints, auditability and row-level authorization.
@@ -22,7 +24,7 @@
 
 ## ADR-006 — Original editorial identity
 
-**Status:** Accepted. **Reason:** The reference informs structure only. NOVA Cairo uses original copy, generated photography and a sand/clay/olive visual system.
+**Status:** Superseded by ADR-019. Earlier NOVA/Scrub Vibe branding and generated/sand-clay photography direction are historical; current KOVA uses supplied studio photography and the navy/teal master.
 
 ## ADR-007 — Database-backed RBAC with private policy helper
 
@@ -42,7 +44,7 @@
 
 ## ADR-011 — Multi-stage transactional order lifecycle notifications
 
-**Status:** Accepted. **Reason:** Customers receive real-time, non-blocking bilingual (Arabic/English) email notifications throughout their entire order lifecycle (Order Placed, Payment Approved, In Preparation, Shipped with Tracking, Out for Delivery, Delivered, and Cancelled), as well as on any staff update note. Sending failures never abort administrative or customer transactions, and sandbox/unverified sender domains safely fall back to Resend's onboarding domain to avoid delivery disruptions.
+**Status:** Accepted as implementation design, not a delivery guarantee. Bilingual lifecycle notification attempts are non-blocking: failures must not undo a successful order or staff transaction. Sender selection can use the configured sender or test fallback, but real delivery still requires verified provider/domain/recipient configuration and acceptance. Never claim an arbitrary unverified domain will deliver successfully.
 
 ## ADR-012 — Hybrid size chart architecture with client-side recommendation engine
 
@@ -65,3 +67,27 @@
 **Status:** Accepted. **Reason:** To recover lost sales while respecting customer privacy and anti-spam standards, cart recovery operates on server-persisted carts belonging to authenticated or identified customers. An index-backed PostgreSQL RPC (`find_abandoned_cart_candidates`) identifies unpurchased carts meeting strict delay windows (2h, 24h, 48h) and progression requirements without client-side polling or race conditions. A Vercel Cron route (`/api/cron/abandoned-cart`) orchestrates a 3-stage escalation: gentle reminder, urgency notification, and an auto-generated limited-time single-use discount code (`RECOVER-XXXX`). Emails feature bilingual HTML responsive layouts, direct cart restore and checkout auto-apply links, and cryptographic HMAC-signed 1-click unsubscribe links storing opt-outs in `profiles.cart_recovery_opt_out`. Successful order completions asynchronously mark notifications as recovered, feeding live recovery rates and attributed revenue directly into the operations dashboard.
 
 
+
+## ADR-017 — Two applications, one shared contract and database
+
+**Status:** Accepted. Storefront owns customer commerce, webhooks and cron; admin owns staff workflows. Both reuse packages/shared and root migration history. Separate Vercel roots and host-scoped auth improve ownership clarity; app rollback remains independent of database state.
+
+## ADR-018 — Owner-selected KOVA database
+
+**Status:** Accepted. khccehpehasicomumani is current production. The earlier database retains separate legacy commerce; accounts/orders were not silently migrated. Mutable product/variant/role facts require live verification rather than replaying historical seed data.
+
+## ADR-019 — Arabic-first KOVA identity and self-hosted fonts
+
+**Status:** Accepted; supersedes ADR-006 identity. Storefront / redirects to /ar while /en stays explicit. Real supplied studio media and navy/teal tokens define KOVA. Licensed local Noto Sans/Naskh Arabic variable fonts provide consistent Arabic text without runtime third-party font requests. Preserve RTL, upright letters and image quality.
+
+## ADR-020 — Bounded anonymous public caching
+
+**Status:** Accepted. Only allowlisted anonymous reads receive 60-second tagged caching and an eight-second complete-response deadline. Private clients remain uncached. Admin invalidates public data through a fixed-scope bearer endpoint. Checkout remains database-authoritative even when a public availability view is cached.
+
+## ADR-021 — Super-admin role management
+
+**Status:** Accepted. Current relational roles gate page, action and private database function. Invoker wrappers expose only guarded APIs; serialized mutations prevent last-super-admin/concurrent actor-revocation races. Self-demotion is blocked, customer access is automatic, grants require verified email, and real changes are privately audited.
+
+## ADR-022 — Current documentation separated from history
+
+**Status:** Accepted. Agent handoff, project state, environment reference and domain guides are current sources; archive retains old checkpoints. Test results remain dated/scoped. Legacy operational target/restore/instrumentation gaps are documented work, not implied completed protections. Documentation does not authorize privileged external actions by itself.

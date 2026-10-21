@@ -1,6 +1,24 @@
 # Changelog
 
-## Unreleased
+## 2026-10-22 — KOVA documentation and continuation handoff
+
+- Reconciled active documentation with the deployed two-app KOVA architecture, selected Supabase project, active products/variants and current role-management release.
+- Added agent entrypoints, documentation index, complete environment ownership/key guide, feature/source map, current tasks and verification limits.
+- Archived superseded draft-only/old-brand/old-host checkpoints rather than mixing them into current setup.
+- Documented actual legacy monitoring/restore guard and instrumentation wiring follow-up; no runtime configuration or business data changed in this docs update.
+
+## 2026-10-22 — Last application release checkpoints
+
+- c0a2b23: super-admin-only user search/role management, protected RPCs/audit, owner super-admin and requested regular-admin grants. 45 files / 378 tests passed; both production deployments READY.
+- 3f04ba3: self-hosted Arabic fonts, RTL typography/spacing and streamed-content layout stability.
+- bf99ce1: Arabic default storefront and selectable product-card colours with matching product links.
+- Earlier KOVA loading release: bounded public read cache/deadline, Dublin functions and authenticated cache invalidation; image quality preserved.
+
+## Historical pre-KOVA implementation log
+
+The entries below retain their original checkpoint facts, test counts, brand labels and project IDs. They are not current deployment/setup instructions; see PROJECT_STATE.md and docs/AGENT_HANDOFF.md.
+
+### Earlier unreleased work
 
 - Updated CI and security workflows to Node.js 24-compatible Checkout, Setup Node, pnpm Setup, Dependency Review and CodeQL action majors, removing the Node.js 20 and CodeQL v3 deprecation warnings.
 - Implemented the production operations foundation with liveness/readiness endpoints, structured Next.js server-error logging, fail-closed Vercel cron authentication, expired-reservation cleanup and stale payment/proof/webhook escalation.

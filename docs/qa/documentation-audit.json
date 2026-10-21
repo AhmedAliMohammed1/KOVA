@@ -1,0 +1,14 @@
+{
+  "reviewedOn": "2026-10-22",
+  "timezone": "Europe/Berlin",
+  "applicationBaseline": "c0a2b234f9297d3bbf9d397c2b8f2cfbadc6fc06",
+  "maintainedMarkdownFiles": 48,
+  "archivedSnapshots": 12,
+  "relativeLinksChecked": 235,
+  "exampleEnvironmentVariablesCovered": 46,
+  "routeSourcesCovered": 54,
+  "generatedNextInstructionsPreserved": true,
+  "runtimeCodeChanged": false,
+  "applicationTestsRerun": false,
+  "errors": []
+}

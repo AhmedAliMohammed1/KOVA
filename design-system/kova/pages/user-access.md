@@ -1,5 +1,7 @@
 # User access management
 
+Maintained documentation: [current implementation context](../../../docs/AGENT_HANDOFF.md). Reviewed 2026-10-22.
+
 Inherits the KOVA master palette, Arabic fonts, 44–48px controls and logical RTL
 spacing. A generic UI/UX Pro Max design-system query suggested glass styling
 and a SaaS landing page; that result did not fit this established admin app and

@@ -1,37 +1,19 @@
 # Paymob activation runbook
 
-## Current state
+Reviewed 2026-10-22. Implementation exists but activation remains held pending acceptance. Do not enable merely because keys exist. [Payments](docs/PAYMENTS.md) describes independent manual/COD workflows.
 
-Paymob is implemented but intentionally held. Customers cannot see or select it unless `PAYMOB_ENABLED=true` and every required setting below is valid. Vodafone Cash, InstaPay and COD deposit verification continue independently.
+## Storefront settings
 
-## Required Vercel settings
+PAYMOB_ENABLED=false until acceptance; PAYMOB_SECRET_KEY, PAYMOB_PUBLIC_KEY, PAYMOB_HMAC_SECRET and PAYMOB_INTEGRATION_ID belong in storefront server configuration. IDs are a positive comma-separated allowlist. NEXT_PUBLIC_APP_URL is the actual storefront origin: https://kova-green-delta.vercel.app in production. Never prefix provider secrets with NEXT_PUBLIC_.
 
-- `PAYMOB_ENABLED=false` while onboarding is pending
-- `PAYMOB_SECRET_KEY`
-- `PAYMOB_PUBLIC_KEY`
-- `PAYMOB_HMAC_SECRET`
-- `PAYMOB_INTEGRATION_ID` — one or more positive IDs separated by commas
-- `NEXT_PUBLIC_APP_URL=https://scrub-vibe-tau.vercel.app`
+Processed callback: https://kova-green-delta.vercel.app/api/payments/paymob/webhook. Customer return: generated /{locale}/track/{orderNumber}?payment=returned. Only the verified server callback establishes payment success; a redirect never does.
 
-Never use a `NEXT_PUBLIC_` prefix for Paymob secrets.
+## Acceptance sequence
 
-## Callback configuration
+1. Verify the intended non-production app/database, test merchant keys/integrations and callback URL; record current known-good settings.
+2. Configure required credentials with Paymob still held; redeploy and inspect readiness without exposing secrets.
+3. Enable only the sandbox environment and redeploy. Test successful, declined and abandoned attempts.
+4. Verify signatures, amount/currency/integration mismatch rejection, duplicate callback idempotency and resulting order/audit state. Reconcile provider identifiers against the test dashboard.
+5. Only after acceptance and owner authorization configure live credentials/callbacks and enable Production. Record commit/environment/provider evidence.
 
-- Transaction processed callback: `https://scrub-vibe-tau.vercel.app/api/payments/paymob/webhook`
-- Customer redirect: generated per order as `/{locale}/track/{orderNumber}?payment=returned`
-- The server callback is the payment source of truth; the browser redirect never marks an order paid.
-
-## Activation checklist
-
-1. Add Paymob test keys and integration IDs in Vercel, leaving `PAYMOB_ENABLED=false`.
-2. Configure the transaction processed callback URL in Paymob.
-3. Redeploy and confirm the admin orders page reports only `PAYMOB_ENABLED` as held.
-4. Set `PAYMOB_ENABLED=true` in Preview first and redeploy.
-5. Complete successful and declined sandbox payments.
-6. Confirm duplicate callbacks produce one order transition and an audited duplicate outcome.
-7. Confirm wrong amounts, currencies, integration IDs and signatures cannot mark an order paid.
-8. Repeat with live credentials, then enable Production.
-
-## Emergency stop
-
-Set `PAYMOB_ENABLED=false` and redeploy. Existing orders and webhook audit records remain available, while new customers immediately stop seeing Paymob.
+Emergency stop: set PAYMOB_ENABLED=false and redeploy to stop new intentions. Preserve callback/payment audit records and reconcile ambiguous transactions; never manually infer paid status from a redirect. Keep manual methods active only when their review queues are healthy. [Release/rollback](docs/runbooks/RELEASE_ROLLBACK.md).

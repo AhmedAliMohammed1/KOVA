@@ -1,5 +1,7 @@
 # KOVA Scrubs design system
 
+Maintained documentation: [current implementation context](../../docs/AGENT_HANDOFF.md). Reviewed 2026-10-22.
+
 Authoritative palette: `packages/shared/tokens.css`. Shared component styles: `packages/shared/src/styles/globals.css`. Supersedes the Scrub Vibe master; the earlier document remains as history.
 
 ## Direction and source
@@ -44,4 +46,4 @@ Body and form text: 16px; supporting text 12–14px where appropriate. Editorial
 
 ## Scope of acceptance
 
-The browser evidence covers both locales, 375/768/812/1440px layouts, native navigation focus, catalog recovery, product selection and cart persistence. It is not a WCAG certification. Authenticated dialogs, staff workflows, transactions and screen-reader behavior still need sandbox and assistive-technology acceptance as listed in the delivery report.
+Browser evidence covers both locales, responsive layouts, navigation focus, catalog recovery, colour/product selection, cart persistence and the authenticated super-admin role directory/dialog. Role mutations and denial/audit invariants were tested in a rolled-back database transaction. This is not a WCAG certification or full provider-backed commerce acceptance; remaining authenticated transactions, screen-reader and zoom acceptance are listed in TASKS and the current test report.
