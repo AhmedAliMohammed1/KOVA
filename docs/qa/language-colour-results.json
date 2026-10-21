@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-21T21:58:40.308Z",
+  "date": "2026-10-21T22:14:39.166Z",
   "origin": "http://localhost:3200",
   "checks": [
     "Fresh root visit opens Arabic despite English browser preference",

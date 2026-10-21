@@ -4,6 +4,7 @@ import { getSiteOrigin } from "@/features/auth/site-url";
 import { copy, isLocale } from "@/lib/i18n";
 import "@/styles/globals.css";
 import { MarketingScripts } from "@/components/analytics/marketing-scripts";
+import { arabicDisplay, arabicUi } from "@/fonts/arabic";
 
 export const metadata: Metadata = {
   metadataBase: new URL(getSiteOrigin()),
@@ -25,7 +26,7 @@ export default async function RootLayout({
     requestedLocale && isLocale(requestedLocale) ? requestedLocale : "ar";
 
   return (
-    <html lang={locale} dir={copy[locale].dir} data-scroll-behavior="smooth">
+    <html lang={locale} dir={copy[locale].dir} className={locale === "ar" ? `${arabicUi.variable} ${arabicDisplay.variable}` : undefined} data-scroll-behavior="smooth">
       <body><MarketingScripts />{children}</body>
     </html>
   );

@@ -1,0 +1,464 @@
+{
+  "origin": "http://localhost:3200",
+  "results": [
+    {
+      "width": 375,
+      "route": "/ar",
+      "direction": "rtl",
+      "bodyFont": "arabicUi, \"arabicUi Fallback\", Tahoma, Arial, sans-serif, Tahoma, Arial, sans-serif",
+      "headingFont": "arabicDisplay, \"arabicDisplay Fallback\", Georgia, serif, Georgia, serif",
+      "headingTracking": "normal",
+      "headingLineHeight": "69.6px",
+      "overflow": false,
+      "layoutShift": 0.0013513082304526748,
+      "layoutShiftSources": [
+        {
+          "value": 0.0013513082304526748,
+          "sources": [
+            {
+              "node": "#text",
+              "previousY": 6,
+              "currentY": 6
+            },
+            {
+              "node": "A",
+              "previousY": 476.046875,
+              "currentY": 476.046875
+            },
+            {
+              "node": "svg",
+              "previousY": 489.546875,
+              "currentY": 489.546875
+            }
+          ]
+        }
+      ],
+      "loadedFonts": [
+        "arabicUi",
+        "arabicUi Fallback",
+        "arabicDisplay",
+        "arabicDisplay Fallback"
+      ],
+      "fontRequests": [
+        {
+          "url": "http://localhost:3200/_next/static/media/noto_sans_arabic_variable-s.30bz475acv3ru.woff2",
+          "bytes": 165960
+        },
+        {
+          "url": "http://localhost:3200/_next/static/media/noto_naskh_arabic_variable-s.12r0n0cv1atcw.woff2",
+          "bytes": 94032
+        }
+      ]
+    },
+    {
+      "width": 375,
+      "route": "/ar/shop",
+      "direction": "rtl",
+      "bodyFont": "arabicUi, \"arabicUi Fallback\", Tahoma, Arial, sans-serif, Tahoma, Arial, sans-serif",
+      "headingFont": "arabicDisplay, \"arabicDisplay Fallback\", Georgia, serif, Georgia, serif",
+      "headingTracking": "normal",
+      "headingLineHeight": "45px",
+      "overflow": false,
+      "layoutShift": 0,
+      "layoutShiftSources": [],
+      "loadedFonts": [
+        "arabicUi",
+        "arabicUi Fallback",
+        "arabicDisplay"
+      ],
+      "fontRequests": [
+        {
+          "url": "http://localhost:3200/_next/static/media/noto_sans_arabic_variable-s.30bz475acv3ru.woff2",
+          "bytes": 165960
+        },
+        {
+          "url": "http://localhost:3200/_next/static/media/noto_naskh_arabic_variable-s.12r0n0cv1atcw.woff2",
+          "bytes": 94032
+        }
+      ]
+    },
+    {
+      "width": 375,
+      "route": "/ar/products/kova-womens-scrub-set",
+      "direction": "rtl",
+      "bodyFont": "arabicUi, \"arabicUi Fallback\", Tahoma, Arial, sans-serif, Tahoma, Arial, sans-serif",
+      "headingFont": "arabicDisplay, \"arabicDisplay Fallback\", Georgia, serif, Georgia, serif",
+      "headingTracking": "normal",
+      "headingLineHeight": "45px",
+      "overflow": false,
+      "layoutShift": 0,
+      "layoutShiftSources": [],
+      "loadedFonts": [
+        "arabicUi",
+        "arabicUi Fallback",
+        "arabicDisplay"
+      ],
+      "fontRequests": [
+        {
+          "url": "http://localhost:3200/_next/static/media/noto_sans_arabic_variable-s.30bz475acv3ru.woff2",
+          "bytes": 165960
+        },
+        {
+          "url": "http://localhost:3200/_next/static/media/noto_naskh_arabic_variable-s.12r0n0cv1atcw.woff2",
+          "bytes": 94032
+        }
+      ]
+    },
+    {
+      "width": 375,
+      "route": "/ar/account",
+      "direction": "rtl",
+      "bodyFont": "arabicUi, \"arabicUi Fallback\", Tahoma, Arial, sans-serif, Tahoma, Arial, sans-serif",
+      "headingFont": "arabicDisplay, \"arabicDisplay Fallback\", Georgia, serif, Georgia, serif",
+      "headingTracking": "normal",
+      "headingLineHeight": "72px",
+      "overflow": false,
+      "layoutShift": 0,
+      "layoutShiftSources": [],
+      "loadedFonts": [
+        "arabicUi",
+        "arabicUi Fallback",
+        "arabicDisplay"
+      ],
+      "fontRequests": [
+        {
+          "url": "http://localhost:3200/_next/static/media/noto_sans_arabic_variable-s.30bz475acv3ru.woff2",
+          "bytes": 165960
+        },
+        {
+          "url": "http://localhost:3200/_next/static/media/noto_naskh_arabic_variable-s.12r0n0cv1atcw.woff2",
+          "bytes": 94032
+        }
+      ]
+    },
+    {
+      "width": 375,
+      "route": "/ar/checkout",
+      "direction": "rtl",
+      "bodyFont": "arabicUi, \"arabicUi Fallback\", Tahoma, Arial, sans-serif, Tahoma, Arial, sans-serif",
+      "headingFont": "arabicDisplay, \"arabicDisplay Fallback\", Georgia, serif, Georgia, serif",
+      "headingTracking": "normal",
+      "headingLineHeight": "72px",
+      "overflow": false,
+      "layoutShift": 0,
+      "layoutShiftSources": [],
+      "loadedFonts": [
+        "arabicUi",
+        "arabicUi Fallback",
+        "arabicDisplay"
+      ],
+      "fontRequests": [
+        {
+          "url": "http://localhost:3200/_next/static/media/noto_sans_arabic_variable-s.30bz475acv3ru.woff2",
+          "bytes": 165960
+        },
+        {
+          "url": "http://localhost:3200/_next/static/media/noto_naskh_arabic_variable-s.12r0n0cv1atcw.woff2",
+          "bytes": 94032
+        }
+      ]
+    },
+    {
+      "width": 375,
+      "route": "/ar/help/sizing",
+      "direction": "rtl",
+      "bodyFont": "arabicUi, \"arabicUi Fallback\", Tahoma, Arial, sans-serif, Tahoma, Arial, sans-serif",
+      "headingFont": "arabicDisplay, \"arabicDisplay Fallback\", Georgia, serif, Georgia, serif",
+      "headingTracking": "normal",
+      "headingLineHeight": "54px",
+      "overflow": false,
+      "layoutShift": 0,
+      "layoutShiftSources": [],
+      "loadedFonts": [
+        "arabicUi",
+        "arabicUi Fallback",
+        "arabicDisplay",
+        "arabicDisplay Fallback"
+      ],
+      "fontRequests": [
+        {
+          "url": "http://localhost:3200/_next/static/media/noto_sans_arabic_variable-s.30bz475acv3ru.woff2",
+          "bytes": 165960
+        },
+        {
+          "url": "http://localhost:3200/_next/static/media/noto_naskh_arabic_variable-s.12r0n0cv1atcw.woff2",
+          "bytes": 94032
+        }
+      ]
+    },
+    {
+      "width": 768,
+      "route": "/ar",
+      "direction": "rtl",
+      "bodyFont": "arabicUi, \"arabicUi Fallback\", Tahoma, Arial, sans-serif, Tahoma, Arial, sans-serif",
+      "headingFont": "arabicDisplay, \"arabicDisplay Fallback\", Georgia, serif, Georgia, serif",
+      "headingTracking": "normal",
+      "headingLineHeight": "69.6px",
+      "overflow": false,
+      "layoutShift": 0.0005189236111111112,
+      "layoutShiftSources": [
+        {
+          "value": 0.0005189236111111112,
+          "sources": [
+            {
+              "node": "#text",
+              "previousY": 6,
+              "currentY": 6
+            }
+          ]
+        }
+      ],
+      "loadedFonts": [
+        "arabicUi",
+        "arabicUi Fallback",
+        "arabicDisplay",
+        "arabicDisplay Fallback"
+      ],
+      "fontRequests": [
+        {
+          "url": "http://localhost:3200/_next/static/media/noto_sans_arabic_variable-s.30bz475acv3ru.woff2",
+          "bytes": 165960
+        },
+        {
+          "url": "http://localhost:3200/_next/static/media/noto_naskh_arabic_variable-s.12r0n0cv1atcw.woff2",
+          "bytes": 94032
+        }
+      ]
+    },
+    {
+      "width": 812,
+      "route": "/ar",
+      "direction": "rtl",
+      "bodyFont": "arabicUi, \"arabicUi Fallback\", Tahoma, Arial, sans-serif, Tahoma, Arial, sans-serif",
+      "headingFont": "arabicDisplay, \"arabicDisplay Fallback\", Georgia, serif, Georgia, serif",
+      "headingTracking": "normal",
+      "headingLineHeight": "69.6px",
+      "overflow": false,
+      "layoutShift": 0.0013803879310344829,
+      "layoutShiftSources": [
+        {
+          "value": 0.0013803879310344829,
+          "sources": [
+            {
+              "node": "#text",
+              "previousY": 6,
+              "currentY": 6
+            }
+          ]
+        }
+      ],
+      "loadedFonts": [
+        "arabicUi",
+        "arabicUi Fallback",
+        "arabicDisplay",
+        "arabicDisplay Fallback"
+      ],
+      "fontRequests": [
+        {
+          "url": "http://localhost:3200/_next/static/media/noto_sans_arabic_variable-s.30bz475acv3ru.woff2",
+          "bytes": 165960
+        },
+        {
+          "url": "http://localhost:3200/_next/static/media/noto_naskh_arabic_variable-s.12r0n0cv1atcw.woff2",
+          "bytes": 94032
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "route": "/ar",
+      "direction": "rtl",
+      "bodyFont": "arabicUi, \"arabicUi Fallback\", Tahoma, Arial, sans-serif, Tahoma, Arial, sans-serif",
+      "headingFont": "arabicDisplay, \"arabicDisplay Fallback\", Georgia, serif, Georgia, serif",
+      "headingTracking": "normal",
+      "headingLineHeight": "114.84px",
+      "overflow": false,
+      "layoutShift": 0.0009012908307613168,
+      "layoutShiftSources": [
+        {
+          "value": 0.0009012908307613168,
+          "sources": [
+            {
+              "node": "#text",
+              "previousY": 6,
+              "currentY": 6
+            },
+            {
+              "node": "A",
+              "previousY": 130.5,
+              "currentY": 130.5
+            },
+            {
+              "node": "A",
+              "previousY": 130.5,
+              "currentY": 130.5
+            },
+            {
+              "node": "A",
+              "previousY": 130.5,
+              "currentY": 130.5
+            },
+            {
+              "node": "A",
+              "previousY": 130.5,
+              "currentY": 130.5
+            }
+          ]
+        }
+      ],
+      "loadedFonts": [
+        "arabicUi",
+        "arabicUi Fallback",
+        "arabicDisplay",
+        "arabicDisplay Fallback"
+      ],
+      "fontRequests": [
+        {
+          "url": "http://localhost:3200/_next/static/media/noto_sans_arabic_variable-s.30bz475acv3ru.woff2",
+          "bytes": 165960
+        },
+        {
+          "url": "http://localhost:3200/_next/static/media/noto_naskh_arabic_variable-s.12r0n0cv1atcw.woff2",
+          "bytes": 94032
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "route": "/ar/shop",
+      "direction": "rtl",
+      "bodyFont": "arabicUi, \"arabicUi Fallback\", Tahoma, Arial, sans-serif, Tahoma, Arial, sans-serif",
+      "headingFont": "arabicDisplay, \"arabicDisplay Fallback\", Georgia, serif, Georgia, serif",
+      "headingTracking": "normal",
+      "headingLineHeight": "90px",
+      "overflow": false,
+      "layoutShift": 0,
+      "layoutShiftSources": [],
+      "loadedFonts": [
+        "arabicUi",
+        "arabicUi Fallback",
+        "arabicDisplay"
+      ],
+      "fontRequests": [
+        {
+          "url": "http://localhost:3200/_next/static/media/noto_sans_arabic_variable-s.30bz475acv3ru.woff2",
+          "bytes": 165960
+        },
+        {
+          "url": "http://localhost:3200/_next/static/media/noto_naskh_arabic_variable-s.12r0n0cv1atcw.woff2",
+          "bytes": 94032
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "route": "/ar/products/kova-womens-scrub-set",
+      "direction": "rtl",
+      "bodyFont": "arabicUi, \"arabicUi Fallback\", Tahoma, Arial, sans-serif, Tahoma, Arial, sans-serif",
+      "headingFont": "arabicDisplay, \"arabicDisplay Fallback\", Georgia, serif, Georgia, serif",
+      "headingTracking": "normal",
+      "headingLineHeight": "72px",
+      "overflow": false,
+      "layoutShift": 0,
+      "layoutShiftSources": [],
+      "loadedFonts": [
+        "arabicUi",
+        "arabicUi Fallback",
+        "arabicDisplay"
+      ],
+      "fontRequests": [
+        {
+          "url": "http://localhost:3200/_next/static/media/noto_sans_arabic_variable-s.30bz475acv3ru.woff2",
+          "bytes": 165960
+        },
+        {
+          "url": "http://localhost:3200/_next/static/media/noto_naskh_arabic_variable-s.12r0n0cv1atcw.woff2",
+          "bytes": 94032
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "route": "/ar/account",
+      "direction": "rtl",
+      "bodyFont": "arabicUi, \"arabicUi Fallback\", Tahoma, Arial, sans-serif, Tahoma, Arial, sans-serif",
+      "headingFont": "arabicDisplay, \"arabicDisplay Fallback\", Georgia, serif, Georgia, serif",
+      "headingTracking": "normal",
+      "headingLineHeight": "108px",
+      "overflow": false,
+      "layoutShift": 0,
+      "layoutShiftSources": [],
+      "loadedFonts": [
+        "arabicUi",
+        "arabicUi Fallback",
+        "arabicDisplay"
+      ],
+      "fontRequests": [
+        {
+          "url": "http://localhost:3200/_next/static/media/noto_sans_arabic_variable-s.30bz475acv3ru.woff2",
+          "bytes": 165960
+        },
+        {
+          "url": "http://localhost:3200/_next/static/media/noto_naskh_arabic_variable-s.12r0n0cv1atcw.woff2",
+          "bytes": 94032
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "route": "/ar/checkout",
+      "direction": "rtl",
+      "bodyFont": "arabicUi, \"arabicUi Fallback\", Tahoma, Arial, sans-serif, Tahoma, Arial, sans-serif",
+      "headingFont": "arabicDisplay, \"arabicDisplay Fallback\", Georgia, serif, Georgia, serif",
+      "headingTracking": "normal",
+      "headingLineHeight": "72px",
+      "overflow": false,
+      "layoutShift": 0,
+      "layoutShiftSources": [],
+      "loadedFonts": [
+        "arabicUi",
+        "arabicUi Fallback",
+        "arabicDisplay"
+      ],
+      "fontRequests": [
+        {
+          "url": "http://localhost:3200/_next/static/media/noto_sans_arabic_variable-s.30bz475acv3ru.woff2",
+          "bytes": 165960
+        },
+        {
+          "url": "http://localhost:3200/_next/static/media/noto_naskh_arabic_variable-s.12r0n0cv1atcw.woff2",
+          "bytes": 94032
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "route": "/ar/help/sizing",
+      "direction": "rtl",
+      "bodyFont": "arabicUi, \"arabicUi Fallback\", Tahoma, Arial, sans-serif, Tahoma, Arial, sans-serif",
+      "headingFont": "arabicDisplay, \"arabicDisplay Fallback\", Georgia, serif, Georgia, serif",
+      "headingTracking": "normal",
+      "headingLineHeight": "72px",
+      "overflow": false,
+      "layoutShift": 0,
+      "layoutShiftSources": [],
+      "loadedFonts": [
+        "arabicUi",
+        "arabicUi Fallback",
+        "arabicDisplay",
+        "arabicDisplay Fallback"
+      ],
+      "fontRequests": [
+        {
+          "url": "http://localhost:3200/_next/static/media/noto_sans_arabic_variable-s.30bz475acv3ru.woff2",
+          "bytes": 165960
+        },
+        {
+          "url": "http://localhost:3200/_next/static/media/noto_naskh_arabic_variable-s.12r0n0cv1atcw.woff2",
+          "bytes": 94032
+        }
+      ]
+    }
+  ],
+  "errors": []
+}

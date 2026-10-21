@@ -99,11 +99,6 @@ summary {
 .font-serif {
   font-family: var(--font-display);
 }
-/* Arabic diacritical clearance per DESIGN.md */
-[lang="ar"] .font-serif,
-[dir="rtl"] .font-serif {
-  line-height: 1.22;
-}
 .skip-link {
   position: fixed;
   inset-block-start: 0;
@@ -192,8 +187,6 @@ input:not([type="checkbox"]):not([type="radio"]):not([type="hidden"]), select { 
 input, select, textarea { scroll-margin-block: 9rem; }
 button, a, summary { -webkit-tap-highlight-color: transparent; }
 [id] { scroll-margin-block-start: 9rem; }
-[lang="ar"] { letter-spacing: normal; }
-[lang="ar"] .eyebrow, [lang="ar"] .nav-secondary { letter-spacing: normal; }
 .kova-editorial { font-family: var(--font-display); font-weight: 400; letter-spacing: -.035em; text-wrap: balance; }
 .kova-link { display: inline-flex; align-items: center; gap: .65rem; min-height: 44px; font-size: .75rem; font-weight: 650; text-decoration: underline; text-underline-offset: 6px; }
 .kova-hero { display: grid; grid-template-columns: 1fr 1fr; background: var(--brand-950); color: white; }
@@ -208,6 +201,38 @@ button, a, summary { -webkit-tap-highlight-color: transparent; }
 .kova-policy { max-width: 70ch; }
 .kova-policy h2 { margin-block: 2rem .75rem; font-size: 1.25rem; font-weight: 650; }
 .kova-policy p { color: var(--text-muted); line-height: 1.8; }
+/* Reserve the first screen while route content streams; keep the footer stable. */
+#main-content { min-block-size: 100svh; }
+
+/* Arabic has its own reading rhythm. Keep joined letters and diacritics clear. */
+:root:lang(ar) {
+  --font-sans: var(--font-arabic-ui), Tahoma, Arial, sans-serif;
+  --font-display: var(--font-arabic-display), Georgia, serif;
+}
+body:lang(ar) { line-height: 1.85; }
+:lang(ar):is([class*="tracking-"], .eyebrow, .nav-secondary, .nav-sale, .kova-button, .kova-editorial, .hero-title) {
+  letter-spacing: normal;
+  text-transform: none;
+}
+:lang(ar):is(.font-serif, .kova-editorial, .hero-title) {
+  line-height: 1.5;
+  font-style: normal;
+  text-wrap: balance;
+}
+:lang(ar):is(.font-serif, .kova-editorial, .hero-title) .italic { font-style: normal; }
+.hero-title:lang(ar) {
+  font-size: clamp(3rem, 5.5vw, 5.5rem);
+  line-height: 1.45;
+}
+:lang(ar):is(.eyebrow, .nav-secondary, .nav-sale) { font-size: .8125rem; line-height: 1.8; font-weight: 600; }
+:lang(ar):is(.kova-button, .kova-link) { font-size: .875rem; line-height: 1.8; font-weight: 600; }
+:lang(ar):is(h1, h2, h3, h4) { text-wrap: balance; }
+:lang(ar):is(p, label, button, summary, input, select, textarea, .leading-snug, .leading-tight) { line-height: 1.8; }
+:lang(ar):is(.font-serif, .kova-editorial) { line-height: 1.5; }
+:lang(ar).text-xs { font-size: .8125rem; line-height: 1.85; }
+header:lang(ar) nav { font-size: .875rem; }
+/* Explicit Latin brand labels retain their original editorial appearance. */
+:lang(en).font-serif { font-family: "Iowan Old Style", Baskerville, Georgia, serif; }
 @media(max-width:767px) {
   .kova-hero { grid-template-columns: 1fr; }
   .kova-hero-copy { padding: 2.5rem 1.25rem; }

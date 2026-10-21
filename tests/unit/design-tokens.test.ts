@@ -34,6 +34,13 @@ describe("global design tokens", () => {
   it("defines every custom property referenced by the application UI", () => {
     const globals = readFileSync(globalsPath, "utf8") + readFileSync(join(projectRoot, "packages/shared/tokens.css"), "utf8");
     const defined = customPropertiesDefinedIn(globals);
+    // next/font emits these custom properties into generated CSS at build time.
+    for (const file of collectSourceFiles(join(sourceRoot, "fonts"))) {
+      const source = readFileSync(file, "utf8");
+      for (const match of source.matchAll(/variable:\s*["'](--[\w-]+)["']/g)) {
+        defined.add(match[1]);
+      }
+    }
     const referenced = new Set<string>();
 
     for (const file of [...collectSourceFiles(sourceRoot), ...collectSourceFiles(join(projectRoot, "apps/storefront/src")), ...collectSourceFiles(join(projectRoot, "apps/admin/src"))]) {

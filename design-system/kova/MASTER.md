@@ -26,9 +26,9 @@ White text belongs on navy and the dark teal action token. Highlight teal belong
 
 ## Typography and bilingual behavior
 
-English display: Iowan Old Style, Baskerville, Georgia, serif. Interface: Inter, Aptos, Segoe UI, Noto Sans Arabic, Arial, sans-serif. Arabic display: Noto Naskh Arabic then system serif. These are local font stacks: no third-party font requests, no assumption that an optional font is installed. Supply licensed WOFF2 files before changing this to self-hosted fonts.
+English display: Iowan Old Style, Baskerville, Georgia, serif. English interface: Inter, Aptos, Segoe UI, Arial, sans-serif. Arabic interface: self-hosted Noto Sans Arabic; Arabic display: self-hosted Noto Naskh Arabic. Licensed Arabic-subset variable WOFF2 assets (400–700) live in `packages/shared/src/fonts`, with OFL licenses and provenance. The focused UI/UX Pro Max typography search verified the “Arabic Elegant” pairing. Fonts load on use through `next/font/local`, with swap rendering and no third-party font requests; English routes do not load the Arabic assets. Explicit English brand labels retain Latin serif styling.
 
-Body and form text: 16px; supporting text 12–14px where appropriate. Editorial headings scale with `clamp`, use balanced wrapping, and have no decorative uppercase paragraphs. Arabic headings have line-height at least 1.22 and no tight letter-spacing. Long reading content is limited to 70ch. Interfaces retain native Arabic RTL; logical spacing and directional arrows mirror appropriately.
+Body and form text: 16px; supporting text 12–14px where appropriate. Editorial headings scale with `clamp`, use balanced wrapping, and have no decorative uppercase paragraphs. Arabic uses normal letter spacing, upright lettering, 1.5 heading line-height (1.45 hero), and 1.8–1.85 body/control line-height for joined letters and diacritics. Arabic editorial links/buttons are 14px and eyebrows 13px. Long reading content is limited to 70ch. Interfaces retain native Arabic RTL; logical spacing and directional arrows mirror appropriately.
 
 ## Layout and components
 
